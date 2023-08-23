@@ -21,8 +21,8 @@ vcf_folder="/shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/
 vcf_prefix="vcf-1-1-2-chr20"
 vcf="${vcf_folder}/${vcf_prefix}.vcf.gz"
 vcf_truth="/shared/home/sorozcoarias/coffea_genomes/Simon/Luis/HG002_GRCh38_chr20.vcf.gz"
-bed_truth="/shared/home/sorozcoarias/coffea_genomes/Simon/Luis/HG002_GRCh38_chr20.bed"
-metrics_prefix="metrics/metrics-1-1-2-chr20"
+bed_truth="/shared/home/sorozcoarias/coffea_genomes/Simon/Luis/GRCh38_chr20.bed"
+metrics_prefix="metrics/metrics-1-1-2-chr20/metrics-1-1-2-chr20"
 
 
 if [ -e "$vcf" ]; then

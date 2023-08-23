@@ -26,8 +26,8 @@ vcf_truth="HG002_GRCh38_benchmark.vcf.gz"
 bed_truth="GRCh38.bed"
 bed_intersection="alignment/bed-intersection.bed"
 bed_alignment="alignment/bed-alignment.bed"
-metrics_prefix="metrics/metrics-1-1-2"
-focus=1
+metrics_prefix="metrics/metrics-1-1-2/metrics-1-1-2"
+focus=0
 
 if [ -e "$fastq" ]; then
   echo "$fastq already exists."
