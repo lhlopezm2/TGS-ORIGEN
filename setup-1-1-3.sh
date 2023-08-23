@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 #SBATCH -J 1-1-3
 #SBATCH -D .
-#SBATCH -o out-1-1-3.txt
-#SBATCH -e err-1-1-3.txt
+#SBATCH -o results/out-1-1-3.txt
+#SBATCH -e results/err-1-1-3.txt
 #SBATCH -n 20
 #SBATCH -N 1
 #SBATCH --partition=gpu
