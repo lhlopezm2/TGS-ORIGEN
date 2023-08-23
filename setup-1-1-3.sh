@@ -15,21 +15,21 @@
 source ~/.bashrc
 
 CPU=20
-fastq="base-calling/fastq-1.fastq"
-fastq_index="base-calling/fastq-1.fastq.index"
-bam="alignment/bam-1-1.bam"
-ref_fasta="GRCh38.fa"
-MODEL_NAME="r941_prom_hac_g360+g422"
-vcf="/shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-3/vcf-1-1-3.vcf"
-chr="/shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-3"
-#vcf="${vcf_folder}/merge_output.vcf.gz"
-vcf_truth="HG002_GRCh38_benchmark.vcf.gz"
-bed_truth="GRCh38.bed"
-bed_intersection="alignment/bed-intersection.bed"
-bed_alignment="alignment/bed-alignment.bed"
-metrics_prefix="metrics/metrics-1-1-3/metrics-1-1-3"
-focus=0
+setup_v="-1-1-3"
+fastq_v=${setup_v:0:2}
+bam_v=${setup_v:0:4}
 home="/shared/home/sorozcoarias/coffea_genomes/Simon/Luis"
+
+
+fastq="base-calling/fastq${fastq_v}.fastq"
+fastq_index="base-calling/fastq${fastq_v}.fastq.index"
+bam="alignment/bam${bam_v}.bam"
+ref_fasta="GRCh38.fa"
+vcf="${home}/variant-calling/vcf${setup_v}/vcf${setup_v}.vcf"
+chr="${home}/variant-calling/vcf${setup_v}"
+vcf_truth="HG002_GRCh38_benchmark.vcf.gz"
+bed="GRCh38.bed"
+metrics_prefix="metrics/metrics${setup_v}/metrics${setup_v}"
 
 contigs=("chr1:1-248956422" "chr2:1-242193529" "chr3:1-198295559" "chr4:1-190214555" "chr5:1-181538259" "chr6:1-170805979" "chr7:1-159345973" "chr8:1-145138636" "chr9:1-138394717" "chr10:1-133797422" "chr11:1-135086622" "chr12:1-133275309" "chr13:1-114364328" "chr14:1-107043718" "chr15:1-101991189" "chr16:1-90338345" "chr17:1-83257441" "chr18:1-80373285" "chr19:1-58617616" "chr20:1-64444167" "chr21:1-46709983" "chr22:1-50818468")
 
@@ -42,14 +42,14 @@ else
   module load guppy/6.4.6-gpu
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Base Calling - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' guppy_basecaller --disable_pings\
     -i ./raw_reads\
-    -s base-calling/fastq-1\
+    -s "base-calling/fastq${fastq_v}"\
     --cpu_threads_per_caller 4\
     --flowcell FLO-PRO002M\
     --kit SQK-RBK112-96\
     --recursive -x 'cuda:all:50G'\
     --num_callers 5\
     --compress_fastq 
-  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Merge fastq files - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' zcat base-calling/fastq-1/pass/fastq_runid*.fastq.gz > $fastq
+  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Merge fastq files - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' zcat "base-calling/fastq${fastq_v}/pass/fastq_runid*.fastq.gz" > $fastq
   module unload guppy/6.4.6-gpu
   module unload singularity
 fi
@@ -66,21 +66,6 @@ else
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Bam indexing - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' samtools index $bam -@ $CPU
   module unload minimap2/2.24
   module unload samtools/1.15.1
-fi
-
-if [ $focus -eq 1 ]; then
-  if [ -e "$bed_intersection" ]; then
-    echo "$bed_intersection already exists."
-  else
-    echo "----------------"
-    echo "Intersect bam coverage with groundtruth bed file"
-    conda activate clair3
-    /shared/home/sorozcoarias/anaconda3/bin/time -f 'Bam to Bed - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' bedtools bamtobed -i $bam > $bed_alignment
-    /shared/home/sorozcoarias/anaconda3/bin/time -f 'Bed Intersection - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' bedtools intersect -a $bed_alignment -b $bed_truth > $bed_intersection
-    conda deactivate
-  fi
-else
-  bed_intersection=$bed_truth
 fi
 
 if [ -e "$fastq_index" ]; then
@@ -146,6 +131,9 @@ conda deactivate
 echo "----------------"
 echo "Compute metrics"
 conda activate happy
-HGREF=$ref_fasta /shared/home/sorozcoarias/anaconda3/bin/time -f 'Compute metrics - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' hap.py $vcf_truth $vcf --threads $CPU -o $metrics_prefix -T $bed_intersection
+HGREF=$ref_fasta /shared/home/sorozcoarias/anaconda3/bin/time -f 'Compute metrics - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' hap.py $vcf_truth $vcf \
+    --threads $CPU \
+    -o $metrics_prefix \
+    -T $bed
 conda deactivate
 
