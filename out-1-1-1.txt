@@ -1,0 +1,3157 @@
+----------------
+Base-calling step
+ONT Guppy basecalling software version 6.4.6+ae70e8f, minimap2 version 2.24-r1122
+config file:        /opt/ont/guppy/data/dna_r9.4.1_e8.1_hac_prom.cfg
+model file:         /opt/ont/guppy/data/template_r9.4.1_e8.1_hac.jsn
+input path:         ./raw_reads
+save path:          base-calling/fastq-1
+chunk size:         2000
+chunks per runner:  1024
+minimum qscore:     9
+records per file:   4000
+fastq compression:  ON
+num basecallers:    5
+gpu device:         cuda:all:50G
+kernel path:        
+runners per device: 20
+
+Use of this software is permitted solely under the terms of the end user license agreement (EULA).
+By running, copying or accessing this software, you are demonstrating your acceptance of the EULA.
+The EULA may be found in /opt/ont/guppy/bin
+Found 113851 input read files to process.
+Init time: 13566 ms
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Caller time: 1756276 ms, Samples called: 21295893971, samples/s: 1.21256e+07
+Finishing up any open output files.
+Basecalling completed successfully.
+----------------
+Alignment step
+----------------
+Intersect bam coverage with groundtruth bed file
+----------------
+Variant calling step
+[INFO] CLAIR3 VERSION: v1.0.4
+[INFO] BAM FILE PATH: /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/alignment/bam-1-1.bam
+[INFO] REFERENCE FILE PATH: /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/GRCh38.fa
+[INFO] MODEL PATH: /shared/home/sorozcoarias/anaconda3/envs/clair3/bin/models/r941_prom_hac_g360+g422
+[INFO] OUTPUT FOLDER: /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1
+[INFO] PLATFORM: ont
+[INFO] THREADS: 20
+[INFO] BED FILE PATH: EMPTY
+[INFO] VCF FILE PATH: EMPTY
+[INFO] CONTIGS: EMPTY
+[INFO] CONDA PREFIX: /shared/home/sorozcoarias/anaconda3/envs/clair3
+[INFO] SAMTOOLS PATH: samtools
+[INFO] PYTHON PATH: python3
+[INFO] PYPY PATH: pypy3
+[INFO] PARALLEL PATH: parallel
+[INFO] WHATSHAP PATH: whatshap
+[INFO] LONGPHASE PATH: EMPTY
+[INFO] CHUNK SIZE: 5000000
+[INFO] FULL ALIGN PROPORTION: 0.7
+[INFO] FULL ALIGN REFERENCE PROPORTION: 0.1
+[INFO] PHASING PROPORTION: 0.7
+[INFO] MINIMUM MQ: 5
+[INFO] MINIMUM COVERAGE: 2
+[INFO] SNP AF THRESHOLD: 0.08
+[INFO] INDEL AF THRESHOLD: 0.15
+[INFO] ENABLE FILEUP ONLY CALLING: False
+[INFO] ENABLE FAST MODE CALLING: False
+[INFO] ENABLE CALLING SNP CANDIDATES ONLY: False
+[INFO] ENABLE PRINTING REFERENCE CALLS: False
+[INFO] ENABLE OUTPUT GVCF: False
+[INFO] ENABLE HAPLOID PRECISE MODE: False
+[INFO] ENABLE HAPLOID SENSITIVE MODE: False
+[INFO] ENABLE INCLUDE ALL CTGS CALLING: False
+[INFO] ENABLE NO PHASING FOR FULL ALIGNMENT: False
+[INFO] ENABLE REMOVING INTERMEDIATE FILES: False
+[INFO] ENABLE LONGPHASE FOR INTERMEDIATE VCF PHASING: False
+[INFO] ENABLE PHASING FINAL VCF OUTPUT USING WHATSHAP: False
+[INFO] ENABLE PHASING FINAL VCF OUTPUT USING LONGPHASE: False
+[INFO] ENABLE HAPLOTAGGING FINAL BAM: False
+[INFO] ENABLE LONG INDEL CALLING: False
+[INFO] ENABLE C_IMPLEMENT: True
+
++ /shared/ifbstor1/projects/coffea_genomes/Simon/anaconda3_homesimon/envs/clair3/bin/scripts/clair3_c_impl.sh --bam_fn /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/alignment/bam-1-1.bam --ref_fn /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/GRCh38.fa --threads 20 --model_path /shared/home/sorozcoarias/anaconda3/envs/clair3/bin/models/r941_prom_hac_g360+g422 --platform ont --output /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1 --bed_fn=EMPTY --vcf_fn=EMPTY --ctg_name=EMPTY --sample_name=SAMPLE --chunk_num=0 --chunk_size=5000000 --samtools=samtools --python=python3 --pypy=pypy3 --parallel=parallel --whatshap=whatshap --qual=2 --var_pct_full=0.7 --ref_pct_full=0.1 --var_pct_phasing=0.7 --snp_min_af=0.08 --indel_min_af=0.15 --min_mq=5 --min_coverage=2 --min_contig_size=0 --pileup_only=False --gvcf=False --fast_mode=False --call_snp_only=False --print_ref_calls=False --haploid_precise=False --haploid_sensitive=False --include_all_ctgs=False --no_phasing_for_fa=False --pileup_model_prefix=pileup --fa_model_prefix=full_alignment --remove_intermediate_dir=False --enable_phasing=False --enable_long_indel=False --keep_iupac_bases=False --use_gpu=False --longphase_for_phasing=False --longphase=EMPTY --use_whatshap_for_intermediate_phasing=True --use_longphase_for_intermediate_phasing=False --use_whatshap_for_final_output_phasing=False --use_longphase_for_final_output_phasing=False --use_whatshap_for_final_output_haplotagging=False
+
+[INFO] Check environment variables
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/log
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/merge_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/phase_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/gvcf_tmp_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/full_alignment_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/phase_output/phase_vcf
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/phase_output/phase_bam
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/full_alignment_output/candidate_bed
+[INFO] --include_all_ctgs not enabled, use chr{1..22,X,Y} and {1..22,X,Y} by default
+[INFO] Call variant in contigs: chr1 chr2 chr3 chr4 chr5 chr6 chr7 chr8 chr9 chr10 chr11 chr12 chr13 chr14 chr15 chr16 chr17 chr18 chr19 chr20 chr21 chr22 chrX chrY
+[INFO] Chunk number for each contig: 50 49 40 39 37 35 32 30 28 27 28 27 23 22 21 19 17 17 12 13 10 11 32 12
+[INFO] 1/7 Call variants using pileup model
+Calling variants ...
+Total processed positions in chr1 (chunk 7/50) : 1386
+Total time elapsed: 5.91 s
+Calling variants ...
+Total processed positions in chr1 (chunk 1/50) : 3977
+Total time elapsed: 8.50 s
+Calling variants ...
+Total processed positions in chr1 (chunk 2/50) : 5868
+Total time elapsed: 10.01 s
+Calling variants ...
+Total processed positions in chr1 (chunk 9/50) : 7201
+Total time elapsed: 11.07 s
+Calling variants ...
+Total processed positions in chr1 (chunk 13/50) : 8283
+Total time elapsed: 12.52 s
+Calling variants ...
+Total processed positions in chr1 (chunk 14/50) : 9160
+Total time elapsed: 12.78 s
+Calling variants ...
+Total processed positions in chr1 (chunk 5/50) : 11375
+Total time elapsed: 14.98 s
+Calling variants ...
+Total processed positions in chr1 (chunk 4/50) : 13119
+Total time elapsed: 16.37 s
+Calling variants ...
+Total processed positions in chr1 (chunk 17/50) : 4063
+Total time elapsed: 7.50 s
+Calling variants ...
+Total processed positions in chr1 (chunk 6/50) : 16940
+Total time elapsed: 20.47 s
+Calling variants ...
+Total processed positions in chr1 (chunk 8/50) : 22116
+Total time elapsed: 25.22 s
+Calling variants ...
+Total processed positions in chr1 (chunk 11/50) : 22087
+Total time elapsed: 25.31 s
+Calling variants ...
+Total processed positions in chr1 (chunk 21/50) : 5137
+Total time elapsed: 8.90 s
+Calling variants ...
+Total processed positions in chr1 (chunk 10/50) : 24254
+Total time elapsed: 27.77 s
+Calling variants ...
+Total processed positions in chr1 (chunk 16/50) : 14760
+Total time elapsed: 17.81 s
+Calling variants ...
+Total processed positions in chr1 (chunk 27/50) : 0
+Total time elapsed: 0.10 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr1_27.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 12/50) : 26404
+Total time elapsed: 29.68 s
+Calling variants ...
+Total processed positions in chr1 (chunk 28/50) : 0
+Total time elapsed: 0.16 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr1_28.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 20/50) : 9724
+Total time elapsed: 13.40 s
+Calling variants ...
+Total processed positions in chr1 (chunk 22/50) : 10624
+Total time elapsed: 13.91 s
+Calling variants ...
+Total processed positions in chr1 (chunk 26/50) : 379
+Total time elapsed: 3.35 s
+Calling variants ...
+Total processed positions in chr1 (chunk 25/50) : 12215
+Total time elapsed: 14.78 s
+Calling variants ...
+Total processed positions in chr1 (chunk 33/50) : 3282
+Total time elapsed: 7.28 s
+Calling variants ...
+Total processed positions in chr1 (chunk 15/50) : 38328
+Total time elapsed: 41.72 s
+Calling variants ...
+Total processed positions in chr1 (chunk 29/50) : 15063
+Total time elapsed: 18.48 s
+Calling variants ...
+Total processed positions in chr1 (chunk 36/50) : 10698
+Total time elapsed: 14.74 s
+Calling variants ...
+Total processed positions in chr1 (chunk 23/50) : 29453
+Total time elapsed: 32.53 s
+Calling variants ...
+Total processed positions in chr1 (chunk 19/50) : 40125
+Total time elapsed: 42.19 s
+Calling variants ...
+Total processed positions in chr1 (chunk 37/50) : 10753
+Total time elapsed: 15.11 s
+Calling variants ...
+Total processed positions in chr1 (chunk 18/50) : 40865
+Total time elapsed: 44.45 s
+Calling variants ...
+Total processed positions in chr1 (chunk 31/50) : 22918
+Total time elapsed: 26.60 s
+Calling variants ...
+Total processed positions in chr1 (chunk 3/50) : 57259
+Total time elapsed: 62.27 s
+Calling variants ...
+Total processed positions in chr1 (chunk 24/50) : 36780
+Total time elapsed: 39.33 s
+Calling variants ...
+Total processed positions in chr1 (chunk 40/50) : 12400
+Total time elapsed: 13.96 s
+Calling variants ...
+Total processed positions in chr1 (chunk 30/50) : 35988
+Total time elapsed: 39.01 s
+Calling variants ...
+Total processed positions in chr1 (chunk 43/50) : 7771
+Total time elapsed: 11.24 s
+Calling variants ...
+Total processed positions in chr1 (chunk 32/50) : 34697
+Total time elapsed: 39.06 s
+Calling variants ...
+Total processed positions in chr1 (chunk 47/50) : 3168
+Total time elapsed: 6.90 s
+Calling variants ...
+Total processed positions in chr1 (chunk 34/50) : 37675
+Total time elapsed: 43.98 s
+Calling variants ...
+Total processed positions in chr1 (chunk 35/50) : 40933
+Total time elapsed: 43.53 s
+Calling variants ...
+Total processed positions in chr1 (chunk 50/50) : 1201
+Total time elapsed: 4.73 s
+Calling variants ...
+Total processed positions in chr1 (chunk 42/50) : 21698
+Total time elapsed: 24.45 s
+Calling variants ...
+Total processed positions in chr2 (chunk 3/49) : 4780
+Total time elapsed: 8.12 s
+Calling variants ...
+Total processed positions in chr1 (chunk 46/50) : 19998
+Total time elapsed: 23.67 s
+Calling variants ...
+Total processed positions in chr1 (chunk 41/50) : 30803
+Total time elapsed: 33.93 s
+Calling variants ...
+Total processed positions in chr1 (chunk 48/50) : 21237
+Total time elapsed: 24.47 s
+Calling variants ...
+Total processed positions in chr1 (chunk 49/50) : 14499
+Total time elapsed: 18.25 s
+Calling variants ...
+Total processed positions in chr1 (chunk 39/50) : 41783
+Total time elapsed: 45.39 s
+Calling variants ...
+Total processed positions in chr1 (chunk 45/50) : 26883
+Total time elapsed: 30.05 s
+Calling variants ...
+Total processed positions in chr2 (chunk 12/49) : 0
+Total time elapsed: 0.40 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr2_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 7/49) : 7743
+Total time elapsed: 11.38 s
+Calling variants ...
+Total processed positions in chr2 (chunk 2/49) : 15837
+Total time elapsed: 19.48 s
+Calling variants ...
+Total processed positions in chr1 (chunk 38/50) : 47362
+Total time elapsed: 52.17 s
+Calling variants ...
+Total processed positions in chr2 (chunk 11/49) : 3880
+Total time elapsed: 7.24 s
+Calling variants ...
+Total processed positions in chr2 (chunk 1/49) : 24155
+Total time elapsed: 26.43 s
+Calling variants ...
+Total processed positions in chr1 (chunk 44/50) : 37857
+Total time elapsed: 41.49 s
+Calling variants ...
+Total processed positions in chr2 (chunk 4/49) : 19505
+Total time elapsed: 22.74 s
+Calling variants ...
+Total processed positions in chr2 (chunk 6/49) : 19181
+Total time elapsed: 21.82 s
+Calling variants ...
+Total processed positions in chr2 (chunk 18/49) : 4437
+Total time elapsed: 7.63 s
+Calling variants ...
+Total processed positions in chr2 (chunk 8/49) : 16607
+Total time elapsed: 19.77 s
+Calling variants ...
+Total processed positions in chr2 (chunk 21/49) : 2801
+Total time elapsed: 6.64 s
+Calling variants ...
+Total processed positions in chr2 (chunk 22/49) : 4997
+Total time elapsed: 7.76 s
+Calling variants ...
+Total processed positions in chr2 (chunk 16/49) : 13885
+Total time elapsed: 17.88 s
+Calling variants ...
+Total processed positions in chr2 (chunk 13/49) : 20557
+Total time elapsed: 23.71 s
+Calling variants ...
+Total processed positions in chr2 (chunk 25/49) : 2625
+Total time elapsed: 6.36 s
+Calling variants ...
+Total processed positions in chr2 (chunk 10/49) : 22723
+Total time elapsed: 26.36 s
+Calling variants ...
+Total processed positions in chr2 (chunk 20/49) : 9129
+Total time elapsed: 13.91 s
+Calling variants ...
+Total processed positions in chr2 (chunk 14/49) : 22317
+Total time elapsed: 24.72 s
+Calling variants ...
+Total processed positions in chr2 (chunk 19/49) : 21151
+Total time elapsed: 22.97 s
+Calling variants ...
+Total processed positions in chr2 (chunk 9/49) : 33353
+Total time elapsed: 36.69 s
+Calling variants ...
+Total processed positions in chr2 (chunk 32/49) : 2218
+Total time elapsed: 5.84 s
+Calling variants ...
+Total processed positions in chr2 (chunk 15/49) : 29835
+Total time elapsed: 34.59 s
+Calling variants ...
+Total processed positions in chr2 (chunk 17/49) : 29630
+Total time elapsed: 33.67 s
+Calling variants ...
+Total processed positions in chr2 (chunk 24/49) : 22796
+Total time elapsed: 25.65 s
+Calling variants ...
+Total processed positions in chr2 (chunk 35/49) : 2946
+Total time elapsed: 6.28 s
+Calling variants ...
+Total processed positions in chr2 (chunk 27/49) : 19773
+Total time elapsed: 23.35 s
+Calling variants ...
+Total processed positions in chr2 (chunk 23/49) : 29584
+Total time elapsed: 32.70 s
+Calling variants ...
+Total processed positions in chr2 (chunk 33/49) : 15700
+Total time elapsed: 19.94 s
+Calling variants ...
+Total processed positions in chr2 (chunk 5/49) : 60115
+Total time elapsed: 64.00 s
+Calling variants ...
+Total processed positions in chr2 (chunk 26/49) : 27094
+Total time elapsed: 30.35 s
+Calling variants ...
+Total processed positions in chr2 (chunk 31/49) : 20687
+Total time elapsed: 25.07 s
+Calling variants ...
+Total processed positions in chr2 (chunk 36/49) : 11823
+Total time elapsed: 15.37 s
+Calling variants ...
+Total processed positions in chr2 (chunk 28/49) : 23261
+Total time elapsed: 27.85 s
+Calling variants ...
+Total processed positions in chr2 (chunk 42/49) : 5675
+Total time elapsed: 9.02 s
+Calling variants ...
+Total processed positions in chr2 (chunk 48/49) : 1010
+Total time elapsed: 4.42 s
+Calling variants ...
+Total processed positions in chr2 (chunk 41/49) : 10990
+Total time elapsed: 15.48 s
+Calling variants ...
+Total processed positions in chr2 (chunk 43/49) : 10006
+Total time elapsed: 14.74 s
+Calling variants ...
+Total processed positions in chr2 (chunk 29/49) : 36610
+Total time elapsed: 40.34 s
+Calling variants ...
+Total processed positions in chr2 (chunk 39/49) : 19223
+Total time elapsed: 22.38 s
+Calling variants ...
+Total processed positions in chr2 (chunk 44/49) : 9742
+Total time elapsed: 12.96 s
+Calling variants ...
+Total processed positions in chr2 (chunk 34/49) : 30059
+Total time elapsed: 33.68 s
+Calling variants ...
+Total processed positions in chr2 (chunk 49/49) : 4440
+Total time elapsed: 7.89 s
+Calling variants ...
+Total processed positions in chr2 (chunk 40/49) : 21171
+Total time elapsed: 24.32 s
+Calling variants ...
+Total processed positions in chr3 (chunk 6/40) : 1099
+Total time elapsed: 4.59 s
+Calling variants ...
+Total processed positions in chr2 (chunk 45/49) : 19665
+Total time elapsed: 22.28 s
+Calling variants ...
+Total processed positions in chr2 (chunk 46/49) : 18561
+Total time elapsed: 21.55 s
+Calling variants ...
+Total processed positions in chr3 (chunk 3/40) : 5939
+Total time elapsed: 8.87 s
+Calling variants ...
+Total processed positions in chr2 (chunk 37/49) : 38097
+Total time elapsed: 40.46 s
+Calling variants ...
+Total processed positions in chr3 (chunk 8/40) : 5668
+Total time elapsed: 8.95 s
+Calling variants ...
+Total processed positions in chr2 (chunk 47/49) : 24281
+Total time elapsed: 29.23 s
+Calling variants ...
+Total processed positions in chr3 (chunk 1/40) : 17828
+Total time elapsed: 21.22 s
+Calling variants ...
+Total processed positions in chr3 (chunk 11/40) : 2732
+Total time elapsed: 6.10 s
+Calling variants ...
+Total processed positions in chr3 (chunk 5/40) : 15177
+Total time elapsed: 17.85 s
+Calling variants ...
+Total processed positions in chr3 (chunk 14/40) : 2850
+Total time elapsed: 5.85 s
+Calling variants ...
+Total processed positions in chr3 (chunk 13/40) : 3705
+Total time elapsed: 7.28 s
+Calling variants ...
+Total processed positions in chr2 (chunk 30/49) : 68206
+Total time elapsed: 69.98 s
+Calling variants ...
+Total processed positions in chr3 (chunk 7/40) : 22391
+Total time elapsed: 25.59 s
+Calling variants ...
+Total processed positions in chr3 (chunk 12/40) : 14245
+Total time elapsed: 17.68 s
+Calling variants ...
+Total processed positions in chr3 (chunk 15/40) : 11162
+Total time elapsed: 14.76 s
+Calling variants ...
+Total processed positions in chr3 (chunk 2/40) : 33144
+Total time elapsed: 36.86 s
+Calling variants ...
+Total processed positions in chr2 (chunk 38/49) : 63386
+Total time elapsed: 64.81 s
+Calling variants ...
+Total processed positions in chr3 (chunk 9/40) : 30003
+Total time elapsed: 34.07 s
+Calling variants ...
+Total processed positions in chr3 (chunk 10/40) : 24370
+Total time elapsed: 27.77 s
+Calling variants ...
+Total processed positions in chr3 (chunk 22/40) : 4838
+Total time elapsed: 8.99 s
+Calling variants ...
+Total processed positions in chr3 (chunk 18/40) : 18047
+Total time elapsed: 21.87 s
+Calling variants ...
+Total processed positions in chr3 (chunk 21/40) : 15450
+Total time elapsed: 19.79 s
+Calling variants ...
+Total processed positions in chr3 (chunk 30/40) : 1561
+Total time elapsed: 5.35 s
+Calling variants ...
+Total processed positions in chr3 (chunk 26/40) : 11067
+Total time elapsed: 14.94 s
+Calling variants ...
+Total processed positions in chr3 (chunk 16/40) : 34161
+Total time elapsed: 38.71 s
+Calling variants ...
+Total processed positions in chr3 (chunk 4/40) : 56314
+Total time elapsed: 58.78 s
+Calling variants ...
+Total processed positions in chr3 (chunk 27/40) : 15422
+Total time elapsed: 19.53 s
+Calling variants ...
+Total processed positions in chr3 (chunk 20/40) : 32698
+Total time elapsed: 36.17 s
+Calling variants ...
+Total processed positions in chr3 (chunk 24/40) : 25981
+Total time elapsed: 30.17 s
+Calling variants ...
+Total processed positions in chr3 (chunk 31/40) : 18427
+Total time elapsed: 22.30 s
+Calling variants ...
+Total processed positions in chr3 (chunk 37/40) : 3523
+Total time elapsed: 6.82 s
+Calling variants ...
+Total processed positions in chr3 (chunk 19/40) : 50146
+Total time elapsed: 52.61 s
+Calling variants ...
+Total processed positions in chr3 (chunk 39/40) : 4729
+Total time elapsed: 8.84 s
+Calling variants ...
+Total processed positions in chr3 (chunk 32/40) : 29102
+Total time elapsed: 32.75 s
+Calling variants ...
+Total processed positions in chr3 (chunk 17/40) : 54438
+Total time elapsed: 60.80 s
+Calling variants ...
+Total processed positions in chr4 (chunk 1/39) : 8382
+Total time elapsed: 12.93 s
+Calling variants ...
+Total processed positions in chr3 (chunk 29/40) : 39790
+Total time elapsed: 44.92 s
+Calling variants ...
+Total processed positions in chr4 (chunk 2/39) : 5994
+Total time elapsed: 9.88 s
+Calling variants ...
+Total processed positions in chr3 (chunk 28/40) : 43471
+Total time elapsed: 48.32 s
+Calling variants ...
+Total processed positions in chr3 (chunk 25/40) : 55116
+Total time elapsed: 58.89 s
+Calling variants ...
+Total processed positions in chr3 (chunk 38/40) : 23336
+Total time elapsed: 29.51 s
+Calling variants ...
+Total processed positions in chr3 (chunk 36/40) : 28506
+Total time elapsed: 33.09 s
+Calling variants ...
+Total processed positions in chr4 (chunk 3/39) : 15670
+Total time elapsed: 19.30 s
+Calling variants ...
+Total processed positions in chr3 (chunk 23/40) : 64482
+Total time elapsed: 70.55 s
+Calling variants ...
+Total processed positions in chr3 (chunk 35/40) : 39508
+Total time elapsed: 44.61 s
+Calling variants ...
+Total processed positions in chr4 (chunk 12/39) : 6393
+Total time elapsed: 10.65 s
+Calling variants ...
+Total processed positions in chr3 (chunk 34/40) : 50753
+Total time elapsed: 55.65 s
+Calling variants ...
+Total processed positions in chr3 (chunk 40/40) : 39700
+Total time elapsed: 42.49 s
+Calling variants ...
+Total processed positions in chr3 (chunk 33/40) : 58825
+Total time elapsed: 62.89 s
+Calling variants ...
+Total processed positions in chr4 (chunk 6/39) : 20759
+Total time elapsed: 25.43 s
+Calling variants ...
+Total processed positions in chr4 (chunk 8/39) : 19087
+Total time elapsed: 23.57 s
+Calling variants ...
+Total processed positions in chr4 (chunk 9/39) : 20775
+Total time elapsed: 24.32 s
+Calling variants ...
+Total processed positions in chr4 (chunk 13/39) : 11986
+Total time elapsed: 15.68 s
+Calling variants ...
+Total processed positions in chr4 (chunk 4/39) : 39242
+Total time elapsed: 42.49 s
+Calling variants ...
+Total processed positions in chr4 (chunk 7/39) : 33014
+Total time elapsed: 36.30 s
+Calling variants ...
+Total processed positions in chr4 (chunk 17/39) : 11263
+Total time elapsed: 14.41 s
+Calling variants ...
+Total processed positions in chr4 (chunk 5/39) : 45249
+Total time elapsed: 46.96 s
+Calling variants ...
+Total processed positions in chr4 (chunk 22/39) : 10037
+Total time elapsed: 14.13 s
+Calling variants ...
+Total processed positions in chr4 (chunk 11/39) : 35892
+Total time elapsed: 39.68 s
+Calling variants ...
+Total processed positions in chr4 (chunk 21/39) : 15190
+Total time elapsed: 18.99 s
+Calling variants ...
+Total processed positions in chr4 (chunk 14/39) : 32374
+Total time elapsed: 34.50 s
+Calling variants ...
+Total processed positions in chr4 (chunk 20/39) : 17246
+Total time elapsed: 21.12 s
+Calling variants ...
+Total processed positions in chr4 (chunk 19/39) : 18239
+Total time elapsed: 21.99 s
+Calling variants ...
+Total processed positions in chr4 (chunk 10/39) : 41079
+Total time elapsed: 45.20 s
+Calling variants ...
+Total processed positions in chr4 (chunk 15/39) : 31534
+Total time elapsed: 36.27 s
+Calling variants ...
+Total processed positions in chr4 (chunk 29/39) : 5720
+Total time elapsed: 9.37 s
+Calling variants ...
+Total processed positions in chr4 (chunk 18/39) : 30971
+Total time elapsed: 35.54 s
+Calling variants ...
+Total processed positions in chr4 (chunk 24/39) : 19312
+Total time elapsed: 24.81 s
+Calling variants ...
+Total processed positions in chr4 (chunk 27/39) : 17407
+Total time elapsed: 20.73 s
+Calling variants ...
+Total processed positions in chr4 (chunk 26/39) : 21854
+Total time elapsed: 25.15 s
+Calling variants ...
+Total processed positions in chr4 (chunk 25/39) : 26326
+Total time elapsed: 30.38 s
+Calling variants ...
+Total processed positions in chr4 (chunk 30/39) : 18473
+Total time elapsed: 20.97 s
+Calling variants ...
+Total processed positions in chr4 (chunk 28/39) : 20294
+Total time elapsed: 24.46 s
+Calling variants ...
+Total processed positions in chr4 (chunk 16/39) : 48005
+Total time elapsed: 50.21 s
+Calling variants ...
+Total processed positions in chr5 (chunk 1/37) : 1186
+Total time elapsed: 4.83 s
+Calling variants ...
+Total processed positions in chr4 (chunk 35/39) : 14607
+Total time elapsed: 18.91 s
+Calling variants ...
+Total processed positions in chr4 (chunk 38/39) : 10473
+Total time elapsed: 14.48 s
+Calling variants ...
+Total processed positions in chr4 (chunk 39/39) : 10894
+Total time elapsed: 14.06 s
+Calling variants ...
+Total processed positions in chr4 (chunk 32/39) : 24023
+Total time elapsed: 29.31 s
+Calling variants ...
+Total processed positions in chr5 (chunk 7/37) : 697
+Total time elapsed: 4.19 s
+Calling variants ...
+Total processed positions in chr5 (chunk 3/37) : 8654
+Total time elapsed: 12.56 s
+Calling variants ...
+Total processed positions in chr5 (chunk 2/37) : 12172
+Total time elapsed: 16.35 s
+Calling variants ...
+Total processed positions in chr5 (chunk 10/37) : 2378
+Total time elapsed: 5.84 s
+Calling variants ...
+Total processed positions in chr5 (chunk 5/37) : 13895
+Total time elapsed: 17.79 s
+Calling variants ...
+Total processed positions in chr5 (chunk 11/37) : 2058
+Total time elapsed: 5.63 s
+Calling variants ...
+Total processed positions in chr5 (chunk 8/37) : 6956
+Total time elapsed: 10.82 s
+Calling variants ...
+Total processed positions in chr4 (chunk 36/39) : 29116
+Total time elapsed: 32.55 s
+Calling variants ...
+Total processed positions in chr5 (chunk 6/37) : 12981
+Total time elapsed: 17.23 s
+Calling variants ...
+Total processed positions in chr4 (chunk 33/39) : 42264
+Total time elapsed: 44.85 s
+Calling variants ...
+Total processed positions in chr4 (chunk 34/39) : 50862
+Total time elapsed: 53.69 s
+Calling variants ...
+Total processed positions in chr4 (chunk 31/39) : 53514
+Total time elapsed: 56.89 s
+Calling variants ...
+Total processed positions in chr4 (chunk 37/39) : 42011
+Total time elapsed: 46.35 s
+Calling variants ...
+Total processed positions in chr5 (chunk 17/37) : 9448
+Total time elapsed: 13.74 s
+Calling variants ...
+Total processed positions in chr5 (chunk 13/37) : 19742
+Total time elapsed: 24.19 s
+Calling variants ...
+Total processed positions in chr5 (chunk 9/37) : 31960
+Total time elapsed: 36.15 s
+Calling variants ...
+Total processed positions in chr5 (chunk 16/37) : 20816
+Total time elapsed: 26.07 s
+Calling variants ...
+Total processed positions in chr5 (chunk 4/37) : 48301
+Total time elapsed: 50.53 s
+Calling variants ...
+Total processed positions in chr5 (chunk 19/37) : 22400
+Total time elapsed: 25.78 s
+Calling variants ...
+Total processed positions in chr5 (chunk 21/37) : 14557
+Total time elapsed: 18.47 s
+Calling variants ...
+Total processed positions in chr4 (chunk 23/39) : 97099
+Total time elapsed: 101.26 s
+Calling variants ...
+Total processed positions in chr5 (chunk 18/37) : 27119
+Total time elapsed: 31.38 s
+Calling variants ...
+Total processed positions in chr5 (chunk 27/37) : 158
+Total time elapsed: 2.55 s
+Calling variants ...
+Total processed positions in chr5 (chunk 20/37) : 24433
+Total time elapsed: 29.97 s
+Calling variants ...
+Total processed positions in chr5 (chunk 15/37) : 31893
+Total time elapsed: 35.29 s
+Calling variants ...
+Total processed positions in chr5 (chunk 23/37) : 18012
+Total time elapsed: 22.26 s
+Calling variants ...
+Total processed positions in chr5 (chunk 24/37) : 17901
+Total time elapsed: 22.40 s
+Calling variants ...
+Total processed positions in chr5 (chunk 14/37) : 39089
+Total time elapsed: 43.02 s
+Calling variants ...
+Total processed positions in chr5 (chunk 12/37) : 45635
+Total time elapsed: 49.26 s
+Calling variants ...
+Total processed positions in chr5 (chunk 28/37) : 10832
+Total time elapsed: 13.62 s
+Calling variants ...
+Total processed positions in chr5 (chunk 29/37) : 16309
+Total time elapsed: 19.28 s
+Calling variants ...
+Total processed positions in chr5 (chunk 34/37) : 11448
+Total time elapsed: 15.77 s
+Calling variants ...
+Total processed positions in chr5 (chunk 37/37) : 5821
+Total time elapsed: 8.77 s
+Calling variants ...
+Total processed positions in chr5 (chunk 33/37) : 13866
+Total time elapsed: 17.20 s
+Calling variants ...
+Total processed positions in chr5 (chunk 32/37) : 15190
+Total time elapsed: 18.83 s
+Calling variants ...
+Total processed positions in chr5 (chunk 25/37) : 31703
+Total time elapsed: 35.47 s
+Calling variants ...
+Total processed positions in chr5 (chunk 31/37) : 20141
+Total time elapsed: 23.32 s
+Calling variants ...
+Total processed positions in chr6 (chunk 3/35) : 7748
+Total time elapsed: 11.62 s
+Calling variants ...
+Total processed positions in chr5 (chunk 30/37) : 23414
+Total time elapsed: 26.67 s
+Calling variants ...
+Total processed positions in chr5 (chunk 35/37) : 20907
+Total time elapsed: 24.49 s
+Calling variants ...
+Total processed positions in chr6 (chunk 6/35) : 1879
+Total time elapsed: 5.55 s
+Calling variants ...
+Total processed positions in chr6 (chunk 1/35) : 16684
+Total time elapsed: 21.16 s
+Calling variants ...
+Total processed positions in chr5 (chunk 22/37) : 51965
+Total time elapsed: 54.51 s
+Calling variants ...
+Total processed positions in chr5 (chunk 36/37) : 24450
+Total time elapsed: 27.15 s
+Calling variants ...
+Total processed positions in chr6 (chunk 8/35) : 14642
+Total time elapsed: 18.10 s
+Calling variants ...
+Total processed positions in chr6 (chunk 7/35) : 19911
+Total time elapsed: 22.65 s
+Calling variants ...
+Total processed positions in chr6 (chunk 11/35) : 18020
+Total time elapsed: 21.47 s
+Calling variants ...
+Total processed positions in chr6 (chunk 5/35) : 27386
+Total time elapsed: 30.97 s
+Calling variants ...
+Total processed positions in chr6 (chunk 9/35) : 26288
+Total time elapsed: 29.57 s
+Calling variants ...
+Total processed positions in chr6 (chunk 4/35) : 33009
+Total time elapsed: 37.83 s
+Calling variants ...
+Total processed positions in chr6 (chunk 13/35) : 21953
+Total time elapsed: 25.93 s
+Calling variants ...
+Total processed positions in chr6 (chunk 12/35) : 22002
+Total time elapsed: 26.46 s
+Calling variants ...
+Total processed positions in chr6 (chunk 2/35) : 44687
+Total time elapsed: 48.47 s
+Calling variants ...
+Total processed positions in chr6 (chunk 14/35) : 25062
+Total time elapsed: 29.79 s
+Calling variants ...
+Total processed positions in chr6 (chunk 17/35) : 22718
+Total time elapsed: 27.77 s
+Calling variants ...
+Total processed positions in chr6 (chunk 24/35) : 4046
+Total time elapsed: 7.69 s
+Calling variants ...
+Total processed positions in chr6 (chunk 19/35) : 17202
+Total time elapsed: 21.18 s
+Calling variants ...
+Total processed positions in chr6 (chunk 16/35) : 30350
+Total time elapsed: 34.29 s
+Calling variants ...
+Total processed positions in chr6 (chunk 27/35) : 2909
+Total time elapsed: 6.45 s
+Calling variants ...
+Total processed positions in chr5 (chunk 26/37) : 79083
+Total time elapsed: 82.20 s
+Calling variants ...
+Total processed positions in chr6 (chunk 29/35) : 2160
+Total time elapsed: 6.00 s
+Calling variants ...
+Total processed positions in chr6 (chunk 28/35) : 4896
+Total time elapsed: 8.25 s
+Calling variants ...
+Total processed positions in chr6 (chunk 20/35) : 22830
+Total time elapsed: 28.07 s
+Calling variants ...
+Total processed positions in chr6 (chunk 31/35) : 4348
+Total time elapsed: 8.23 s
+Calling variants ...
+Total processed positions in chr6 (chunk 26/35) : 17800
+Total time elapsed: 20.29 s
+Calling variants ...
+Total processed positions in chr6 (chunk 22/35) : 24185
+Total time elapsed: 28.16 s
+Calling variants ...
+Total processed positions in chr6 (chunk 30/35) : 9631
+Total time elapsed: 12.93 s
+Calling variants ...
+Total processed positions in chr6 (chunk 35/35) : 3613
+Total time elapsed: 7.24 s
+Calling variants ...
+Total processed positions in chr6 (chunk 34/35) : 4740
+Total time elapsed: 8.58 s
+Calling variants ...
+Total processed positions in chr6 (chunk 10/35) : 66110
+Total time elapsed: 70.01 s
+Calling variants ...
+Total processed positions in chr6 (chunk 25/35) : 33532
+Total time elapsed: 38.05 s
+Calling variants ...
+Total processed positions in chr7 (chunk 7/32) : 2968
+Total time elapsed: 6.94 s
+Calling variants ...
+Total processed positions in chr7 (chunk 1/32) : 14797
+Total time elapsed: 18.36 s
+Calling variants ...
+Total processed positions in chr7 (chunk 6/32) : 5998
+Total time elapsed: 10.12 s
+Calling variants ...
+Total processed positions in chr6 (chunk 18/35) : 55541
+Total time elapsed: 59.76 s
+Calling variants ...
+Total processed positions in chr6 (chunk 33/35) : 23259
+Total time elapsed: 27.69 s
+Calling variants ...
+Total processed positions in chr6 (chunk 21/35) : 46514
+Total time elapsed: 50.56 s
+Calling variants ...
+Total processed positions in chr7 (chunk 3/32) : 15422
+Total time elapsed: 19.99 s
+Calling variants ...
+Total processed positions in chr7 (chunk 9/32) : 4277
+Total time elapsed: 7.53 s
+Calling variants ...
+Total processed positions in chr6 (chunk 15/35) : 73356
+Total time elapsed: 77.99 s
+Calling variants ...
+Total processed positions in chr7 (chunk 15/32) : 672
+Total time elapsed: 3.90 s
+Calling variants ...
+Total processed positions in chr7 (chunk 5/32) : 22274
+Total time elapsed: 25.41 s
+Calling variants ...
+Total processed positions in chr7 (chunk 2/32) : 26489
+Total time elapsed: 29.41 s
+Calling variants ...
+Total processed positions in chr6 (chunk 32/35) : 43228
+Total time elapsed: 47.56 s
+Calling variants ...
+Total processed positions in chr7 (chunk 11/32) : 15897
+Total time elapsed: 19.53 s
+Calling variants ...
+Total processed positions in chr7 (chunk 16/32) : 14655
+Total time elapsed: 17.90 s
+Calling variants ...
+Total processed positions in chr6 (chunk 23/35) : 67025
+Total time elapsed: 68.83 s
+Calling variants ...
+Total processed positions in chr7 (chunk 13/32) : 16736
+Total time elapsed: 20.96 s
+Calling variants ...
+Total processed positions in chr7 (chunk 8/32) : 29523
+Total time elapsed: 33.12 s
+Calling variants ...
+Total processed positions in chr7 (chunk 4/32) : 41220
+Total time elapsed: 44.47 s
+Calling variants ...
+Total processed positions in chr7 (chunk 10/32) : 25953
+Total time elapsed: 29.39 s
+Calling variants ...
+Total processed positions in chr7 (chunk 14/32) : 23378
+Total time elapsed: 26.27 s
+Calling variants ...
+Total processed positions in chr7 (chunk 18/32) : 18780
+Total time elapsed: 22.38 s
+Calling variants ...
+Total processed positions in chr7 (chunk 17/32) : 24804
+Total time elapsed: 28.10 s
+Calling variants ...
+Total processed positions in chr7 (chunk 21/32) : 22367
+Total time elapsed: 25.50 s
+Calling variants ...
+Total processed positions in chr7 (chunk 26/32) : 14701
+Total time elapsed: 19.04 s
+Calling variants ...
+Total processed positions in chr8 (chunk 1/30) : 2455
+Total time elapsed: 6.31 s
+Calling variants ...
+Total processed positions in chr7 (chunk 20/32) : 35738
+Total time elapsed: 40.38 s
+Calling variants ...
+Total processed positions in chr7 (chunk 24/32) : 23461
+Total time elapsed: 27.43 s
+Calling variants ...
+Total processed positions in chr7 (chunk 27/32) : 21534
+Total time elapsed: 26.78 s
+Calling variants ...
+Total processed positions in chr7 (chunk 19/32) : 40424
+Total time elapsed: 45.07 s
+Calling variants ...
+Total processed positions in chr7 (chunk 29/32) : 21647
+Total time elapsed: 25.92 s
+Calling variants ...
+Total processed positions in chr7 (chunk 31/32) : 21655
+Total time elapsed: 26.62 s
+Calling variants ...
+Total processed positions in chr7 (chunk 32/32) : 19826
+Total time elapsed: 24.47 s
+Calling variants ...
+Total processed positions in chr7 (chunk 12/32) : 59278
+Total time elapsed: 61.61 s
+Calling variants ...
+Total processed positions in chr7 (chunk 25/32) : 32360
+Total time elapsed: 37.58 s
+Calling variants ...
+Total processed positions in chr8 (chunk 3/30) : 10127
+Total time elapsed: 12.74 s
+Calling variants ...
+Total processed positions in chr8 (chunk 9/30) : 3915
+Total time elapsed: 7.69 s
+Calling variants ...
+Total processed positions in chr8 (chunk 8/30) : 8276
+Total time elapsed: 12.64 s
+Calling variants ...
+Total processed positions in chr8 (chunk 12/30) : 4852
+Total time elapsed: 8.91 s
+Calling variants ...
+Total processed positions in chr8 (chunk 11/30) : 6481
+Total time elapsed: 10.18 s
+Calling variants ...
+Total processed positions in chr8 (chunk 4/30) : 17735
+Total time elapsed: 21.51 s
+Calling variants ...
+Total processed positions in chr7 (chunk 30/32) : 45652
+Total time elapsed: 49.14 s
+Calling variants ...
+Total processed positions in chr8 (chunk 2/30) : 27337
+Total time elapsed: 30.98 s
+Calling variants ...
+Total processed positions in chr8 (chunk 6/30) : 19472
+Total time elapsed: 22.86 s
+Calling variants ...
+Total processed positions in chr7 (chunk 23/32) : 54019
+Total time elapsed: 58.91 s
+Calling variants ...
+Total processed positions in chr8 (chunk 14/30) : 5060
+Total time elapsed: 8.55 s
+Calling variants ...
+Total processed positions in chr8 (chunk 10/30) : 13939
+Total time elapsed: 17.83 s
+Calling variants ...
+Total processed positions in chr8 (chunk 7/30) : 27956
+Total time elapsed: 31.99 s
+Calling variants ...
+Total processed positions in chr8 (chunk 18/30) : 8671
+Total time elapsed: 12.01 s
+Calling variants ...
+Total processed positions in chr8 (chunk 5/30) : 32467
+Total time elapsed: 36.40 s
+Calling variants ...
+Total processed positions in chr8 (chunk 26/30) : 574
+Total time elapsed: 4.03 s
+Calling variants ...
+Total processed positions in chr8 (chunk 21/30) : 11926
+Total time elapsed: 15.57 s
+Calling variants ...
+Total processed positions in chr8 (chunk 17/30) : 19210
+Total time elapsed: 22.04 s
+Calling variants ...
+Total processed positions in chr8 (chunk 15/30) : 22071
+Total time elapsed: 25.86 s
+Calling variants ...
+Total processed positions in chr8 (chunk 23/30) : 13150
+Total time elapsed: 17.69 s
+Calling variants ...
+Total processed positions in chr8 (chunk 25/30) : 5477
+Total time elapsed: 9.59 s
+Calling variants ...
+Total processed positions in chr8 (chunk 16/30) : 22360
+Total time elapsed: 26.60 s
+Calling variants ...
+Total processed positions in chr7 (chunk 28/32) : 70257
+Total time elapsed: 76.47 s
+Calling variants ...
+Total processed positions in chr8 (chunk 20/30) : 18147
+Total time elapsed: 21.80 s
+Calling variants ...
+Total processed positions in chr8 (chunk 19/30) : 22785
+Total time elapsed: 26.32 s
+Calling variants ...
+Total processed positions in chr8 (chunk 24/30) : 26373
+Total time elapsed: 29.88 s
+Calling variants ...
+Total processed positions in chr9 (chunk 4/28) : 3842
+Total time elapsed: 7.65 s
+Calling variants ...
+Total processed positions in chr8 (chunk 13/30) : 47107
+Total time elapsed: 50.92 s
+Calling variants ...
+Total processed positions in chr8 (chunk 22/30) : 30313
+Total time elapsed: 33.04 s
+Calling variants ...
+Total processed positions in chr9 (chunk 10/28) : 0
+Total time elapsed: 0.15 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr9_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 11/28) : 0
+Total time elapsed: 0.18 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr9_11.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 12/28) : 0
+Total time elapsed: 0.20 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr9_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 7/28) : 8464
+Total time elapsed: 12.44 s
+Calling variants ...
+Total processed positions in chr9 (chunk 8/28) : 1583
+Total time elapsed: 5.36 s
+Calling variants ...
+Total processed positions in chr8 (chunk 30/30) : 17341
+Total time elapsed: 20.58 s
+Calling variants ...
+Total processed positions in chr7 (chunk 22/32) : 108355
+Total time elapsed: 111.37 s
+Calling variants ...
+Total processed positions in chr9 (chunk 1/28) : 19153
+Total time elapsed: 23.08 s
+Calling variants ...
+Total processed positions in chr8 (chunk 29/30) : 21692
+Total time elapsed: 24.75 s
+Calling variants ...
+Total processed positions in chr8 (chunk 27/30) : 31415
+Total time elapsed: 33.93 s
+Calling variants ...
+Total processed positions in chr9 (chunk 3/28) : 19028
+Total time elapsed: 23.16 s
+Calling variants ...
+Total processed positions in chr9 (chunk 15/28) : 1019
+Total time elapsed: 4.39 s
+Calling variants ...
+Total processed positions in chr9 (chunk 2/28) : 23336
+Total time elapsed: 26.27 s
+Calling variants ...
+Total processed positions in chr9 (chunk 14/28) : 6183
+Total time elapsed: 9.09 s
+Calling variants ...
+Total processed positions in chr9 (chunk 5/28) : 31137
+Total time elapsed: 33.61 s
+Calling variants ...
+Total processed positions in chr9 (chunk 20/28) : 5195
+Total time elapsed: 9.62 s
+Calling variants ...
+Total processed positions in chr9 (chunk 16/28) : 9213
+Total time elapsed: 13.15 s
+Calling variants ...
+Total processed positions in chr9 (chunk 13/28) : 13419
+Total time elapsed: 16.38 s
+Calling variants ...
+Total processed positions in chr9 (chunk 22/28) : 5011
+Total time elapsed: 8.84 s
+Calling variants ...
+Total processed positions in chr9 (chunk 21/28) : 8578
+Total time elapsed: 12.76 s
+Calling variants ...
+Total processed positions in chr8 (chunk 28/30) : 41235
+Total time elapsed: 42.71 s
+Calling variants ...
+Total processed positions in chr10 (chunk 2/27) : 2713
+Total time elapsed: 6.67 s
+Calling variants ...
+Total processed positions in chr9 (chunk 25/28) : 11413
+Total time elapsed: 15.02 s
+Calling variants ...
+Total processed positions in chr9 (chunk 23/28) : 16854
+Total time elapsed: 20.84 s
+Calling variants ...
+Total processed positions in chr9 (chunk 28/28) : 8171
+Total time elapsed: 11.55 s
+Calling variants ...
+Total processed positions in chr9 (chunk 19/28) : 24382
+Total time elapsed: 27.65 s
+Calling variants ...
+Total processed positions in chr9 (chunk 24/28) : 18157
+Total time elapsed: 22.19 s
+Calling variants ...
+Total processed positions in chr9 (chunk 6/28) : 50898
+Total time elapsed: 53.14 s
+Calling variants ...
+Total processed positions in chr9 (chunk 18/28) : 29158
+Total time elapsed: 32.78 s
+Calling variants ...
+Total processed positions in chr9 (chunk 9/28) : 43608
+Total time elapsed: 44.85 s
+Calling variants ...
+Total processed positions in chr10 (chunk 1/27) : 13196
+Total time elapsed: 17.84 s
+Calling variants ...
+Total processed positions in chr9 (chunk 27/28) : 15906
+Total time elapsed: 18.48 s
+Calling variants ...
+Total processed positions in chr10 (chunk 5/27) : 4745
+Total time elapsed: 7.86 s
+Calling variants ...
+Total processed positions in chr9 (chunk 26/28) : 16193
+Total time elapsed: 19.92 s
+Calling variants ...
+Total processed positions in chr10 (chunk 15/27) : 450
+Total time elapsed: 3.72 s
+Calling variants ...
+Total processed positions in chr9 (chunk 17/28) : 43500
+Total time elapsed: 46.58 s
+Calling variants ...
+Total processed positions in chr10 (chunk 11/27) : 6377
+Total time elapsed: 9.68 s
+Calling variants ...
+Total processed positions in chr10 (chunk 10/27) : 8415
+Total time elapsed: 11.90 s
+Calling variants ...
+Total processed positions in chr10 (chunk 3/27) : 25332
+Total time elapsed: 27.64 s
+Calling variants ...
+Total processed positions in chr10 (chunk 14/27) : 9292
+Total time elapsed: 12.42 s
+Calling variants ...
+Total processed positions in chr10 (chunk 7/27) : 22965
+Total time elapsed: 26.09 s
+Calling variants ...
+Total processed positions in chr10 (chunk 19/27) : 4674
+Total time elapsed: 8.74 s
+Calling variants ...
+Total processed positions in chr10 (chunk 18/27) : 7837
+Total time elapsed: 11.96 s
+Calling variants ...
+Total processed positions in chr10 (chunk 17/27) : 16920
+Total time elapsed: 20.16 s
+Calling variants ...
+Total processed positions in chr10 (chunk 4/27) : 41100
+Total time elapsed: 43.25 s
+Calling variants ...
+Total processed positions in chr10 (chunk 16/27) : 21500
+Total time elapsed: 25.54 s
+Calling variants ...
+Total processed positions in chr10 (chunk 21/27) : 11114
+Total time elapsed: 15.39 s
+Calling variants ...
+Total processed positions in chr10 (chunk 8/27) : 29587
+Total time elapsed: 33.31 s
+Calling variants ...
+Total processed positions in chr10 (chunk 20/27) : 16515
+Total time elapsed: 19.39 s
+Calling variants ...
+Total processed positions in chr10 (chunk 27/27) : 4440
+Total time elapsed: 7.78 s
+Calling variants ...
+Total processed positions in chr10 (chunk 22/27) : 20356
+Total time elapsed: 24.65 s
+Calling variants ...
+Total processed positions in chr10 (chunk 13/27) : 34537
+Total time elapsed: 39.63 s
+Calling variants ...
+Total processed positions in chr11 (chunk 4/28) : 8391
+Total time elapsed: 11.90 s
+Calling variants ...
+Total processed positions in chr10 (chunk 26/27) : 16222
+Total time elapsed: 20.00 s
+Calling variants ...
+Total processed positions in chr10 (chunk 9/27) : 48415
+Total time elapsed: 51.42 s
+Calling variants ...
+Total processed positions in chr11 (chunk 3/28) : 13790
+Total time elapsed: 17.11 s
+Calling variants ...
+Total processed positions in chr11 (chunk 1/28) : 15861
+Total time elapsed: 21.28 s
+Calling variants ...
+Total processed positions in chr10 (chunk 23/27) : 33249
+Total time elapsed: 36.58 s
+Calling variants ...
+Total processed positions in chr11 (chunk 8/28) : 7282
+Total time elapsed: 11.50 s
+Calling variants ...
+Total processed positions in chr11 (chunk 7/28) : 13072
+Total time elapsed: 16.61 s
+Calling variants ...
+Total processed positions in chr11 (chunk 12/28) : 6960
+Total time elapsed: 10.41 s
+Calling variants ...
+Total processed positions in chr11 (chunk 13/28) : 5629
+Total time elapsed: 9.17 s
+Calling variants ...
+Total processed positions in chr11 (chunk 14/28) : 2668
+Total time elapsed: 6.76 s
+Calling variants ...
+Total processed positions in chr11 (chunk 15/28) : 5808
+Total time elapsed: 9.54 s
+Calling variants ...
+Total processed positions in chr11 (chunk 2/28) : 34026
+Total time elapsed: 39.37 s
+Calling variants ...
+Total processed positions in chr11 (chunk 10/28) : 16917
+Total time elapsed: 21.11 s
+Calling variants ...
+Total processed positions in chr10 (chunk 6/27) : 71567
+Total time elapsed: 78.01 s
+Calling variants ...
+Total processed positions in chr11 (chunk 6/28) : 28712
+Total time elapsed: 32.99 s
+Calling variants ...
+Total processed positions in chr11 (chunk 21/28) : 1283
+Total time elapsed: 4.76 s
+Calling variants ...
+Total processed positions in chr11 (chunk 9/28) : 28312
+Total time elapsed: 30.89 s
+Calling variants ...
+Total processed positions in chr11 (chunk 11/28) : 32110
+Total time elapsed: 36.05 s
+Calling variants ...
+Total processed positions in chr10 (chunk 12/27) : 87398
+Total time elapsed: 89.79 s
+Calling variants ...
+Total processed positions in chr10 (chunk 24/27) : 60128
+Total time elapsed: 64.81 s
+Calling variants ...
+Total processed positions in chr11 (chunk 24/28) : 10813
+Total time elapsed: 14.36 s
+Calling variants ...
+Total processed positions in chr11 (chunk 23/28) : 11563
+Total time elapsed: 15.58 s
+Calling variants ...
+Total processed positions in chr11 (chunk 25/28) : 4745
+Total time elapsed: 8.46 s
+Calling variants ...
+Total processed positions in chr11 (chunk 22/28) : 22461
+Total time elapsed: 26.17 s
+Calling variants ...
+Total processed positions in chr12 (chunk 1/27) : 4092
+Total time elapsed: 7.48 s
+Calling variants ...
+Total processed positions in chr11 (chunk 27/28) : 6422
+Total time elapsed: 10.44 s
+Calling variants ...
+Total processed positions in chr11 (chunk 5/28) : 69619
+Total time elapsed: 74.35 s
+Calling variants ...
+Total processed positions in chr11 (chunk 26/28) : 21626
+Total time elapsed: 27.29 s
+Calling variants ...
+Total processed positions in chr10 (chunk 25/27) : 83955
+Total time elapsed: 86.94 s
+Calling variants ...
+Total processed positions in chr11 (chunk 20/28) : 39495
+Total time elapsed: 44.12 s
+Calling variants ...
+Total processed positions in chr12 (chunk 7/27) : 10018
+Total time elapsed: 13.07 s
+Calling variants ...
+Total processed positions in chr12 (chunk 8/27) : 1340
+Total time elapsed: 4.99 s
+Calling variants ...
+Total processed positions in chr11 (chunk 16/28) : 54175
+Total time elapsed: 59.38 s
+Calling variants ...
+Total processed positions in chr12 (chunk 2/27) : 25964
+Total time elapsed: 30.78 s
+Calling variants ...
+Total processed positions in chr11 (chunk 18/28) : 55492
+Total time elapsed: 59.85 s
+Calling variants ...
+Total processed positions in chr12 (chunk 11/27) : 3585
+Total time elapsed: 7.42 s
+Calling variants ...
+Total processed positions in chr12 (chunk 14/27) : 1173
+Total time elapsed: 4.35 s
+Calling variants ...
+Total processed positions in chr11 (chunk 17/28) : 58146
+Total time elapsed: 62.97 s
+Calling variants ...
+Total processed positions in chr12 (chunk 13/27) : 8999
+Total time elapsed: 12.76 s
+Calling variants ...
+Total processed positions in chr12 (chunk 12/27) : 9637
+Total time elapsed: 14.20 s
+Calling variants ...
+Total processed positions in chr12 (chunk 3/27) : 45161
+Total time elapsed: 48.67 s
+Calling variants ...
+Total processed positions in chr11 (chunk 28/28) : 49078
+Total time elapsed: 52.46 s
+Calling variants ...
+Total processed positions in chr12 (chunk 19/27) : 8532
+Total time elapsed: 12.18 s
+Calling variants ...
+Total processed positions in chr12 (chunk 10/27) : 29019
+Total time elapsed: 33.08 s
+Calling variants ...
+Total processed positions in chr11 (chunk 19/28) : 77409
+Total time elapsed: 80.55 s
+Calling variants ...
+Total processed positions in chr12 (chunk 16/27) : 20130
+Total time elapsed: 24.24 s
+Calling variants ...
+Total processed positions in chr12 (chunk 20/27) : 13012
+Total time elapsed: 15.98 s
+Calling variants ...
+Total processed positions in chr12 (chunk 4/27) : 55033
+Total time elapsed: 59.78 s
+Calling variants ...
+Total processed positions in chr13 (chunk 1/23) : 0
+Total time elapsed: 0.12 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr13_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr13 (chunk 2/23) : 0
+Total time elapsed: 0.18 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr13_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 24/27) : 7675
+Total time elapsed: 11.31 s
+Calling variants ...
+Total processed positions in chr12 (chunk 5/27) : 53171
+Total time elapsed: 56.94 s
+Calling variants ...
+Total processed positions in chr13 (chunk 3/23) : 0
+Total time elapsed: 0.16 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr13_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 22/27) : 13754
+Total time elapsed: 17.30 s
+Calling variants ...
+Total processed positions in chr12 (chunk 6/27) : 54946
+Total time elapsed: 59.88 s
+Calling variants ...
+Total processed positions in chr12 (chunk 27/27) : 11800
+Total time elapsed: 13.90 s
+Calling variants ...
+Total processed positions in chr12 (chunk 17/27) : 38529
+Total time elapsed: 42.78 s
+Calling variants ...
+Total processed positions in chr12 (chunk 21/27) : 29828
+Total time elapsed: 34.00 s
+Calling variants ...
+Total processed positions in chr12 (chunk 25/27) : 20802
+Total time elapsed: 23.65 s
+Calling variants ...
+Total processed positions in chr13 (chunk 6/23) : 8575
+Total time elapsed: 12.50 s
+Calling variants ...
+Total processed positions in chr12 (chunk 18/27) : 41808
+Total time elapsed: 47.16 s
+Calling variants ...
+Total processed positions in chr12 (chunk 9/27) : 65282
+Total time elapsed: 69.15 s
+Calling variants ...
+Total processed positions in chr12 (chunk 15/27) : 53004
+Total time elapsed: 57.26 s
+Calling variants ...
+Total processed positions in chr13 (chunk 4/23) : 19837
+Total time elapsed: 22.94 s
+Calling variants ...
+Total processed positions in chr13 (chunk 8/23) : 16053
+Total time elapsed: 19.43 s
+Calling variants ...
+Total processed positions in chr13 (chunk 13/23) : 3813
+Total time elapsed: 7.33 s
+Calling variants ...
+Total processed positions in chr13 (chunk 5/23) : 18792
+Total time elapsed: 23.31 s
+Calling variants ...
+Total processed positions in chr13 (chunk 7/23) : 20772
+Total time elapsed: 23.37 s
+Calling variants ...
+Total processed positions in chr13 (chunk 10/23) : 16514
+Total time elapsed: 20.20 s
+Calling variants ...
+Total processed positions in chr13 (chunk 11/23) : 16808
+Total time elapsed: 19.94 s
+Calling variants ...
+Total processed positions in chr12 (chunk 23/27) : 42745
+Total time elapsed: 50.46 s
+Calling variants ...
+Total processed positions in chr13 (chunk 20/23) : 6330
+Total time elapsed: 9.90 s
+Calling variants ...
+Total processed positions in chr13 (chunk 15/23) : 14890
+Total time elapsed: 18.69 s
+Calling variants ...
+Total processed positions in chr13 (chunk 9/23) : 29309
+Total time elapsed: 34.29 s
+Calling variants ...
+Total processed positions in chr14 (chunk 1/22) : 0
+Total time elapsed: 0.11 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr14_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 2/22) : 0
+Total time elapsed: 0.11 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr14_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr13 (chunk 14/23) : 19295
+Total time elapsed: 22.29 s
+Calling variants ...
+Total processed positions in chr13 (chunk 16/23) : 13716
+Total time elapsed: 17.49 s
+Calling variants ...
+Total processed positions in chr13 (chunk 22/23) : 6476
+Total time elapsed: 9.86 s
+Calling variants ...
+Total processed positions in chr14 (chunk 3/22) : 0
+Total time elapsed: 0.12 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr14_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 26/27) : 50110
+Total time elapsed: 52.93 s
+Calling variants ...
+Total processed positions in chr13 (chunk 12/23) : 24428
+Total time elapsed: 28.03 s
+Calling variants ...
+Total processed positions in chr13 (chunk 21/23) : 15174
+Total time elapsed: 17.63 s
+Calling variants ...
+Total processed positions in chr13 (chunk 19/23) : 19445
+Total time elapsed: 21.97 s
+Calling variants ...
+Total processed positions in chr14 (chunk 4/22) : 4689
+Total time elapsed: 7.60 s
+Calling variants ...
+Total processed positions in chr14 (chunk 9/22) : 4401
+Total time elapsed: 7.34 s
+Calling variants ...
+Total processed positions in chr13 (chunk 17/23) : 26588
+Total time elapsed: 30.64 s
+Calling variants ...
+Total processed positions in chr14 (chunk 14/22) : 2303
+Total time elapsed: 5.94 s
+Calling variants ...
+Total processed positions in chr14 (chunk 7/22) : 11295
+Total time elapsed: 14.21 s
+Calling variants ...
+Total processed positions in chr14 (chunk 16/22) : 2696
+Total time elapsed: 6.24 s
+Calling variants ...
+Total processed positions in chr14 (chunk 12/22) : 16658
+Total time elapsed: 19.59 s
+Calling variants ...
+Total processed positions in chr14 (chunk 20/22) : 4337
+Total time elapsed: 8.85 s
+Calling variants ...
+Total processed positions in chr14 (chunk 6/22) : 25575
+Total time elapsed: 30.01 s
+Calling variants ...
+Total processed positions in chr15 (chunk 1/21) : 0
+Total time elapsed: 0.10 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr15_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr13 (chunk 18/23) : 43748
+Total time elapsed: 48.69 s
+Calling variants ...
+Total processed positions in chr14 (chunk 19/22) : 12876
+Total time elapsed: 17.68 s
+Calling variants ...
+Total processed positions in chr15 (chunk 2/21) : 0
+Total time elapsed: 0.13 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr15_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr15 (chunk 3/21) : 0
+Total time elapsed: 0.18 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr15_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 22/22) : 7203
+Total time elapsed: 10.99 s
+Calling variants ...
+Total processed positions in chr14 (chunk 18/22) : 17077
+Total time elapsed: 21.34 s
+Calling variants ...
+Total processed positions in chr14 (chunk 15/22) : 27242
+Total time elapsed: 30.95 s
+Calling variants ...
+Total processed positions in chr14 (chunk 21/22) : 17429
+Total time elapsed: 21.05 s
+Calling variants ...
+Total processed positions in chr14 (chunk 5/22) : 39035
+Total time elapsed: 42.99 s
+Calling variants ...
+Total processed positions in chr15 (chunk 4/21) : 5038
+Total time elapsed: 8.45 s
+Calling variants ...
+Total processed positions in chr15 (chunk 9/21) : 1987
+Total time elapsed: 5.49 s
+Calling variants ...
+Total processed positions in chr15 (chunk 6/21) : 5846
+Total time elapsed: 9.13 s
+Calling variants ...
+Total processed positions in chr14 (chunk 13/22) : 43232
+Total time elapsed: 46.47 s
+Calling variants ...
+Total processed positions in chr15 (chunk 10/21) : 2505
+Total time elapsed: 6.06 s
+Calling variants ...
+Total processed positions in chr13 (chunk 23/23) : 55859
+Total time elapsed: 58.01 s
+Calling variants ...
+Total processed positions in chr15 (chunk 8/21) : 8106
+Total time elapsed: 11.90 s
+Calling variants ...
+Total processed positions in chr15 (chunk 13/21) : 5587
+Total time elapsed: 8.76 s
+Calling variants ...
+Total processed positions in chr15 (chunk 5/21) : 18044
+Total time elapsed: 20.65 s
+Calling variants ...
+Total processed positions in chr14 (chunk 8/22) : 55996
+Total time elapsed: 59.77 s
+Calling variants ...
+Total processed positions in chr14 (chunk 11/22) : 54639
+Total time elapsed: 58.90 s
+Calling variants ...
+Total processed positions in chr15 (chunk 19/21) : 2019
+Total time elapsed: 5.51 s
+Calling variants ...
+Total processed positions in chr14 (chunk 17/22) : 46113
+Total time elapsed: 50.87 s
+Calling variants ...
+Total processed positions in chr14 (chunk 10/22) : 63773
+Total time elapsed: 67.35 s
+Calling variants ...
+Total processed positions in chr15 (chunk 16/21) : 14351
+Total time elapsed: 17.57 s
+Calling variants ...
+Total processed positions in chr15 (chunk 12/21) : 20434
+Total time elapsed: 23.67 s
+Calling variants ...
+Total processed positions in chr16 (chunk 3/19) : 8254
+Total time elapsed: 12.57 s
+Calling variants ...
+Total processed positions in chr16 (chunk 4/19) : 7589
+Total time elapsed: 11.40 s
+Calling variants ...
+Total processed positions in chr15 (chunk 14/21) : 24116
+Total time elapsed: 28.75 s
+Calling variants ...
+Total processed positions in chr15 (chunk 7/21) : 37752
+Total time elapsed: 40.35 s
+Calling variants ...
+Total processed positions in chr16 (chunk 2/19) : 13600
+Total time elapsed: 17.07 s
+Calling variants ...
+Total processed positions in chr15 (chunk 15/21) : 25122
+Total time elapsed: 29.77 s
+Calling variants ...
+Total processed positions in chr16 (chunk 9/19) : 0
+Total time elapsed: 0.14 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr16_9.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr16 (chunk 1/19) : 17104
+Total time elapsed: 21.61 s
+Calling variants ...
+Total processed positions in chr16 (chunk 6/19) : 7804
+Total time elapsed: 11.32 s
+Calling variants ...
+Total processed positions in chr15 (chunk 18/21) : 30282
+Total time elapsed: 33.13 s
+Calling variants ...
+Total processed positions in chr16 (chunk 8/19) : 3033
+Total time elapsed: 6.15 s
+Calling variants ...
+Total processed positions in chr16 (chunk 11/19) : 5455
+Total time elapsed: 8.49 s
+Calling variants ...
+Total processed positions in chr16 (chunk 5/19) : 18310
+Total time elapsed: 20.84 s
+Calling variants ...
+Total processed positions in chr15 (chunk 20/21) : 31499
+Total time elapsed: 35.09 s
+Calling variants ...
+Total processed positions in chr16 (chunk 10/19) : 12086
+Total time elapsed: 14.68 s
+Calling variants ...
+Total processed positions in chr16 (chunk 7/19) : 18422
+Total time elapsed: 22.55 s
+Calling variants ...
+Total processed positions in chr16 (chunk 16/19) : 6303
+Total time elapsed: 9.37 s
+Calling variants ...
+Total processed positions in chr16 (chunk 13/19) : 11272
+Total time elapsed: 14.07 s
+Calling variants ...
+Total processed positions in chr17 (chunk 2/17) : 766
+Total time elapsed: 4.27 s
+Calling variants ...
+Total processed positions in chr17 (chunk 6/17) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr17_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr16 (chunk 15/19) : 11898
+Total time elapsed: 15.19 s
+Calling variants ...
+Total processed positions in chr16 (chunk 14/19) : 15873
+Total time elapsed: 19.23 s
+Calling variants ...
+Total processed positions in chr17 (chunk 1/17) : 5361
+Total time elapsed: 8.75 s
+Calling variants ...
+Total processed positions in chr15 (chunk 17/21) : 52893
+Total time elapsed: 53.95 s
+Calling variants ...
+Total processed positions in chr16 (chunk 19/19) : 9440
+Total time elapsed: 12.31 s
+Calling variants ...
+Total processed positions in chr17 (chunk 5/17) : 4028
+Total time elapsed: 7.19 s
+Calling variants ...
+Total processed positions in chr17 (chunk 8/17) : 4197
+Total time elapsed: 7.91 s
+Calling variants ...
+Total processed positions in chr17 (chunk 13/17) : 3686
+Total time elapsed: 7.58 s
+Calling variants ...
+Total processed positions in chr16 (chunk 18/19) : 28700
+Total time elapsed: 33.20 s
+Calling variants ...
+Total processed positions in chr17 (chunk 9/17) : 13987
+Total time elapsed: 17.05 s
+Calling variants ...
+Total processed positions in chr15 (chunk 21/21) : 62896
+Total time elapsed: 64.84 s
+Calling variants ...
+Total processed positions in chr16 (chunk 12/19) : 38782
+Total time elapsed: 42.54 s
+Calling variants ...
+Total processed positions in chr15 (chunk 11/21) : 81984
+Total time elapsed: 82.61 s
+Calling variants ...
+Total processed positions in chr17 (chunk 3/17) : 23915
+Total time elapsed: 26.88 s
+Calling variants ...
+Total processed positions in chr17 (chunk 10/17) : 14778
+Total time elapsed: 19.61 s
+Calling variants ...
+Total processed positions in chr17 (chunk 11/17) : 15624
+Total time elapsed: 20.05 s
+Calling variants ...
+Total processed positions in chr16 (chunk 17/19) : 36255
+Total time elapsed: 39.42 s
+Calling variants ...
+Total processed positions in chr17 (chunk 14/17) : 15016
+Total time elapsed: 17.68 s
+Calling variants ...
+Total processed positions in chr17 (chunk 16/17) : 5670
+Total time elapsed: 9.14 s
+Calling variants ...
+Total processed positions in chr17 (chunk 17/17) : 231
+Total time elapsed: 3.42 s
+Calling variants ...
+Total processed positions in chr17 (chunk 4/17) : 28218
+Total time elapsed: 31.27 s
+Calling variants ...
+Total processed positions in chr18 (chunk 5/17) : 3344
+Total time elapsed: 6.77 s
+Calling variants ...
+Total processed positions in chr18 (chunk 1/17) : 19293
+Total time elapsed: 23.08 s
+Calling variants ...
+Total processed positions in chr17 (chunk 7/17) : 44208
+Total time elapsed: 47.35 s
+Calling variants ...
+Total processed positions in chr18 (chunk 12/17) : 13481
+Total time elapsed: 17.49 s
+Calling variants ...
+Total processed positions in chr17 (chunk 15/17) : 31852
+Total time elapsed: 35.55 s
+Calling variants ...
+Total processed positions in chr18 (chunk 3/17) : 21282
+Total time elapsed: 24.72 s
+Calling variants ...
+Total processed positions in chr17 (chunk 12/17) : 41441
+Total time elapsed: 45.51 s
+Calling variants ...
+Total processed positions in chr18 (chunk 8/17) : 20470
+Total time elapsed: 25.25 s
+Calling variants ...
+Total processed positions in chr18 (chunk 4/17) : 27033
+Total time elapsed: 31.14 s
+Calling variants ...
+Total processed positions in chr19 (chunk 1/12) : 390
+Total time elapsed: 3.64 s
+Calling variants ...
+Total processed positions in chr19 (chunk 2/12) : 825
+Total time elapsed: 4.34 s
+Calling variants ...
+Total processed positions in chr18 (chunk 15/17) : 6119
+Total time elapsed: 9.90 s
+Calling variants ...
+Total processed positions in chr18 (chunk 14/17) : 13209
+Total time elapsed: 17.02 s
+Calling variants ...
+Total processed positions in chr18 (chunk 7/17) : 38878
+Total time elapsed: 42.62 s
+Calling variants ...
+Total processed positions in chr19 (chunk 4/12) : 6092
+Total time elapsed: 9.71 s
+Calling variants ...
+Total processed positions in chr19 (chunk 7/12) : 2114
+Total time elapsed: 5.66 s
+Calling variants ...
+Total processed positions in chr18 (chunk 6/17) : 41456
+Total time elapsed: 44.68 s
+Calling variants ...
+Total processed positions in chr18 (chunk 17/17) : 14857
+Total time elapsed: 18.47 s
+Calling variants ...
+Total processed positions in chr18 (chunk 10/17) : 37628
+Total time elapsed: 42.12 s
+Calling variants ...
+Total processed positions in chr18 (chunk 2/17) : 46316
+Total time elapsed: 49.52 s
+Calling variants ...
+Total processed positions in chr20 (chunk 1/13) : 3182
+Total time elapsed: 6.96 s
+Calling variants ...
+Total processed positions in chr18 (chunk 11/17) : 48932
+Total time elapsed: 53.27 s
+Calling variants ...
+Total processed positions in chr19 (chunk 11/12) : 6793
+Total time elapsed: 10.57 s
+Calling variants ...
+Total processed positions in chr19 (chunk 10/12) : 8239
+Total time elapsed: 12.55 s
+Calling variants ...
+Total processed positions in chr18 (chunk 9/17) : 52446
+Total time elapsed: 58.13 s
+Calling variants ...
+Total processed positions in chr19 (chunk 9/12) : 10049
+Total time elapsed: 13.76 s
+Calling variants ...
+Total processed positions in chr20 (chunk 3/13) : 8325
+Total time elapsed: 11.82 s
+Calling variants ...
+Total processed positions in chr19 (chunk 8/12) : 16826
+Total time elapsed: 20.41 s
+Calling variants ...
+Total processed positions in chr19 (chunk 3/12) : 31249
+Total time elapsed: 35.01 s
+Calling variants ...
+Total processed positions in chr18 (chunk 16/17) : 39420
+Total time elapsed: 42.90 s
+Calling variants ...
+Total processed positions in chr20 (chunk 2/13) : 14218
+Total time elapsed: 18.85 s
+Calling variants ...
+Total processed positions in chr19 (chunk 6/12) : 28197
+Total time elapsed: 32.66 s
+Calling variants ...
+Total processed positions in chr20 (chunk 9/13) : 2608
+Total time elapsed: 5.88 s
+Calling variants ...
+Total processed positions in chr21 (chunk 1/10) : 0
+Total time elapsed: 0.11 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr21_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr20 (chunk 8/13) : 6299
+Total time elapsed: 10.22 s
+Calling variants ...
+Total processed positions in chr20 (chunk 4/13) : 12640
+Total time elapsed: 15.80 s
+Calling variants ...
+Total processed positions in chr20 (chunk 12/13) : 2112
+Total time elapsed: 5.59 s
+Calling variants ...
+Total processed positions in chr20 (chunk 5/13) : 12292
+Total time elapsed: 15.43 s
+Calling variants ...
+Total processed positions in chr19 (chunk 5/12) : 37290
+Total time elapsed: 41.14 s
+Calling variants ...
+Total processed positions in chr18 (chunk 13/17) : 66008
+Total time elapsed: 68.16 s
+Calling variants ...
+Total processed positions in chr21 (chunk 4/10) : 4027
+Total time elapsed: 6.75 s
+Calling variants ...
+Total processed positions in chr22 (chunk 1/11) : 0
+Total time elapsed: 0.10 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr22_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr20 (chunk 13/13) : 12595
+Total time elapsed: 15.70 s
+Calling variants ...
+Total processed positions in chr21 (chunk 10/10) : 2076
+Total time elapsed: 5.59 s
+Calling variants ...
+Total processed positions in chr19 (chunk 12/12) : 36708
+Total time elapsed: 39.75 s
+Calling variants ...
+Total processed positions in chr22 (chunk 2/11) : 0
+Total time elapsed: 0.15 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chr22_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr20 (chunk 7/13) : 28125
+Total time elapsed: 30.21 s
+Calling variants ...
+Total processed positions in chr21 (chunk 7/10) : 11635
+Total time elapsed: 16.20 s
+Calling variants ...
+Total processed positions in chr20 (chunk 6/13) : 33877
+Total time elapsed: 34.64 s
+Calling variants ...
+Total processed positions in chr21 (chunk 6/10) : 17775
+Total time elapsed: 20.95 s
+Calling variants ...
+Total processed positions in chr22 (chunk 6/11) : 2583
+Total time elapsed: 6.28 s
+Calling variants ...
+Total processed positions in chr20 (chunk 11/13) : 27664
+Total time elapsed: 31.60 s
+Calling variants ...
+Total processed positions in chr22 (chunk 5/11) : 7856
+Total time elapsed: 10.99 s
+Calling variants ...
+Total processed positions in chr22 (chunk 8/11) : 2286
+Total time elapsed: 5.53 s
+Calling variants ...
+Total processed positions in chr20 (chunk 10/13) : 34725
+Total time elapsed: 37.47 s
+Calling variants ...
+Total processed positions in chr21 (chunk 2/10) : 34508
+Total time elapsed: 36.40 s
+Calling variants ...
+Total processed positions in chr22 (chunk 3/11) : 15202
+Total time elapsed: 18.00 s
+Calling variants ...
+Total processed positions in chr21 (chunk 9/10) : 26102
+Total time elapsed: 29.22 s
+Calling variants ...
+Total processed positions in chrX (chunk 2/32) : 934
+Total time elapsed: 4.04 s
+Calling variants ...
+Total processed positions in chrX (chunk 1/32) : 3659
+Total time elapsed: 7.20 s
+Calling variants ...
+Total processed positions in chr21 (chunk 5/10) : 32709
+Total time elapsed: 34.80 s
+Calling variants ...
+Total processed positions in chrX (chunk 3/32) : 2511
+Total time elapsed: 5.81 s
+Calling variants ...
+Total processed positions in chr22 (chunk 11/11) : 6726
+Total time elapsed: 10.37 s
+Calling variants ...
+Total processed positions in chrX (chunk 4/32) : 3792
+Total time elapsed: 6.84 s
+Calling variants ...
+Total processed positions in chrX (chunk 7/32) : 22
+Total time elapsed: 2.13 s
+Calling variants ...
+Total processed positions in chrX (chunk 5/32) : 240
+Total time elapsed: 3.48 s
+Calling variants ...
+Total processed positions in chr22 (chunk 9/11) : 11669
+Total time elapsed: 14.61 s
+Calling variants ...
+Total processed positions in chr22 (chunk 4/11) : 25077
+Total time elapsed: 27.08 s
+Calling variants ...
+Total processed positions in chrX (chunk 13/32) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chrX_13.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 11/32) : 6
+Total time elapsed: 1.97 s
+Calling variants ...
+Total processed positions in chrX (chunk 9/32) : 3930
+Total time elapsed: 6.71 s
+Calling variants ...
+Total processed positions in chrX (chunk 15/32) : 126
+Total time elapsed: 2.33 s
+Calling variants ...
+Total processed positions in chrX (chunk 16/32) : 101
+Total time elapsed: 2.16 s
+Calling variants ...
+Total processed positions in chrX (chunk 8/32) : 5849
+Total time elapsed: 8.37 s
+Calling variants ...
+Total processed positions in chr21 (chunk 8/10) : 39122
+Total time elapsed: 44.21 s
+Calling variants ...
+Total processed positions in chr22 (chunk 10/11) : 16556
+Total time elapsed: 19.35 s
+Calling variants ...
+Total processed positions in chr22 (chunk 7/11) : 23613
+Total time elapsed: 25.95 s
+Calling variants ...
+Total processed positions in chrX (chunk 17/32) : 286
+Total time elapsed: 3.39 s
+Calling variants ...
+Total processed positions in chrX (chunk 10/32) : 6147
+Total time elapsed: 8.70 s
+Calling variants ...
+Total processed positions in chrX (chunk 6/32) : 10053
+Total time elapsed: 12.57 s
+Calling variants ...
+Total processed positions in chrX (chunk 12/32) : 5195
+Total time elapsed: 7.61 s
+Calling variants ...
+Total processed positions in chr21 (chunk 3/10) : 53724
+Total time elapsed: 53.11 s
+Calling variants ...
+Total processed positions in chrX (chunk 14/32) : 7345
+Total time elapsed: 9.83 s
+Calling variants ...
+Total processed positions in chrX (chunk 22/32) : 479
+Total time elapsed: 3.76 s
+Calling variants ...
+Total processed positions in chrX (chunk 25/32) : 767
+Total time elapsed: 4.00 s
+Calling variants ...
+Total processed positions in chrX (chunk 27/32) : 11
+Total time elapsed: 2.19 s
+Calling variants ...
+Total processed positions in chrX (chunk 19/32) : 5298
+Total time elapsed: 7.52 s
+Calling variants ...
+Total processed positions in chrX (chunk 20/32) : 4505
+Total time elapsed: 7.11 s
+Calling variants ...
+Total processed positions in chrX (chunk 26/32) : 2498
+Total time elapsed: 5.32 s
+Calling variants ...
+Total processed positions in chrX (chunk 21/32) : 4176
+Total time elapsed: 7.20 s
+Calling variants ...
+Total processed positions in chrX (chunk 30/32) : 465
+Total time elapsed: 4.04 s
+Calling variants ...
+Total processed positions in chrX (chunk 29/32) : 1710
+Total time elapsed: 5.04 s
+Calling variants ...
+Total processed positions in chrX (chunk 31/32) : 841
+Total time elapsed: 4.10 s
+Calling variants ...
+Total processed positions in chrX (chunk 32/32) : 414
+Total time elapsed: 3.52 s
+Calling variants ...
+Total processed positions in chrY (chunk 1/12) : 22
+Total time elapsed: 1.97 s
+Calling variants ...
+Total processed positions in chrX (chunk 23/32) : 8528
+Total time elapsed: 10.98 s
+Calling variants ...
+Total processed positions in chrX (chunk 18/32) : 12407
+Total time elapsed: 13.90 s
+Calling variants ...
+Total processed positions in chrY (chunk 6/12) : 0
+Total time elapsed: 0.17 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chrY_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 7/12) : 0
+Total time elapsed: 0.12 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chrY_7.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 8/12) : 0
+Total time elapsed: 0.14 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chrY_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 9/12) : 0
+Total time elapsed: 0.13 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chrY_9.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 10/12) : 0
+Total time elapsed: 0.16 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chrY_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 2/12) : 414
+Total time elapsed: 3.72 s
+Calling variants ...
+Total processed positions in chrY (chunk 11/12) : 0
+Total time elapsed: 0.14 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/tmp/pileup_output/pileup_chrY_11.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 28/32) : 11148
+Total time elapsed: 12.13 s
+Calling variants ...
+Total processed positions in chrY (chunk 4/12) : 3173
+Total time elapsed: 5.10 s
+Calling variants ...
+Total processed positions in chrY (chunk 5/12) : 2130
+Total time elapsed: 4.18 s
+Calling variants ...
+Total processed positions in chrX (chunk 24/32) : 14292
+Total time elapsed: 15.01 s
+Calling variants ...
+Total processed positions in chrY (chunk 12/12) : 30820
+Total time elapsed: 24.91 s
+Calling variants ...
+Total processed positions in chrY (chunk 3/12) : 44258
+Total time elapsed: 38.05 s
+
+real	20m20.956s
+user	262m33.771s
+sys	16m22.371s
+
+[INFO] 2/7 Select heterozygous SNP variants for Whatshap phasing and haplotagging
+[INFO] Select heterozygous pileup variants exceeding phasing quality cutoff 6
+[INFO] Total heterozygous SNP positions selected: chr10: 4721
+[INFO] Total heterozygous SNP positions selected: chr9: 3058
+[INFO] Total heterozygous SNP positions selected: chr19: 1574
+[INFO] Total heterozygous SNP positions selected: chr8: 3656
+[INFO] Total heterozygous SNP positions selected: chr18: 3058
+[INFO] Total heterozygous SNP positions selected: chr6: 5748
+[INFO] Total heterozygous SNP positions selected: chr5: 5077
+[INFO] Total heterozygous SNP positions selected: chr17: 1963
+[INFO] Total heterozygous SNP positions selected: chr20: 2965
+[INFO] Total heterozygous SNP positions selected: chr15: 2914
+[INFO] Total heterozygous SNP positions selected: chr2: 6548
+[INFO] Total heterozygous SNP positions selected: chr16: 2231
+[INFO] Total heterozygous SNP positions selected: chr7: 6195
+[INFO] Total heterozygous SNP positions selected: chr1: 6874
+[INFO] Total heterozygous SNP positions selected: chr11: 4762
+[INFO] Total heterozygous SNP positions selected: chr12: 4993
+[INFO] Total heterozygous SNP positions selected: chr13: 3486
+[INFO] Total heterozygous SNP positions selected: chr3: 6374
+[INFO] Total heterozygous SNP positions selected: chr4: 7538
+[INFO] Total heterozygous SNP positions selected: chr14: 2981
+[INFO] Total heterozygous SNP positions selected: chr21: 4938
+[INFO] Total heterozygous SNP positions selected: chrY: 1118
+[INFO] Total heterozygous SNP positions selected: chrX: 581
+[INFO] Total heterozygous SNP positions selected: chr22: 1618
+
+real	0m23.900s
+user	4m25.498s
+sys	0m5.353s
+
+[INFO] 3/7 Phase VCF file using Whatshap
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr19 in individual SAMPLE
+Found 1574 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 153 reads covering 1574 variants
+Kept 128 reads that cover at least two variants each
+Selected 128 most phase-informative reads covering 1566 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 376 variants (24.0% of accessible variants) between position 56333842 and 56900030
+
+# Resource usage
+Maximum memory usage: 0.164 GB
+Time spent reading BAM/CRAM:                    1.4 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             2.2 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr20 in individual SAMPLE
+Found 2965 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 190 reads covering 2761 variants
+Kept 157 reads that cover at least two variants each
+Selected 157 most phase-informative reads covering 2747 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 792 variants (28.8% of accessible variants) between position 28773701 and 28827943
+Changed 4 genotypes while writing VCF
+
+# Resource usage
+Maximum memory usage: 0.178 GB
+Time spent reading BAM/CRAM:                    1.4 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             2.3 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr17 in individual SAMPLE
+Found 1963 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 258 reads covering 1962 variants
+Kept 200 reads that cover at least two variants each
+Selected 200 most phase-informative reads covering 1944 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 257 variants (13.2% of accessible variants) between position 54404983 and 54644655
+
+# Resource usage
+Maximum memory usage: 0.213 GB
+Time spent reading BAM/CRAM:                    1.6 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             2.5 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr18 in individual SAMPLE
+Found 3058 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 334 reads covering 3058 variants
+Kept 270 reads that cover at least two variants each
+Selected 270 most phase-informative reads covering 3044 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 318 variants (10.4% of accessible variants) between position 72846884 and 73173772
+
+# Resource usage
+Maximum memory usage: 0.210 GB
+Time spent reading BAM/CRAM:                    1.8 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             2.7 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr15 in individual SAMPLE
+Found 2914 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 328 reads covering 2798 variants
+Kept 283 reads that cover at least two variants each
+Selected 283 most phase-informative reads covering 2785 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 266 variants (9.6% of accessible variants) between position 100614207 and 100951825
+
+# Resource usage
+Maximum memory usage: 0.252 GB
+Time spent reading BAM/CRAM:                    1.9 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             2.8 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr9 in individual SAMPLE
+Found 3058 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 384 reads covering 3055 variants
+Kept 321 reads that cover at least two variants each
+Selected 321 most phase-informative reads covering 3038 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 188 variants (6.2% of accessible variants) between position 29267543 and 29515956
+
+# Resource usage
+Maximum memory usage: 0.324 GB
+Time spent reading BAM/CRAM:                    1.9 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             2.9 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr14 in individual SAMPLE
+Found 2981 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 304 reads covering 2981 variants
+Kept 263 reads that cover at least two variants each
+Selected 263 most phase-informative reads covering 2969 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 170 variants (5.7% of accessible variants) between position 59565976 and 59758084
+
+# Resource usage
+Maximum memory usage: 0.262 GB
+Time spent reading BAM/CRAM:                    2.0 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             2.9 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr13 in individual SAMPLE
+Found 3486 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 326 reads covering 3174 variants
+Kept 268 reads that cover at least two variants each
+Selected 268 most phase-informative reads covering 3156 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 646 variants (20.5% of accessible variants) between position 16110876 and 16166355
+
+# Resource usage
+Maximum memory usage: 0.277 GB
+Time spent reading BAM/CRAM:                    2.3 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             3.1 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr16 in individual SAMPLE
+Found 2231 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 317 reads covering 2231 variants
+Kept 269 reads that cover at least two variants each
+Selected 239 most phase-informative reads covering 2221 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 449 variants (20.2% of accessible variants) between position 76946630 and 77383838
+Changed 37 genotypes while writing VCF
+
+# Resource usage
+Maximum memory usage: 0.228 GB
+Time spent reading BAM/CRAM:                    1.9 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.6 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             3.3 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr5 in individual SAMPLE
+Found 5077 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 621 reads covering 5076 variants
+Kept 505 reads that cover at least two variants each
+Selected 505 most phase-informative reads covering 5044 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 425 variants (8.4% of accessible variants) between position 54171721 and 54992365
+
+# Resource usage
+Maximum memory usage: 0.413 GB
+Time spent reading BAM/CRAM:                    2.3 s
+Time spent parsing VCF:                         0.2 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             3.3 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr8 in individual SAMPLE
+Found 3656 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 461 reads covering 3656 variants
+Kept 366 reads that cover at least two variants each
+Selected 366 most phase-informative reads covering 3622 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 185 variants (5.1% of accessible variants) between position 32408239 and 32563533
+
+# Resource usage
+Maximum memory usage: 0.339 GB
+Time spent reading BAM/CRAM:                    2.3 s
+Time spent parsing VCF:                         0.2 s
+Time spent selecting reads:                     0.1 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             3.3 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr10 in individual SAMPLE
+Found 4721 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 494 reads covering 4704 variants
+Kept 398 reads that cover at least two variants each
+Selected 398 most phase-informative reads covering 4669 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 255 variants (5.5% of accessible variants) between position 42073884 and 42104888
+
+# Resource usage
+Maximum memory usage: 0.318 GB
+Time spent reading BAM/CRAM:                    2.3 s
+Time spent parsing VCF:                         0.2 s
+Time spent selecting reads:                     0.1 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             3.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr12 in individual SAMPLE
+Found 4993 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 459 reads covering 4993 variants
+Kept 379 reads that cover at least two variants each
+Selected 379 most phase-informative reads covering 4967 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 420 variants (8.5% of accessible variants) between position 127931003 and 128328722
+
+# Resource usage
+Maximum memory usage: 0.317 GB
+Time spent reading BAM/CRAM:                    2.5 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             3.5 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr11 in individual SAMPLE
+Found 4762 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 472 reads covering 4762 variants
+Kept 396 reads that cover at least two variants each
+Selected 396 most phase-informative reads covering 4745 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 374 variants (7.9% of accessible variants) between position 22870960 and 23207452
+Changed 1 genotypes while writing VCF
+
+# Resource usage
+Maximum memory usage: 0.320 GB
+Time spent reading BAM/CRAM:                    2.7 s
+Time spent parsing VCF:                         0.2 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             3.6 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr6 in individual SAMPLE
+Found 5748 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 644 reads covering 5742 variants
+Kept 510 reads that cover at least two variants each
+Selected 510 most phase-informative reads covering 5703 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 458 variants (8.0% of accessible variants) between position 107490537 and 108164189
+
+# Resource usage
+Maximum memory usage: 0.394 GB
+Time spent reading BAM/CRAM:                    2.7 s
+Time spent parsing VCF:                         0.2 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             3.7 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr22 in individual SAMPLE
+Found 1618 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 100 reads covering 1593 variants
+Kept 90 reads that cover at least two variants each
+Selected 90 most phase-informative reads covering 1590 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 377 variants (23.7% of accessible variants) between position 12510559 and 12614443
+
+# Resource usage
+Maximum memory usage: 0.149 GB
+Time spent reading BAM/CRAM:                    0.3 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.1 s
+Total elapsed time:                             0.5 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr4 in individual SAMPLE
+Found 7538 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 767 reads covering 7487 variants
+Kept 641 reads that cover at least two variants each
+Selected 641 most phase-informative reads covering 7452 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 878 variants (11.8% of accessible variants) between position 49091258 and 49156582
+
+# Resource usage
+Maximum memory usage: 0.434 GB
+Time spent reading BAM/CRAM:                    2.7 s
+Time spent parsing VCF:                         0.2 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.7 s
+Total elapsed time:                             3.7 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr3 in individual SAMPLE
+Found 6374 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 761 reads covering 6373 variants
+Kept 629 reads that cover at least two variants each
+Selected 629 most phase-informative reads covering 6333 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 328 variants (5.2% of accessible variants) between position 112233201 and 112668302
+
+# Resource usage
+Maximum memory usage: 0.449 GB
+Time spent reading BAM/CRAM:                    2.7 s
+Time spent parsing VCF:                         0.2 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.7 s
+Total elapsed time:                             3.8 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr7 in individual SAMPLE
+Found 6195 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 651 reads covering 6186 variants
+Kept 515 reads that cover at least two variants each
+Selected 515 most phase-informative reads covering 6146 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 430 variants (7.0% of accessible variants) between position 106034165 and 106935291
+
+# Resource usage
+Maximum memory usage: 0.371 GB
+Time spent reading BAM/CRAM:                    2.8 s
+Time spent parsing VCF:                         0.2 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             3.8 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr2 in individual SAMPLE
+Found 6548 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 780 reads covering 6547 variants
+Kept 634 reads that cover at least two variants each
+Selected 634 most phase-informative reads covering 6505 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 717 variants (11.0% of accessible variants) between position 91945948 and 92060746
+Changed 17 genotypes while writing VCF
+
+# Resource usage
+Maximum memory usage: 0.536 GB
+Time spent reading BAM/CRAM:                    2.8 s
+Time spent parsing VCF:                         0.2 s
+Time spent selecting reads:                     0.1 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.6 s
+Total elapsed time:                             3.9 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chrY in individual SAMPLE
+Found 1118 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 46 reads covering 1109 variants
+Kept 38 reads that cover at least two variants each
+Selected 38 most phase-informative reads covering 1106 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 323 variants (29.2% of accessible variants) between position 56673670 and 56771254
+
+# Resource usage
+Maximum memory usage: 0.160 GB
+Time spent reading BAM/CRAM:                    0.3 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.1 s
+Total elapsed time:                             0.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chrX in individual SAMPLE
+Found 581 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 154 reads covering 581 variants
+Kept 122 reads that cover at least two variants each
+Selected 122 most phase-informative reads covering 569 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 63 variants (11.1% of accessible variants) between position 113319515 and 113490914
+
+# Resource usage
+Maximum memory usage: 0.357 GB
+Time spent reading BAM/CRAM:                    0.6 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.1 s
+Total elapsed time:                             0.7 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr1 in individual SAMPLE
+Found 6874 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 791 reads covering 6860 variants
+Kept 666 reads that cover at least two variants each
+Selected 644 most phase-informative reads covering 6825 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 386 variants (5.7% of accessible variants) between position 143184653 and 143276758
+Changed 88 genotypes while writing VCF
+
+# Resource usage
+Maximum memory usage: 0.550 GB
+Time spent reading BAM/CRAM:                    3.0 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.1 s
+Time spent phasing:                             0.4 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.7 s
+Total elapsed time:                             4.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr21 in individual SAMPLE
+Found 4938 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 174 reads covering 4916 variants
+Kept 160 reads that cover at least two variants each
+Selected 149 most phase-informative reads covering 4912 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 2279 variants (46.4% of accessible variants) between position 10360119 and 10814347
+Changed 16 genotypes while writing VCF
+
+# Resource usage
+Maximum memory usage: 0.146 GB
+Time spent reading BAM/CRAM:                    0.9 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.3 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.1 s
+Total elapsed time:                             1.5 s
+
+real	0m6.471s
+user	0m49.373s
+sys	0m10.895s
+
+[INFO] 5/7 Select candidates for full-alignment calling
+[INFO] Set variants quality cutoff 7.0
+[INFO] Set reference calls quality cutoff 10.0
+[INFO] Low quality reference calls to be processed in chr16: 28863
+[INFO] Low quality variants to be processed in chr16: 4943
+[INFO] Low quality reference calls to be processed in chr8: 54578
+[INFO] Low quality variants to be processed in chr8: 8112
+[INFO] Low quality reference calls to be processed in chr11: 64890
+[INFO] Low quality variants to be processed in chr11: 9318
+[INFO] Low quality reference calls to be processed in chr20: 22121
+[INFO] Low quality variants to be processed in chr20: 5492
+[INFO] Low quality reference calls to be processed in chr17: 25843
+[INFO] Low quality variants to be processed in chr17: 3966
+[INFO] Low quality reference calls to be processed in chr3: 92338
+[INFO] Low quality variants to be processed in chr3: 14217
+[INFO] Low quality reference calls to be processed in chr6: 83410
+[INFO] Low quality variants to be processed in chr6: 12741
+[INFO] Low quality reference calls to be processed in chr14: 46308
+[INFO] Low quality variants to be processed in chr14: 6527
+[INFO] Low quality reference calls to be processed in chr9: 44639
+[INFO] Low quality variants to be processed in chr9: 6465
+[INFO] Low quality reference calls to be processed in chr15: 41308
+[INFO] Low quality variants to be processed in chr15: 6401
+[INFO] Low quality reference calls to be processed in chr13: 37798
+[INFO] Low quality variants to be processed in chr13: 6619
+[INFO] Low quality reference calls to be processed in chr1: 95511
+[INFO] Low quality variants to be processed in chr1: 14162
+[INFO] Low quality reference calls to be processed in chr19: 17211
+[INFO] Low quality variants to be processed in chr19: 2645
+[INFO] Low quality reference calls to be processed in chr12: 67444
+[INFO] Low quality variants to be processed in chr12: 10662
+[INFO] Low quality reference calls to be processed in chr10: 69000
+[INFO] Low quality variants to be processed in chr10: 9775
+[INFO] Low quality reference calls to be processed in chr4: 101124
+[INFO] Low quality variants to be processed in chr4: 18019
+[INFO] Low quality reference calls to be processed in chr2: 92589
+[INFO] Low quality variants to be processed in chr2: 14254
+[INFO] Low quality reference calls to be processed in chr18: 47829
+[INFO] Low quality variants to be processed in chr18: 7331
+[INFO] Low quality reference calls to be processed in chr7: 87773
+[INFO] Low quality variants to be processed in chr7: 13793
+[INFO] Low quality reference calls to be processed in chr5: 72884
+[INFO] Low quality variants to be processed in chr5: 10967
+[INFO] Low quality reference calls to be processed in chr21: 23219
+[INFO] Low quality variants to be processed in chr21: 5030
+[INFO] Low quality reference calls to be processed in chr22: 13128
+[INFO] Low quality variants to be processed in chr22: 3971
+[INFO] Low quality reference calls to be processed in chrY: 7351
+[INFO] Low quality variants to be processed in chrY: 1563
+[INFO] Low quality reference calls to be processed in chrX: 10771
+[INFO] Low quality variants to be processed in chrX: 1587
+
+real	0m19.942s
+user	3m35.095s
+sys	0m6.588s
+
+[INFO] 6/7 Call low-quality variants using full-alignment model
+Calling variants ...
+Total processed positions in chr1 (chunk 8/11) : 10000
+Total time elapsed: 69.56 s
+Calling variants ...
+Total processed positions in chr10 (chunk 4/8) : 10000
+Total time elapsed: 70.42 s
+Calling variants ...
+Total processed positions in chr1 (chunk 10/11) : 10000
+Total time elapsed: 71.43 s
+Calling variants ...
+Total processed positions in chr1 (chunk 1/11) : 10000
+Total time elapsed: 71.83 s
+Calling variants ...
+Total processed positions in chr1 (chunk 9/11) : 10000
+Total time elapsed: 73.40 s
+Calling variants ...
+Total processed positions in chr1 (chunk 2/11) : 10000
+Total time elapsed: 73.50 s
+Calling variants ...
+Total processed positions in chr1 (chunk 7/11) : 10000
+Total time elapsed: 73.99 s
+Calling variants ...
+Total processed positions in chr1 (chunk 11/11) : 9673
+Total time elapsed: 74.53 s
+Calling variants ...
+Total processed positions in chr1 (chunk 3/11) : 10000
+Total time elapsed: 75.20 s
+Calling variants ...
+Total processed positions in chr1 (chunk 6/11) : 10000
+Total time elapsed: 75.21 s
+Calling variants ...
+Total processed positions in chr1 (chunk 5/11) : 10000
+Total time elapsed: 75.16 s
+Calling variants ...
+Total processed positions in chr10 (chunk 2/8) : 10000
+Total time elapsed: 75.39 s
+Calling variants ...
+Total processed positions in chr10 (chunk 3/8) : 10000
+Total time elapsed: 77.09 s
+Calling variants ...
+Total processed positions in chr10 (chunk 1/8) : 10000
+Total time elapsed: 81.44 s
+Calling variants ...
+Total processed positions in chr1 (chunk 4/11) : 10000
+Total time elapsed: 83.15 s
+Calling variants ...
+Total processed positions in chr11 (chunk 8/8) : 4208
+Total time elapsed: 29.03 s
+Calling variants ...
+Total processed positions in chr10 (chunk 8/8) : 8775
+Total time elapsed: 64.97 s
+Calling variants ...
+Total processed positions in chr10 (chunk 6/8) : 10000
+Total time elapsed: 71.75 s
+Calling variants ...
+Total processed positions in chr12 (chunk 1/8) : 10000
+Total time elapsed: 69.70 s
+Calling variants ...
+Total processed positions in chr10 (chunk 5/8) : 10000
+Total time elapsed: 77.13 s
+Calling variants ...
+Total processed positions in chr11 (chunk 2/8) : 10000
+Total time elapsed: 73.15 s
+Calling variants ...
+Total processed positions in chr11 (chunk 7/8) : 10000
+Total time elapsed: 71.86 s
+Calling variants ...
+Total processed positions in chr11 (chunk 3/8) : 10000
+Total time elapsed: 73.27 s
+Calling variants ...
+Total processed positions in chr11 (chunk 1/8) : 10000
+Total time elapsed: 76.13 s
+Calling variants ...
+Total processed positions in chr11 (chunk 5/8) : 10000
+Total time elapsed: 74.15 s
+Calling variants ...
+Total processed positions in chr11 (chunk 4/8) : 10000
+Total time elapsed: 75.56 s
+Calling variants ...
+Total processed positions in chr11 (chunk 6/8) : 10000
+Total time elapsed: 74.59 s
+Calling variants ...
+Total processed positions in chr10 (chunk 7/8) : 10000
+Total time elapsed: 81.31 s
+Calling variants ...
+Total processed positions in chr12 (chunk 2/8) : 10000
+Total time elapsed: 74.45 s
+Calling variants ...
+Total processed positions in chr12 (chunk 3/8) : 10000
+Total time elapsed: 76.71 s
+Calling variants ...
+Total processed positions in chr13 (chunk 5/5) : 4417
+Total time elapsed: 32.85 s
+Calling variants ...
+Total processed positions in chr12 (chunk 4/8) : 10000
+Total time elapsed: 87.75 s
+Calling variants ...
+Total processed positions in chr12 (chunk 5/8) : 10000
+Total time elapsed: 67.89 s
+Calling variants ...
+Total processed positions in chr14 (chunk 6/6) : 2835
+Total time elapsed: 21.16 s
+Calling variants ...
+Total processed positions in chr12 (chunk 8/8) : 8106
+Total time elapsed: 60.92 s
+Calling variants ...
+Total processed positions in chr13 (chunk 3/5) : 10000
+Total time elapsed: 72.13 s
+Calling variants ...
+Total processed positions in chr12 (chunk 7/8) : 10000
+Total time elapsed: 72.62 s
+Calling variants ...
+Total processed positions in chr12 (chunk 6/8) : 10000
+Total time elapsed: 78.40 s
+Calling variants ...
+Total processed positions in chr13 (chunk 2/5) : 10000
+Total time elapsed: 74.97 s
+Calling variants ...
+Total processed positions in chr13 (chunk 4/5) : 10000
+Total time elapsed: 73.66 s
+Calling variants ...
+Total processed positions in chr14 (chunk 3/6) : 10000
+Total time elapsed: 71.89 s
+Calling variants ...
+Total processed positions in chr13 (chunk 1/5) : 10000
+Total time elapsed: 77.84 s
+Calling variants ...
+Total processed positions in chr14 (chunk 1/6) : 10000
+Total time elapsed: 77.42 s
+Calling variants ...
+Total processed positions in chr14 (chunk 2/6) : 10000
+Total time elapsed: 78.04 s
+Calling variants ...
+Total processed positions in chr14 (chunk 4/6) : 10000
+Total time elapsed: 74.89 s
+Calling variants ...
+Total processed positions in chr14 (chunk 5/6) : 10000
+Total time elapsed: 77.88 s
+Calling variants ...
+Total processed positions in chr16 (chunk 4/4) : 3806
+Total time elapsed: 30.59 s
+Calling variants ...
+Total processed positions in chr15 (chunk 1/5) : 10000
+Total time elapsed: 73.86 s
+Calling variants ...
+Total processed positions in chr15 (chunk 5/5) : 7709
+Total time elapsed: 52.27 s
+Calling variants ...
+Total processed positions in chr15 (chunk 2/5) : 10000
+Total time elapsed: 73.18 s
+Calling variants ...
+Total processed positions in chr15 (chunk 3/5) : 10000
+Total time elapsed: 73.19 s
+Calling variants ...
+Total processed positions in chr15 (chunk 4/5) : 10000
+Total time elapsed: 78.64 s
+Calling variants ...
+Total processed positions in chr16 (chunk 2/4) : 10000
+Total time elapsed: 72.52 s
+Calling variants ...
+Total processed positions in chr16 (chunk 1/4) : 10000
+Total time elapsed: 74.77 s
+Calling variants ...
+Total processed positions in chr16 (chunk 3/4) : 10000
+Total time elapsed: 72.32 s
+Calling variants ...
+Total processed positions in chr17 (chunk 1/3) : 10000
+Total time elapsed: 73.97 s
+Calling variants ...
+Total processed positions in chr18 (chunk 2/6) : 10000
+Total time elapsed: 73.24 s
+Calling variants ...
+Total processed positions in chr18 (chunk 1/6) : 10000
+Total time elapsed: 75.40 s
+Calling variants ...
+Total processed positions in chr17 (chunk 3/3) : 9809
+Total time elapsed: 76.10 s
+Calling variants ...
+Total processed positions in chr17 (chunk 2/3) : 10000
+Total time elapsed: 79.40 s
+Calling variants ...
+Total processed positions in chr18 (chunk 6/6) : 5160
+Total time elapsed: 35.34 s
+Calling variants ...
+Total processed positions in chr18 (chunk 3/6) : 10000
+Total time elapsed: 78.13 s
+Calling variants ...
+Total processed positions in chr18 (chunk 4/6) : 10000
+Total time elapsed: 70.34 s
+Calling variants ...
+Total processed positions in chr18 (chunk 5/6) : 10000
+Total time elapsed: 71.38 s
+Calling variants ...
+Total processed positions in chr19 (chunk 1/2) : 10000
+Total time elapsed: 77.08 s
+Calling variants ...
+Total processed positions in chr2 (chunk 1/11) : 10000
+Total time elapsed: 72.18 s
+Calling variants ...
+Total processed positions in chr2 (chunk 11/11) : 6843
+Total time elapsed: 48.85 s
+Calling variants ...
+Total processed positions in chr2 (chunk 3/11) : 10000
+Total time elapsed: 73.48 s
+Calling variants ...
+Total processed positions in chr2 (chunk 2/11) : 10000
+Total time elapsed: 78.35 s
+Calling variants ...
+Total processed positions in chr19 (chunk 2/2) : 9856
+Total time elapsed: 90.54 s
+Calling variants ...
+Total processed positions in chr2 (chunk 4/11) : 10000
+Total time elapsed: 77.07 s
+Calling variants ...
+Total processed positions in chr2 (chunk 8/11) : 10000
+Total time elapsed: 69.17 s
+Calling variants ...
+Total processed positions in chr2 (chunk 6/11) : 10000
+Total time elapsed: 69.94 s
+Calling variants ...
+Total processed positions in chr2 (chunk 5/11) : 10000
+Total time elapsed: 75.93 s
+Calling variants ...
+Total processed positions in chr2 (chunk 7/11) : 10000
+Total time elapsed: 71.03 s
+Calling variants ...
+Total processed positions in chr2 (chunk 9/11) : 10000
+Total time elapsed: 70.71 s
+Calling variants ...
+Total processed positions in chr2 (chunk 10/11) : 10000
+Total time elapsed: 82.18 s
+Calling variants ...
+Total processed positions in chr20 (chunk 1/3) : 10000
+Total time elapsed: 76.65 s
+Calling variants ...
+Total processed positions in chr20 (chunk 3/3) : 7613
+Total time elapsed: 53.14 s
+Calling variants ...
+Total processed positions in chr20 (chunk 2/3) : 10000
+Total time elapsed: 74.90 s
+Calling variants ...
+Total processed positions in chr22 (chunk 2/2) : 7099
+Total time elapsed: 50.51 s
+Calling variants ...
+Total processed positions in chr21 (chunk 3/3) : 8249
+Total time elapsed: 59.92 s
+Calling variants ...
+Total processed positions in chr21 (chunk 2/3) : 10000
+Total time elapsed: 73.68 s
+Calling variants ...
+Total processed positions in chr21 (chunk 1/3) : 10000
+Total time elapsed: 79.71 s
+Calling variants ...
+Total processed positions in chr3 (chunk 1/11) : 10000
+Total time elapsed: 73.48 s
+Calling variants ...
+Total processed positions in chr22 (chunk 1/2) : 10000
+Total time elapsed: 75.36 s
+Calling variants ...
+Total processed positions in chr3 (chunk 5/11) : 10000
+Total time elapsed: 71.97 s
+Calling variants ...
+Total processed positions in chr3 (chunk 4/11) : 10000
+Total time elapsed: 72.24 s
+Calling variants ...
+Total processed positions in chr3 (chunk 6/11) : 10000
+Total time elapsed: 72.45 s
+Calling variants ...
+Total processed positions in chr3 (chunk 3/11) : 10000
+Total time elapsed: 76.08 s
+Calling variants ...
+Total processed positions in chr3 (chunk 2/11) : 10000
+Total time elapsed: 76.98 s
+Calling variants ...
+Total processed positions in chr3 (chunk 7/11) : 10000
+Total time elapsed: 68.80 s
+Calling variants ...
+Total processed positions in chr3 (chunk 11/11) : 6555
+Total time elapsed: 44.78 s
+Calling variants ...
+Total processed positions in chr3 (chunk 8/11) : 10000
+Total time elapsed: 78.46 s
+Calling variants ...
+Total processed positions in chr3 (chunk 9/11) : 10000
+Total time elapsed: 72.41 s
+Calling variants ...
+Total processed positions in chr3 (chunk 10/11) : 10000
+Total time elapsed: 73.90 s
+Calling variants ...
+Total processed positions in chr4 (chunk 2/12) : 10000
+Total time elapsed: 70.97 s
+Calling variants ...
+Total processed positions in chr4 (chunk 1/12) : 10000
+Total time elapsed: 80.37 s
+Calling variants ...
+Total processed positions in chr4 (chunk 3/12) : 10000
+Total time elapsed: 77.36 s
+Calling variants ...
+Total processed positions in chr4 (chunk 5/12) : 10000
+Total time elapsed: 71.07 s
+Calling variants ...
+Total processed positions in chr4 (chunk 6/12) : 10000
+Total time elapsed: 72.03 s
+Calling variants ...
+Total processed positions in chr4 (chunk 4/12) : 10000
+Total time elapsed: 73.30 s
+Calling variants ...
+Total processed positions in chr4 (chunk 7/12) : 10000
+Total time elapsed: 72.15 s
+Calling variants ...
+Total processed positions in chr4 (chunk 9/12) : 10000
+Total time elapsed: 72.93 s
+Calling variants ...
+Total processed positions in chr4 (chunk 8/12) : 10000
+Total time elapsed: 77.22 s
+Calling variants ...
+Total processed positions in chr4 (chunk 10/12) : 10000
+Total time elapsed: 75.75 s
+Calling variants ...
+Total processed positions in chr4 (chunk 12/12) : 9143
+Total time elapsed: 65.73 s
+Calling variants ...
+Total processed positions in chr4 (chunk 11/12) : 10000
+Total time elapsed: 76.53 s
+Calling variants ...
+Total processed positions in chr5 (chunk 9/9) : 3851
+Total time elapsed: 29.91 s
+Calling variants ...
+Total processed positions in chr5 (chunk 2/9) : 10000
+Total time elapsed: 71.43 s
+Calling variants ...
+Total processed positions in chr5 (chunk 1/9) : 10000
+Total time elapsed: 73.44 s
+Calling variants ...
+Total processed positions in chr5 (chunk 3/9) : 10000
+Total time elapsed: 79.03 s
+Calling variants ...
+Total processed positions in chr5 (chunk 5/9) : 10000
+Total time elapsed: 67.56 s
+Calling variants ...
+Total processed positions in chr5 (chunk 4/9) : 10000
+Total time elapsed: 75.91 s
+Calling variants ...
+Total processed positions in chr5 (chunk 6/9) : 10000
+Total time elapsed: 73.19 s
+Calling variants ...
+Total processed positions in chr5 (chunk 7/9) : 10000
+Total time elapsed: 75.64 s
+Calling variants ...
+Total processed positions in chr6 (chunk 1/10) : 10000
+Total time elapsed: 77.15 s
+Calling variants ...
+Total processed positions in chr6 (chunk 3/10) : 10000
+Total time elapsed: 72.52 s
+Calling variants ...
+Total processed positions in chr5 (chunk 8/9) : 10000
+Total time elapsed: 82.14 s
+Calling variants ...
+Total processed positions in chr6 (chunk 2/10) : 10000
+Total time elapsed: 79.17 s
+Calling variants ...
+Total processed positions in chr6 (chunk 4/10) : 10000
+Total time elapsed: 80.95 s
+Calling variants ...
+Total processed positions in chr6 (chunk 10/10) : 6151
+Total time elapsed: 44.15 s
+Calling variants ...
+Total processed positions in chr6 (chunk 5/10) : 10000
+Total time elapsed: 73.26 s
+Calling variants ...
+Total processed positions in chr6 (chunk 6/10) : 10000
+Total time elapsed: 74.41 s
+Calling variants ...
+Total processed positions in chr6 (chunk 8/10) : 10000
+Total time elapsed: 69.51 s
+Calling variants ...
+Total processed positions in chr6 (chunk 7/10) : 10000
+Total time elapsed: 71.43 s
+Calling variants ...
+Total processed positions in chr7 (chunk 11/11) : 1566
+Total time elapsed: 12.38 s
+Calling variants ...
+Total processed positions in chr6 (chunk 9/10) : 10000
+Total time elapsed: 74.10 s
+Calling variants ...
+Total processed positions in chr7 (chunk 1/11) : 10000
+Total time elapsed: 74.62 s
+Calling variants ...
+Total processed positions in chr7 (chunk 2/11) : 10000
+Total time elapsed: 73.73 s
+Calling variants ...
+Total processed positions in chr7 (chunk 3/11) : 10000
+Total time elapsed: 69.95 s
+Calling variants ...
+Total processed positions in chr7 (chunk 6/11) : 10000
+Total time elapsed: 69.12 s
+Calling variants ...
+Total processed positions in chr7 (chunk 5/11) : 10000
+Total time elapsed: 70.02 s
+Calling variants ...
+Total processed positions in chr7 (chunk 8/11) : 10000
+Total time elapsed: 69.84 s
+Calling variants ...
+Total processed positions in chr7 (chunk 4/11) : 10000
+Total time elapsed: 81.88 s
+Calling variants ...
+Total processed positions in chr7 (chunk 7/11) : 10000
+Total time elapsed: 73.33 s
+Calling variants ...
+Total processed positions in chr7 (chunk 10/11) : 10000
+Total time elapsed: 72.85 s
+Calling variants ...
+Total processed positions in chr7 (chunk 9/11) : 10000
+Total time elapsed: 75.32 s
+Calling variants ...
+Total processed positions in chr8 (chunk 7/7) : 2690
+Total time elapsed: 21.38 s
+Calling variants ...
+Total processed positions in chr8 (chunk 1/7) : 10000
+Total time elapsed: 73.62 s
+Calling variants ...
+Total processed positions in chr9 (chunk 6/6) : 1104
+Total time elapsed: 7.98 s
+Calling variants ...
+Total processed positions in chr8 (chunk 4/7) : 10000
+Total time elapsed: 67.36 s
+Calling variants ...
+Total processed positions in chr8 (chunk 2/7) : 10000
+Total time elapsed: 75.19 s
+Calling variants ...
+Total processed positions in chr8 (chunk 3/7) : 10000
+Total time elapsed: 73.37 s
+Calling variants ...
+Total processed positions in chrX (chunk 2/2) : 2358
+Total time elapsed: 14.97 s
+Calling variants ...
+Total processed positions in chr8 (chunk 5/7) : 10000
+Total time elapsed: 75.19 s
+Calling variants ...
+Total processed positions in chr8 (chunk 6/7) : 10000
+Total time elapsed: 63.83 s
+Calling variants ...
+Total processed positions in chr9 (chunk 1/6) : 10000
+Total time elapsed: 61.13 s
+Calling variants ...
+Total processed positions in chr9 (chunk 4/6) : 10000
+Total time elapsed: 55.22 s
+Calling variants ...
+Total processed positions in chrX (chunk 1/2) : 10000
+Total time elapsed: 53.16 s
+Calling variants ...
+Total processed positions in chr9 (chunk 3/6) : 10000
+Total time elapsed: 75.87 s
+Calling variants ...
+Total processed positions in chrY (chunk 1/1) : 8914
+Total time elapsed: 68.58 s
+Calling variants ...
+Total processed positions in chr9 (chunk 2/6) : 10000
+Total time elapsed: 83.06 s
+Calling variants ...
+Total processed positions in chr9 (chunk 5/6) : 10000
+Total time elapsed: 79.92 s
+
+real	13m17.558s
+user	176m51.190s
+sys	7m47.748s
+
+[INFO] 7/7 Merge pileup VCF and full-alignment VCF
+[INFO] Pileup variants processed in chr13: 3241
+[INFO] Full-alignment variants processed in chr13: 3225
+[INFO] Pileup variants processed in chr17: 1495
+[INFO] Full-alignment variants processed in chr17: 1584
+[INFO] Pileup variants processed in chr16: 2166
+[INFO] Full-alignment variants processed in chr16: 2116
+[INFO] Pileup variants processed in chr9: 2457
+[INFO] Full-alignment variants processed in chr9: 2961
+[INFO] Pileup variants processed in chr15: 2396
+[INFO] Full-alignment variants processed in chr15: 2916
+[INFO] Pileup variants processed in chr19: 1299
+[INFO] Full-alignment variants processed in chr19: 1087
+[INFO] Pileup variants processed in chr18: 2649
+[INFO] Full-alignment variants processed in chr18: 3583
+[INFO] Pileup variants processed in chr14: 2354
+[INFO] Full-alignment variants processed in chr14: 2955
+[INFO] Pileup variants processed in chr1: 6435
+[INFO] Full-alignment variants processed in chr1: 6396
+[INFO] Pileup variants processed in chr12: 4132
+[INFO] Full-alignment variants processed in chr12: 5040
+[INFO] Pileup variants processed in chr10: 3837
+[INFO] Full-alignment variants processed in chr10: 4386
+[INFO] Pileup variants processed in chr5: 4133
+[INFO] Full-alignment variants processed in chr5: 4949
+[INFO] Pileup variants processed in chr11: 4364
+[INFO] Full-alignment variants processed in chr11: 4633
+[INFO] Pileup variants processed in chr20: 4935
+[INFO] Full-alignment variants processed in chr20: 3275
+[INFO] Pileup variants processed in chr8: 3149
+[INFO] Full-alignment variants processed in chr8: 3819
+[INFO] Pileup variants processed in chr7: 5111
+[INFO] Full-alignment variants processed in chr7: 6534
+[INFO] Pileup variants processed in chr2: 6152
+[INFO] Full-alignment variants processed in chr2: 6839
+[INFO] Pileup variants processed in chr4: 6643
+[INFO] Full-alignment variants processed in chr4: 8143
+[INFO] Pileup variants processed in chr6: 4885
+[INFO] Full-alignment variants processed in chr6: 6098
+[INFO] Pileup variants processed in chr3: 5416
+[INFO] Full-alignment variants processed in chr3: 6708
+[INFO] Pileup variants processed in chr21: 5144
+[INFO] Full-alignment variants processed in chr21: 3073
+[INFO] Pileup variants processed in chr22: 1709
+[INFO] Full-alignment variants processed in chr22: 2202
+[INFO] Pileup variants processed in chrY: 1270
+[INFO] Full-alignment variants processed in chrY: 728
+[INFO] Pileup variants processed in chrX: 463
+[INFO] Full-alignment variants processed in chrX: 731
+
+real	0m22.972s
+user	5m26.373s
+sys	0m10.491s
+
+[INFO] Finish calling, output file: /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1/merge_output.vcf.gz
+
+real	36m15.845s
+user	455m4.880s
+sys	24m49.066s
+----------------
+Compute metrics
+Hap.py 
+Benchmarking Summary:
+  Type Filter  TRUTH.TOTAL  TRUTH.TP  TRUTH.FN  QUERY.TOTAL  QUERY.FP  QUERY.UNK  FP.gt  FP.al  METRIC.Recall  METRIC.Precision  METRIC.Frac_NA  METRIC.F1_Score  TRUTH.TOTAL.TiTv_ratio  QUERY.TOTAL.TiTv_ratio  TRUTH.TOTAL.het_hom_ratio  QUERY.TOTAL.het_hom_ratio
+ INDEL    ALL       148065      1705    146360         7891      6167          0    640   2500       0.011515          0.218477             0.0         0.021877                     NaN                     NaN                   1.505938                   0.607691
+ INDEL   PASS       148065      1235    146830         4161      2910          0    392   1342       0.008341          0.300649             0.0         0.016232                     NaN                     NaN                   1.505938                   0.675566
+   SNP    ALL       945065     66838    878227       125831     58994          0  21808   1172       0.070723          0.531165             0.0         0.124826                 2.08182                1.879256                   1.552429                   0.940098
+   SNP   PASS       945065     66508    878557       124816     58308          0  21486   1117       0.070374          0.532848             0.0         0.124328                 2.08182                1.880727                   1.552429                   0.941950

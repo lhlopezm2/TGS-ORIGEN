@@ -1,0 +1,13 @@
+base-calling/fastq-1.fastq already exists.
+alignment/bam-1-1.bam already exists.
+alignment/bed-intersection.bed already exists.
+/shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-2/vcf-1-1-2.vcf.gz already exists.
+----------------
+Compute metrics
+Hap.py 
+Benchmarking Summary:
+  Type Filter  TRUTH.TOTAL  TRUTH.TP  TRUTH.FN  QUERY.TOTAL  QUERY.FP  QUERY.UNK  FP.gt  FP.al  METRIC.Recall  METRIC.Precision  METRIC.Frac_NA  METRIC.F1_Score  TRUTH.TOTAL.TiTv_ratio  QUERY.TOTAL.TiTv_ratio  TRUTH.TOTAL.het_hom_ratio  QUERY.TOTAL.het_hom_ratio
+ INDEL    ALL       148065       110    147955          248       138          0     33     39       0.000743          0.443548             0.0         0.001483                     NaN                     NaN                   1.505938                   0.117117
+ INDEL   PASS       148065       110    147955          248       138          0     33     39       0.000743          0.443548             0.0         0.001483                     NaN                     NaN                   1.505938                   0.117117
+   SNP    ALL       945065      5784    939281         7683      1899          0   1579     22       0.006120          0.752831             0.0         0.012142                 2.08182                2.176106                   1.552429                   0.334317
+   SNP   PASS       945065      5784    939281         7683      1899          0   1579     22       0.006120          0.752831             0.0         0.012142                 2.08182                2.176106                   1.552429                   0.334317

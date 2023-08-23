@@ -1,0 +1,10 @@
+/shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-2-chr20/vcf-1-1-2-chr20.vcf.gz already exists.
+----------------
+Compute metrics
+Hap.py 
+Benchmarking Summary:
+  Type Filter  TRUTH.TOTAL  TRUTH.TP  TRUTH.FN  QUERY.TOTAL  QUERY.FP  QUERY.UNK  FP.gt  FP.al  METRIC.Recall  METRIC.Precision  METRIC.Frac_NA  METRIC.F1_Score  TRUTH.TOTAL.TiTv_ratio  QUERY.TOTAL.TiTv_ratio  TRUTH.TOTAL.het_hom_ratio  QUERY.TOTAL.het_hom_ratio
+ INDEL    ALL        11255      8966      2289        10046       852          0    141    504       0.796624          0.915190             0.0         0.851801                     NaN                     NaN                   1.561467                   1.589535
+ INDEL   PASS        11255      8966      2289        10046       852          0    141    504       0.796624          0.915190             0.0         0.851801                     NaN                     NaN                   1.561467                   1.589535
+   SNP    ALL        71333     71238        95        71335        72          0      3     50       0.998668          0.998991             0.0         0.998829                2.314904                2.316076                   1.715978                   1.717296
+   SNP   PASS        71333     71238        95        71335        72          0      3     50       0.998668          0.998991             0.0         0.998829                2.314904                2.316076                   1.715978                   1.717296

@@ -1,0 +1,10 @@
+Variant calling step - Elapsed Time: 2278.21 s - Memory used: 9814836 kB -CPU used: 744%
+2023-08-20 22:34:31,873 ERROR    Input file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-4-chr20/vcf-1-1-4-chr20.vcf.gz does not exist.
+2023-08-20 22:34:31,873 ERROR    Traceback (most recent call last):
+2023-08-20 22:34:31,873 ERROR      File "/shared/home/sorozcoarias/anaconda3/envs/happy/bin/hap.py", line 540, in <module>
+2023-08-20 22:34:31,874 ERROR        main()
+2023-08-20 22:34:31,874 ERROR      File "/shared/home/sorozcoarias/anaconda3/envs/happy/bin/hap.py", line 240, in main
+2023-08-20 22:34:31,874 ERROR        raise Exception("Input file %s does not exist." % args.vcf2)
+2023-08-20 22:34:31,874 ERROR    Exception: Input file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-4-chr20/vcf-1-1-4-chr20.vcf.gz does not exist.
+Command exited with non-zero status 1
+Compute metrics - Elapsed Time: 5.50 s - Memory used: 74052 kB -CPU used: 31%

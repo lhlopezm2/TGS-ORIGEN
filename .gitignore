@@ -1,0 +1,15 @@
+*.nextflow.log*
+GRCh38*
+HG002_GRCh38*
+pepper_deepvariant_r0.8.sif
+.nextflow/*
+alignment/*
+base-calling/*
+Clair3/*
+download-fast5/*
+methylation-calling/*
+PEPPER-Margin-DeepVariant/*
+raw_reads/*
+variant-calling/*
+wf-human-variation/*
+metrics/*

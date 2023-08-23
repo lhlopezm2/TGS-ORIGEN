@@ -1,0 +1,2 @@
+[post-run summary] total reads: 40012, unparseable: 0, qc fail: 6082, could not calibrate: 1133, no alignment: 7772, bad fast5: 0
+Variant calling step - Elapsed Time: 1128.02 s - Memory used: 20211776 kB -CPU used: 1252%

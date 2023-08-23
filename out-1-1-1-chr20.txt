@@ -1,0 +1,247 @@
+----------------
+Variant calling step
+[INFO] CLAIR3 VERSION: v1.0.4
+[INFO] BAM FILE PATH: /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/HG002_GRCh38_chr20.bam
+[INFO] REFERENCE FILE PATH: /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/GRCh38_chr20.fa
+[INFO] MODEL PATH: /shared/home/sorozcoarias/anaconda3/envs/clair3/bin/models/r941_prom_hac_g360+g422
+[INFO] OUTPUT FOLDER: /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1-chr20
+[INFO] PLATFORM: ont
+[INFO] THREADS: 20
+[INFO] BED FILE PATH: EMPTY
+[INFO] VCF FILE PATH: EMPTY
+[INFO] CONTIGS: EMPTY
+[INFO] CONDA PREFIX: /shared/home/sorozcoarias/anaconda3/envs/clair3
+[INFO] SAMTOOLS PATH: samtools
+[INFO] PYTHON PATH: python3
+[INFO] PYPY PATH: pypy3
+[INFO] PARALLEL PATH: parallel
+[INFO] WHATSHAP PATH: whatshap
+[INFO] LONGPHASE PATH: EMPTY
+[INFO] CHUNK SIZE: 5000000
+[INFO] FULL ALIGN PROPORTION: 0.7
+[INFO] FULL ALIGN REFERENCE PROPORTION: 0.1
+[INFO] PHASING PROPORTION: 0.7
+[INFO] MINIMUM MQ: 5
+[INFO] MINIMUM COVERAGE: 2
+[INFO] SNP AF THRESHOLD: 0.08
+[INFO] INDEL AF THRESHOLD: 0.15
+[INFO] ENABLE FILEUP ONLY CALLING: False
+[INFO] ENABLE FAST MODE CALLING: False
+[INFO] ENABLE CALLING SNP CANDIDATES ONLY: False
+[INFO] ENABLE PRINTING REFERENCE CALLS: False
+[INFO] ENABLE OUTPUT GVCF: False
+[INFO] ENABLE HAPLOID PRECISE MODE: False
+[INFO] ENABLE HAPLOID SENSITIVE MODE: False
+[INFO] ENABLE INCLUDE ALL CTGS CALLING: False
+[INFO] ENABLE NO PHASING FOR FULL ALIGNMENT: False
+[INFO] ENABLE REMOVING INTERMEDIATE FILES: False
+[INFO] ENABLE LONGPHASE FOR INTERMEDIATE VCF PHASING: False
+[INFO] ENABLE PHASING FINAL VCF OUTPUT USING WHATSHAP: False
+[INFO] ENABLE PHASING FINAL VCF OUTPUT USING LONGPHASE: False
+[INFO] ENABLE HAPLOTAGGING FINAL BAM: False
+[INFO] ENABLE LONG INDEL CALLING: False
+[INFO] ENABLE C_IMPLEMENT: True
+
++ /shared/ifbstor1/projects/coffea_genomes/Simon/anaconda3_homesimon/envs/clair3/bin/scripts/clair3_c_impl.sh --bam_fn /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/HG002_GRCh38_chr20.bam --ref_fn /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/GRCh38_chr20.fa --threads 20 --model_path /shared/home/sorozcoarias/anaconda3/envs/clair3/bin/models/r941_prom_hac_g360+g422 --platform ont --output /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1-chr20 --bed_fn=EMPTY --vcf_fn=EMPTY --ctg_name=EMPTY --sample_name=SAMPLE --chunk_num=0 --chunk_size=5000000 --samtools=samtools --python=python3 --pypy=pypy3 --parallel=parallel --whatshap=whatshap --qual=2 --var_pct_full=0.7 --ref_pct_full=0.1 --var_pct_phasing=0.7 --snp_min_af=0.08 --indel_min_af=0.15 --min_mq=5 --min_coverage=2 --min_contig_size=0 --pileup_only=False --gvcf=False --fast_mode=False --call_snp_only=False --print_ref_calls=False --haploid_precise=False --haploid_sensitive=False --include_all_ctgs=False --no_phasing_for_fa=False --pileup_model_prefix=pileup --fa_model_prefix=full_alignment --remove_intermediate_dir=False --enable_phasing=False --enable_long_indel=False --keep_iupac_bases=False --use_gpu=False --longphase_for_phasing=False --longphase=EMPTY --use_whatshap_for_intermediate_phasing=True --use_longphase_for_intermediate_phasing=False --use_whatshap_for_final_output_phasing=False --use_longphase_for_final_output_phasing=False --use_whatshap_for_final_output_haplotagging=False
+
+[INFO] Check environment variables
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1-chr20/log
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1-chr20/tmp/pileup_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1-chr20/tmp/merge_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1-chr20/tmp/phase_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1-chr20/tmp/gvcf_tmp_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1-chr20/tmp/full_alignment_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1-chr20/tmp/phase_output/phase_vcf
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1-chr20/tmp/phase_output/phase_bam
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1-chr20/tmp/full_alignment_output/candidate_bed
+[INFO] --include_all_ctgs not enabled, use chr{1..22,X,Y} and {1..22,X,Y} by default
+[INFO] Call variant in contigs: chr20
+[INFO] Chunk number for each contig: 13
+[INFO] 1/7 Call variants using pileup model
+Calling variants ...
+Total processed positions in chr20 (chunk 2/13) : 67768
+Total time elapsed: 85.24 s
+Calling variants ...
+Total processed positions in chr20 (chunk 4/13) : 69163
+Total time elapsed: 86.09 s
+Calling variants ...
+Total processed positions in chr20 (chunk 5/13) : 70918
+Total time elapsed: 88.30 s
+Calling variants ...
+Total processed positions in chr20 (chunk 3/13) : 64356
+Total time elapsed: 88.83 s
+Calling variants ...
+Total processed positions in chr20 (chunk 9/13) : 68494
+Total time elapsed: 89.13 s
+Calling variants ...
+Total processed positions in chr20 (chunk 1/13) : 81380
+Total time elapsed: 92.05 s
+Calling variants ...
+Total processed positions in chr20 (chunk 12/13) : 77488
+Total time elapsed: 93.75 s
+Calling variants ...
+Total processed positions in chr20 (chunk 8/13) : 78237
+Total time elapsed: 93.97 s
+Calling variants ...
+Total processed positions in chr20 (chunk 10/13) : 78078
+Total time elapsed: 97.37 s
+Calling variants ...
+Total processed positions in chr20 (chunk 11/13) : 78825
+Total time elapsed: 98.41 s
+Calling variants ...
+Total processed positions in chr20 (chunk 13/13) : 92078
+Total time elapsed: 104.08 s
+Calling variants ...
+Total processed positions in chr20 (chunk 7/13) : 123827
+Total time elapsed: 126.04 s
+Calling variants ...
+Total processed positions in chr20 (chunk 6/13) : 311183
+Total time elapsed: 260.23 s
+
+real	4m27.362s
+user	22m49.445s
+sys	1m5.946s
+
+[INFO] 2/7 Select heterozygous SNP variants for Whatshap phasing and haplotagging
+[INFO] Select heterozygous pileup variants exceeding phasing quality cutoff 12
+[INFO] Total heterozygous SNP positions selected: chr20: 64581
+
+real	0m1.976s
+user	0m1.072s
+sys	0m0.125s
+
+[INFO] 3/7 Phase VCF file using Whatshap
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr20 in individual SAMPLE
+Found 64581 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 209458 reads covering 63952 variants
+Kept 172401 reads that cover at least two variants each
+Selected 12326 most phase-informative reads covering 63951 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 18832 variants (29.4% of accessible variants) between position 44162183 and 64333832
+Changed 1558 genotypes while writing VCF
+
+# Resource usage
+Maximum memory usage: 0.658 GB
+Time spent reading BAM/CRAM:                  146.3 s
+Time spent parsing VCF:                         0.7 s
+Time spent selecting reads:                    25.1 s
+Time spent phasing:                           232.6 s
+Time spent writing VCF:                         1.1 s
+Time spent finding components:                  1.1 s
+Time spent on rest:                             1.4 s
+Total elapsed time:                           408.2 s
+
+real	6m49.377s
+user	6m47.080s
+sys	0m1.266s
+
+[INFO] 5/7 Select candidates for full-alignment calling
+[INFO] Set variants quality cutoff 20.0
+[INFO] Set reference calls quality cutoff 12.0
+[INFO] Low quality reference calls to be processed in chr20: 109387
+[INFO] Low quality variants to be processed in chr20: 116162
+
+real	0m10.776s
+user	0m1.224s
+sys	0m0.146s
+
+[INFO] 6/7 Call low-quality variants using full-alignment model
+Calling variants ...
+Total processed positions in chr20 (chunk 7/23) : 10000
+Total time elapsed: 70.43 s
+Calling variants ...
+Total processed positions in chr20 (chunk 11/23) : 10000
+Total time elapsed: 72.67 s
+Calling variants ...
+Total processed positions in chr20 (chunk 9/23) : 10000
+Total time elapsed: 72.43 s
+Calling variants ...
+Total processed positions in chr20 (chunk 15/23) : 10000
+Total time elapsed: 72.58 s
+Calling variants ...
+Total processed positions in chr20 (chunk 5/23) : 10000
+Total time elapsed: 73.62 s
+Calling variants ...
+Total processed positions in chr20 (chunk 10/23) : 10000
+Total time elapsed: 75.70 s
+Calling variants ...
+Total processed positions in chr20 (chunk 13/23) : 10000
+Total time elapsed: 76.61 s
+Calling variants ...
+Total processed positions in chr20 (chunk 8/23) : 10000
+Total time elapsed: 79.74 s
+Calling variants ...
+Total processed positions in chr20 (chunk 14/23) : 10000
+Total time elapsed: 82.21 s
+Calling variants ...
+Total processed positions in chr20 (chunk 6/23) : 10000
+Total time elapsed: 85.10 s
+Calling variants ...
+Total processed positions in chr20 (chunk 1/23) : 10000
+Total time elapsed: 86.68 s
+Calling variants ...
+Total processed positions in chr20 (chunk 12/23) : 10000
+Total time elapsed: 91.96 s
+Calling variants ...
+Total processed positions in chr20 (chunk 3/23) : 10000
+Total time elapsed: 90.93 s
+Calling variants ...
+Total processed positions in chr20 (chunk 2/23) : 10000
+Total time elapsed: 99.13 s
+Calling variants ...
+Total processed positions in chr20 (chunk 4/23) : 10000
+Total time elapsed: 100.60 s
+Calling variants ...
+Total processed positions in chr20 (chunk 23/23) : 5549
+Total time elapsed: 36.11 s
+Calling variants ...
+Total processed positions in chr20 (chunk 16/23) : 10000
+Total time elapsed: 69.95 s
+Calling variants ...
+Total processed positions in chr20 (chunk 21/23) : 10000
+Total time elapsed: 65.97 s
+Calling variants ...
+Total processed positions in chr20 (chunk 19/23) : 10000
+Total time elapsed: 67.60 s
+Calling variants ...
+Total processed positions in chr20 (chunk 18/23) : 10000
+Total time elapsed: 68.50 s
+Calling variants ...
+Total processed positions in chr20 (chunk 17/23) : 10000
+Total time elapsed: 69.44 s
+Calling variants ...
+Total processed positions in chr20 (chunk 20/23) : 10000
+Total time elapsed: 71.43 s
+Calling variants ...
+Total processed positions in chr20 (chunk 22/23) : 10000
+Total time elapsed: 69.61 s
+
+real	2m36.818s
+user	28m55.022s
+sys	1m14.078s
+
+[INFO] 7/7 Merge pileup VCF and full-alignment VCF
+[INFO] Pileup variants processed in chr20: 49833
+[INFO] Full-alignment variants processed in chr20: 99656
+
+real	0m2.254s
+user	0m1.844s
+sys	0m0.182s
+
+[INFO] Finish calling, output file: /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-1-1-chr20/merge_output.vcf.gz
+
+real	14m21.090s
+user	58m42.970s
+sys	2m22.744s
+----------------
+Compute metrics
+Hap.py 
+Benchmarking Summary:
+  Type Filter  TRUTH.TOTAL  TRUTH.TP  TRUTH.FN  QUERY.TOTAL  QUERY.FP  QUERY.UNK  FP.gt  FP.al  METRIC.Recall  METRIC.Precision  METRIC.Frac_NA  METRIC.F1_Score  TRUTH.TOTAL.TiTv_ratio  QUERY.TOTAL.TiTv_ratio  TRUTH.TOTAL.het_hom_ratio  QUERY.TOTAL.het_hom_ratio
+ INDEL    ALL        11255      8039      3216        12995      4781          0    288   1743       0.714260          0.632089             0.0         0.670667                     NaN                     NaN                   1.561467                   1.075658
+ INDEL   PASS        11255      7586      3669        10491      2740          0    152    968       0.674012          0.738824             0.0         0.704931                     NaN                     NaN                   1.561467                   1.155370
+   SNP    ALL        71333     71222       111        71400       155          0      5     88       0.998444          0.997829             0.0         0.998136                2.314904                2.313292                   1.715978                   1.718181
+   SNP   PASS        71333     71214       119        71383       146          0      4     83       0.998332          0.997955             0.0         0.998143                2.314904                2.313733                   1.715978                   1.718776
