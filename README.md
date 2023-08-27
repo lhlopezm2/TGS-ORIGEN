@@ -102,7 +102,8 @@ guppy_basecaller --disable_pings\
     --kit SQK-RBK112-96\
     --recursive -x 'cuda:all:50G'\
     --num_callers 5\
-    --compress_fastq
+    --compress_fastq\
+    --gpu_runners_per_device 15
 ```
 | Parameter | Description |
 | ----------- | ----------- |
@@ -119,9 +120,11 @@ guppy_basecaller --disable_pings\
 | --disable_qscore_filtering    | Disable filtering of reads into PASS/FAIL folders based on min qscore.|
 | --cpu_threads_per_caller      | Number of CPU worker threads per basecaller.|
 | --compress_fastq              | Compress fastq output files with gzip.|
+| --gpu_runners_per_device        | Number of runners per GPU device.|
 
 
 - El producto entre cpu_threads_per_caller y num_callers no debe superar el número de cores que se asignaron al trabajo, que en este caso fueron 20.
+- La cantidad de runners per device debe ser seleccionada cuidadosamente con base en las características de cómputo. Para utilizar la cantidad óptima podría primero utilizarse un número grande (>50) y con base en los logs del error se selecciona este valor.
 - Los parámetros flowcell y kit dependen de la configuración experimental usada para generar las lecturas.
 - La opción recursive indica que hay archivos fast5 contenidos dentro de subcarpetas.
 - Al finalizar la ejecución de guppy se crean 3 carpetas: fail, pass y guppy_basecaller-core-dump-db. La clasificacion entre fail y pass depende de si las lecturas superaron el umbral de calidad especificado por el parámetro min_qscore que por defecto tiene un valor de 7.
