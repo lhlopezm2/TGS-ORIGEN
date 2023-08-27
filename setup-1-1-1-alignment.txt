@@ -1,0 +1,103 @@
+PID measure 5138
+
+
+ Resources used: 
+Time: 0 seconds (0.00000 minutes)
+RAM Memory Actual: 16934 MB (16.5371 GB)
+RAM Memory Min: 16934 MB (16.5371 GB)
+RAM Memory Max: 16934 MB (16.5371 GB)
+RAM Memory MinMax: 0 MB (0.0000 GB)
+Disk Actual: 140652 MB (137.35547 GB)
+Disk Min: 140652 MB (137.35547 GB)
+Disk Max: 140652 MB (137.35547 GB)
+CPU Mean Max: 2%
+CPU Mean: 2%
+CPUs: 
+CPU 1 Usage: 3%
+CPU 2 Usage: 3%
+CPU 3 Usage: 3%
+CPU 4 Usage: 3%
+CPU 5 Usage: 3%
+CPU 6 Usage: 3%
+CPU 7 Usage: 3%
+CPU 8 Usage: 3%
+CPU 9 Usage: 2%
+CPU 10 Usage: 1%
+CPU 11 Usage: 1%
+CPU 12 Usage: 1%
+CPU 13 Usage: 1%
+CPU 14 Usage: 1%
+CPU 15 Usage: 1%
+CPU 16 Usage: 2%
+CPU 17 Usage: 2%
+CPU 18 Usage: 2%
+CPU 19 Usage: 2%
+CPU 20 Usage: 2%
+
+
+ Resources used: 
+Time: 12 seconds (0.20000 minutes)
+RAM Memory Actual: 21473 MB (20.9697 GB)
+RAM Memory Min: 16934 MB (16.5371 GB)
+RAM Memory Max: 21473 MB (20.9697 GB)
+RAM Memory MinMax: 4539 MB (4.4326 GB)
+Disk Actual: 140652 MB (137.35547 GB)
+Disk Min: 140652 MB (137.35547 GB)
+Disk Max: 140652 MB (137.35547 GB)
+CPU Mean Max: 2%
+CPU Mean: 1%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 2%
+CPU 3 Usage: 2%
+CPU 4 Usage: 2%
+CPU 5 Usage: 3%
+CPU 6 Usage: 3%
+CPU 7 Usage: 1%
+CPU 8 Usage: 1%
+CPU 9 Usage: 1%
+CPU 10 Usage: 1%
+CPU 11 Usage: 1%
+CPU 12 Usage: 2%
+CPU 13 Usage: 2%
+CPU 14 Usage: 2%
+CPU 15 Usage: 3%
+CPU 16 Usage: 3%
+CPU 17 Usage: 1%
+CPU 18 Usage: 1%
+CPU 19 Usage: 1%
+CPU 20 Usage: 1%
+
+
+ Resources used: 
+Time: 24 seconds (0.40000 minutes)
+RAM Memory Actual: 26016 MB (25.4062 GB)
+RAM Memory Min: 16934 MB (16.5371 GB)
+RAM Memory Max: 26016 MB (25.4062 GB)
+RAM Memory MinMax: 9082 MB (8.8691 GB)
+Disk Actual: 140653 MB (137.35645 GB)
+Disk Min: 140652 MB (137.35547 GB)
+Disk Max: 140653 MB (137.35645 GB)
+CPU Mean Max: 2%
+CPU Mean: 1%
+CPUs: 
+CPU 1 Usage: 2%
+CPU 2 Usage: 1%
+CPU 3 Usage: 1%
+CPU 4 Usage: 2%
+CPU 5 Usage: 2%
+CPU 6 Usage: 3%
+CPU 7 Usage: 2%
+CPU 8 Usage: 2%
+CPU 9 Usage: 3%
+CPU 10 Usage: 3%
+CPU 11 Usage: 2%
+CPU 12 Usage: 2%
+CPU 13 Usage: 2%
+CPU 14 Usage: 1%
+CPU 15 Usage: 1%
+CPU 16 Usage: 1%
+CPU 17 Usage: 2%
+CPU 18 Usage: 2%
+CPU 19 Usage: 1%
+CPU 20 Usage: 1%
