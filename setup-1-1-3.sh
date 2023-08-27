@@ -19,7 +19,8 @@ setup_v="-1-1-3"
 fastq_v=${setup_v:0:2}
 bam_v=${setup_v:0:4}
 home="/shared/home/sorozcoarias/coffea_genomes/Simon/Luis"
-
+source "${home}/resource_usage.sh"
+inter_med=5
 
 fastq="base-calling/fastq${fastq_v}.fastq"
 fastq_index="base-calling/fastq${fastq_v}.fastq.index"
@@ -36,6 +37,11 @@ contigs=("chr1:1-248956422" "chr2:1-242193529" "chr3:1-198295559" "chr4:1-190214
 if [ -e "$fastq" ]; then
   echo "$fastq already exists."
 else
+  measure_resource_usage "${home}" "${inter_med}" "setup${setup_v}-base_calling.txt" &
+  measure_pid=$!
+  echo "PID measure $measure_pid" >> "setup${setup_v}-base_calling.txt" # Escribir el PID en el LOGFILE
+  sleep "$((inter_med + 2))"
+
   echo "----------------"
   echo "Base-calling step"
   module load singularity
@@ -52,11 +58,17 @@ else
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Merge fastq files - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' zcat "base-calling/fastq${fastq_v}/pass/fastq_runid*.fastq.gz" > $fastq
   module unload guppy/6.4.6-gpu
   module unload singularity
+  kill $measure_pid
 fi
 
 if [ -e "$bam" ]; then
   echo "$bam already exists."
 else
+  measure_resource_usage "${home}" "${inter_med}" "setup${setup_v}-alignment.txt" &
+  measure_pid=$!
+  echo "PID measure $measure_pid" >> "setup${setup_v}-alignment.txt" # Escribir el PID en el LOGFILE
+  sleep "$((inter_med + 2))"
+
   echo "----------------"
   echo "Alignment step"
   module load minimap2/2.24
@@ -66,24 +78,21 @@ else
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Bam indexing - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' samtools index $bam -@ $CPU
   module unload minimap2/2.24
   module unload samtools/1.15.1
+  kill $measure_pid
 fi
 
-if [ -e "$fastq_index" ]; then
-  echo "$fastq_index already exists."
+if [ -e "${vcf}" ]; then
+  echo "${vcf} already exists."
 else
-  echo "----------------"
-  echo "Fastq indexing step"
-  conda activate nanopolish
-  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Fastq indexing step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' nanopolish index -d ./raw_reads $fastq
-  conda deactivate
-fi
+  measure_resource_usage "${home}" "${inter_med}" "setup${setup_v}-variant_calling.txt" &
+  measure_pid=$!
+  echo "PID measure $measure_pid" >> "setup${setup_v}-variant_calling.txt" # Escribir el PID en el LOGFILE
+  sleep "$((inter_med + 2))"
 
-if [ -e "${chr}/chr1.vcf" ]; then
-  echo "chr1.vcf already exists."
-else
   echo "----------------"
   echo "Variant calling step"
   conda activate nanopolish
+  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Fastq indexing step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' nanopolish index -d ./raw_reads $fastq
   for region in "${contigs[@]}"; do
     contig=$(echo "$region" | cut -d':' -f1)
     /shared/home/sorozcoarias/anaconda3/bin/time -f 'Variant calling step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' nanopolish variants \
@@ -93,40 +102,17 @@ else
       --bam=$bam\
       --genome=$ref_fasta\
       --window="${region}"
-  done
-  conda deactivate
-fi
-
-if [ -e "${chr}/chr1.vcf.gz.tbi" ]; then
-  echo "chr1.vcf.gz.tbi already exists."
-else
-  echo "----------------"
-  echo "Compressing and indexing vcf files step"
-  conda activate nanopolish
-  for region in "${contigs[@]}"; do
-    contig=$(echo "$region" | cut -d':' -f1)
     /shared/home/sorozcoarias/anaconda3/bin/time -f 'Compressing vcf files step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' bgzip -k -f "${chr}/${contig}.vcf"
     /shared/home/sorozcoarias/anaconda3/bin/time -f 'Indexing vcf files step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' tabix -p vcf "${chr}/${contig}.vcf.gz"
   done
-  conda deactivate
-fi
-
-if [ -e "${vcf}" ]; then
-  echo "${vcf} already exists."
-else
-  echo "----------------"
-  echo "Merging vcf files"
-  conda activate nanopolish
   cd $chr
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Merging vcf files step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' bcftools merge chr1.vcf.gz chr2.vcf.gz chr3.vcf.gz chr4.vcf.gz chr5.vcf.gz chr6.vcf.gz chr7.vcf.gz chr8.vcf.gz chr9.vcf.gz chr10.vcf.gz chr11.vcf.gz chr12.vcf.gz chr13.vcf.gz chr14.vcf.gz chr15.vcf.gz chr16.vcf.gz chr17.vcf.gz chr18.vcf.gz chr19.vcf.gz chr20.vcf.gz chr21.vcf.gz chr22.vcf.gz --force-samples -o $vcf
   cd $home
+  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Compressing merged vcf step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' bgzip -k -f "${vcf}"
+  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Indexing merged vcf step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' tabix -p vcf "${vcf}.gz"
   conda deactivate
+  kill $measure_pid
 fi
-
-conda activate nanopolish
-/shared/home/sorozcoarias/anaconda3/bin/time -f 'Compressing merged vcf step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' bgzip -k -f "${vcf}"
-/shared/home/sorozcoarias/anaconda3/bin/time -f 'Indexing merged vcf step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' tabix -p vcf "${vcf}.gz"
-conda deactivate
 
 echo "----------------"
 echo "Compute metrics"

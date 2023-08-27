@@ -19,13 +19,14 @@ setup_v="-1-1-4"
 fastq_v=${setup_v:0:2}
 bam_v=${setup_v:0:4}
 home="/shared/home/sorozcoarias/coffea_genomes/Simon/Luis"
-
+source "${home}/resource_usage.sh"
+inter_med=5
 
 fastq="base-calling/fastq${fastq_v}.fastq"
 bam="alignment/bam${bam_v}.bam"
 ref_fasta="GRCh38.fa"
 vcf_folder="${home}/variant-calling/vcf${setup_v}"
-vcf="${vcf_folder}/vcf${setup_v}.vcf.gz"
+vcf="${vcf_folder}/vcf${setup_v}.wf_snp.vcf.gz"
 vcf_truth="HG002_GRCh38_benchmark.vcf.gz"
 bed="GRCh38.bed"
 metrics_prefix="metrics/metrics${setup_v}/metrics${setup_v}"
@@ -33,6 +34,11 @@ metrics_prefix="metrics/metrics${setup_v}/metrics${setup_v}"
 if [ -e "$fastq" ]; then
   echo "$fastq already exists."
 else
+  measure_resource_usage "${home}" "${inter_med}" "setup${setup_v}-base_calling.txt" &
+  measure_pid=$!
+  echo "PID measure $measure_pid" >> "setup${setup_v}-base_calling.txt" # Escribir el PID en el LOGFILE
+  sleep "$((inter_med + 2))"
+
   echo "----------------"
   echo "Base-calling step"
   module load singularity
@@ -49,11 +55,17 @@ else
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Merge fastq files - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' zcat "base-calling/fastq${fastq_v}/pass/fastq_runid*.fastq.gz" > $fastq
   module unload guppy/6.4.6-gpu
   module unload singularity
+  kill $measure_pid
 fi
 
 if [ -e "$bam" ]; then
   echo "$bam already exists."
 else
+  measure_resource_usage "${home}" "${inter_med}" "setup${setup_v}-alignment.txt" &
+  measure_pid=$!
+  echo "PID measure $measure_pid" >> "setup${setup_v}-alignment.txt" # Escribir el PID en el LOGFILE
+  sleep "$((inter_med + 2))"
+
   echo "----------------"
   echo "Alignment step"
   module load minimap2/2.24
@@ -63,11 +75,17 @@ else
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Bam indexing - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' samtools index $bam -@ $CPU
   module unload minimap2/2.24
   module unload samtools/1.15.1
+  kill $measure_pid
 fi
 
 if [ -e "$vcf" ]; then
   echo "$vcf already exists."
 else
+  measure_resource_usage "${home}" "${inter_med}" "setup${setup_v}-variant_calling.txt" &
+  measure_pid=$!
+  echo "PID measure $measure_pid" >> "setup${setup_v}-variant_calling.txt" # Escribir el PID en el LOGFILE
+  sleep "$((inter_med + 2))"
+
   echo "----------------"
   echo "Variant calling step"
   module load singularity
@@ -84,6 +102,7 @@ else
       --out_dir ${vcf_folder}
   module unload nextflow/23.04.1
   module unload singularity
+  kill $measure_pid
 fi
 
 echo "----------------"

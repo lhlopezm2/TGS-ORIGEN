@@ -13,3 +13,11 @@ raw_reads/*
 variant-calling/*
 wf-human-variation/*
 metrics/*
+Sniffles2/
+core.1237
+core.42407
+duet/
+longshot/
+medaka/
+output/
+wf-human-testing/

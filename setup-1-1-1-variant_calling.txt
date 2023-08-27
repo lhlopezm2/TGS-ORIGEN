@@ -1,0 +1,35 @@
+PID measure 17747
+
+
+ Resources used: 
+Time: 0 seconds (0.00000 minutes)
+RAM Memory Actual: 16932 MB (16.5352 GB)
+RAM Memory Min: 16932 MB (16.5352 GB)
+RAM Memory Max: 16932 MB (16.5352 GB)
+RAM Memory MinMax: 0 MB (0.0000 GB)
+Disk Actual: 141345 MB (138.03223 GB)
+Disk Min: 141345 MB (138.03223 GB)
+Disk Max: 141345 MB (138.03223 GB)
+CPU Mean Max: 0%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 2%
+CPU 2 Usage: 1%
+CPU 3 Usage: 1%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
