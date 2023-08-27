@@ -15,6 +15,7 @@ El cluster debe contar con los siguientes módulos:
 - nextflow
 - guppy
 - tensorflow
+- Minimap2
 
 ## 4. Configuración de los ambientes de conda
 Se debe contar con los siguientes ambientes de conda:
