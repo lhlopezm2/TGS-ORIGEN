@@ -54,8 +54,9 @@ else
     --kit SQK-RBK112-96\
     --recursive -x 'cuda:all:50G'\
     --num_callers 5\
-    --compress_fastq 
-  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Merge fastq files - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' zcat "base-calling/fastq${fastq_v}/pass/fastq_runid*.fastq.gz" > $fastq
+    --compress_fastq\
+    --gpu_runners_per_device 15
+  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Merge fastq files - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' zcat base-calling/fastq${fastq_v}/pass/fastq_runid*.fastq.gz > $fastq
   module unload guppy/6.4.6-gpu
   module unload singularity
   kill $measure_pid

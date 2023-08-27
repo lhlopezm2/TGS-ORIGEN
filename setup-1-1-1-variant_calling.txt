@@ -33,3 +33,42 @@ CPU 17 Usage: 0%
 CPU 18 Usage: 0%
 CPU 19 Usage: 0%
 CPU 20 Usage: 0%
+PID measure 43795
+PID measure 41743
+PID measure 40214
+
+
+ Resources used: 
+Time: 0 seconds (0.00000 minutes)
+RAM Memory Actual: 17464 MB (17.0547 GB)
+RAM Memory Min: 17464 MB (17.0547 GB)
+RAM Memory Max: 17464 MB (17.0547 GB)
+RAM Memory MinMax: 0 MB (0.0000 GB)
+Disk Actual: 152644 MB (149.06641 GB)
+Disk Min: 152644 MB (149.06641 GB)
+Disk Max: 152644 MB (149.06641 GB)
+CPU Mean Max: 0%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%

@@ -3,7 +3,7 @@
 #SBATCH -D .
 #SBATCH -o results/out-1-1-1.txt
 #SBATCH -e results/err-1-1-1.txt
-#SBATCH -n 20
+#SBATCH -n 22
 #SBATCH -N 1
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:1
@@ -51,10 +51,11 @@ else
     --cpu_threads_per_caller 4\
     --flowcell FLO-PRO002M\
     --kit SQK-RBK112-96\
-    --recursive -x 'cuda:all:50G'\
+    --recursive -x 'cuda:all:25G'\
     --num_callers 5\
-    --compress_fastq 
-  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Merge fastq files - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' zcat "base-calling/fastq${fastq_v}/pass/fastq_runid*.fastq.gz" > $fastq
+    --compress_fastq\
+    --gpu_runners_per_device 15
+  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Merge fastq files - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' zcat ./base-calling/fastq${fastq_v}/pass/fastq_runid*.fastq.gz > $fastq
   module unload guppy/6.4.6-gpu
   module unload singularity
   kill $measure_pid
