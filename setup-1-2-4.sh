@@ -1,8 +1,8 @@
 #!/usr/bin/bash
-#SBATCH -J 1-1-2
+#SBATCH -J 1-2-4
 #SBATCH -D .
-#SBATCH -o results/out-1-1-2.txt
-#SBATCH -e results/err-1-1-2.txt
+#SBATCH -o results/out-1-2-4.txt
+#SBATCH -e results/err-1-2-4.txt
 #SBATCH -n 22
 #SBATCH -N 1
 #SBATCH --partition=gpu
@@ -15,7 +15,7 @@
 source ~/.bashrc
 
 CPU=20
-setup_v="-1-1-2"
+setup_v="-1-2-4"
 fastq_v=${setup_v:0:2}
 bam_v=${setup_v:0:4}
 home="/shared/home/sorozcoarias/coffea_genomes/Simon/Luis"
@@ -26,8 +26,7 @@ fastq="base-calling/fastq${fastq_v}.fastq"
 bam="alignment/bam${bam_v}.bam"
 ref_fasta="GRCh38.fa"
 vcf_folder="${home}/variant-calling/vcf${setup_v}"
-vcf_prefix="vcf${setup_v}"
-vcf="${vcf_folder}/${vcf_prefix}.vcf.gz"
+vcf="${vcf_folder}/vcf${setup_v}.wf_snp.vcf.gz"
 vcf_truth="HG002_GRCh38_benchmark.vcf.gz"
 bed="GRCh38.bed"
 metrics_prefix="metrics/metrics${setup_v}/metrics${setup_v}"
@@ -70,8 +69,8 @@ else
 
   echo "----------------"
   echo "Alignment step"
-  conda activate minimap2
-  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Alignment step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' minimap2 -a -z 600,200 -x map-ont $ref_fasta $fastq -t $CPU \
+  conda activate ngmlr_env
+  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Alignment step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' ngmlr -t $CPU -r $ref_fasta -q $fastq -x ont \
     |samtools view -Shu |samtools sort -@ $CPU -o $bam --output-fmt BAM
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Bam indexing - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' samtools index $bam -@ $CPU
   conda deactivate
@@ -89,17 +88,19 @@ else
   echo "----------------"
   echo "Variant calling step"
   module load singularity
-  module load tensorflow-gpu/2.6.2
-  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Variant calling step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' singularity exec --bind /usr/lib/locale/ \
-    pepper_deepvariant_r0.8.sif \
-    run_pepper_margin_deepvariant call_variant \
-    -b "${bam}" \
-    -f "${ref_fasta}" \
-    -o "${vcf_folder}" \
-    -p "${vcf_prefix}" \
-    -t "${CPU}" \
-    --ont_r9_guppy5_sup
-  module unload tensorflow-gpu/2.6.2
+  module load nextflow/23.04.1
+  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Variant calling step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' nextflow run wf-human-variation \
+      -w ${vcf_folder} \
+      -profile singularity \
+      --snp \
+      --bam ${bam} \
+      --bed ${bed} \
+      --ref ${ref_fasta} \
+      --basecaller_cfg 'dna_r10.4.1_e8.2_400bps_hac@v4.1.0'  \
+      --sample_name "vcf${setup_v}" \
+      --out_dir ${vcf_folder}\
+      --bam_min_coverage 0.01
+  module unload nextflow/23.04.1
   module unload singularity
   kill $measure_pid
 fi

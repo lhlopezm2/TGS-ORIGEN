@@ -1,9 +1,9 @@
 #!/usr/bin/bash
-#SBATCH -J 1-1-3
+#SBATCH -J meth-1-1
 #SBATCH -D .
 #SBATCH -o results/out-meth-1-1.txt
 #SBATCH -e results/err-meth-1-1.txt
-#SBATCH -n 20
+#SBATCH -n 22
 #SBATCH -N 1
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:1
@@ -15,11 +15,23 @@
 source ~/.bashrc
 
 CPU=20
-fastq="base-calling/fastq-1.fastq"
-bam="alignment/bam-1-1.bam"
+setup_v="-1-1-1"
+fastq_v=${setup_v:0:2}
+bam_v=${setup_v:0:4}
+home="/shared/home/sorozcoarias/coffea_genomes/Simon/Luis"
+source "${home}/resource_usage.sh"
+inter_med=5
+
+fastq="base-calling/fastq${fastq_v}.fastq"
+bam="alignment/bam${bam_v}.bam"
 ref_fasta="GRCh38.fa"
-tsv="methylation-calling/tsv-1-1.tsv"
-fastq_index="base-calling/fastq-1.fastq.index"
+tsv="methylation-calling/tsv${bam_v}.tsv"
+fastq_index="base-calling/fastq${fastq_v}.fastq.index"
+
+measure_resource_usage "${home}" "${inter_med}" "methylation${bam_v}.txt" &
+measure_pid=$!
+echo "PID measure $measure_pid" >> "methylation${bam_v}.txt" # Escribir el PID en el LOGFILE
+sleep "$((inter_med + 2))"
 
 if [ -e "$fastq_index" ]; then
   echo "$fastq_index already exists."
@@ -30,7 +42,6 @@ else
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Fastq indexing step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' nanopolish index -d ./raw_reads $fastq
   conda deactivate
 fi
-
 
 if [ -e "${tsv}" ]; then
   echo "${tsv} already exists."
@@ -47,5 +58,4 @@ else
   conda deactivate
 fi
 
-
-
+kill $measure_pid

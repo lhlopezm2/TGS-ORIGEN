@@ -3,10 +3,10 @@
 #SBATCH -D .
 #SBATCH -o results/out-2-1-1.txt
 #SBATCH -e results/err-2-1-1.txt
-#SBATCH -n 20
+#SBATCH -n 22
 #SBATCH -N 1
 #SBATCH --partition=gpu
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:3g.20gb:1
 #SBATCH --account=coffea_genomes
 #SBATCH --time=1-23:00:00
 #SBATCH --mem=50G
@@ -42,18 +42,19 @@ else
   echo "----------------"
   echo "Variant calling step"
   module load singularity
-  module load nextflow/23.04.1
-  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Variant calling step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' nextflow run wf-human-variation \
+  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Variant calling step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' ./nextflow run wf-human-variation \
       -w ${vcf_folder} \
-      -profile singularity \
+      -profile singularity\
       --snp --sv \
       --fast5_dir ./raw_reads\
       --bed ${bed} \
       --ref ${ref_fasta} \
       --basecaller_cfg 'dna_r10.4.1_e8.2_400bps_hac@v4.1.0'  \
       --sample_name "vcf${setup_v}" \
-      --out_dir ${vcf_folder}
-  module unload nextflow/23.04.1
+      --out_dir ${vcf_folder}\
+      --disable_ping\
+      --threads $CPU\
+      --cuda_device "cuda:all"
   module unload singularity
   kill $measure_pid
 fi

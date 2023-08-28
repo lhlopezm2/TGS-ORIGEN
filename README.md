@@ -1,27 +1,32 @@
 # PIPELINES PARA LLAMADO DE VARIANTES EN SECUENCIAS ONT
 
-## 1. Main steps in bioinformatics pipeline for ONT sequences
+## 0. Third generation sequencing overview
+
+![TGS Overview](TGS_overview.png)
+
+## 1. Principales pasos en un pipeline bioinformático para analizar secuencias ONT
 
 ![General Workflow](GWF.png)
 
-## 2. Possible combinations of tools in the pipeline
+## 2. Selección de herramientas para ser analizadas
 
 ![Setup combinations](combinatory_setups.png)
 
 ## 3. Configuración previa del cluster
 
 El cluster debe contar con los siguientes módulos:
-- singularity
-- nextflow
-- guppy
-- tensorflow
-- Minimap2
+- Singularity
+- Guppy
+- Tensorflow
+- Nextflow 23.04.3
 
 ## 4. Configuración de los ambientes de conda
+
 Se debe contar con los siguientes ambientes de conda:
 - `conda env create -f conda-env-clair3.yml`
 - `conda env create -f conda-env-happy.yml`
 - `conda env create -f conda-env-nanopolish.yml`
+- `conda env create -f conda-env-minimap2.yml`
 
 ## 5. Configuración inicial del repositorio
 
@@ -125,7 +130,7 @@ guppy_basecaller --disable_pings\
 
 
 - El producto entre cpu_threads_per_caller y num_callers no debe superar el número de cores que se asignaron al trabajo, que en este caso fueron 20.
-- La cantidad de runners per device debe ser seleccionada cuidadosamente con base en las características de cómputo. Para utilizar la cantidad óptima podría primero utilizarse un número grande (>50) y con base en los logs del error se selecciona este valor.
+- La cantidad de runners per device debe ser seleccionada cuidadosamente con base en las características de cómputo. Para utilizar la cantidad óptima podría primero utilizarse un número grande (>50) y con base en los logs del error se selecciona este valor. Por otra parte, haga una selección cuidadosa de la gpu a usar asegurandose de requerir toda la memoria necesaria para el cómputo. (Por ejemplo #SBATCH --gres=gpu:3g.20gb:1)
 - Los parámetros flowcell y kit dependen de la configuración experimental usada para generar las lecturas.
 - La opción recursive indica que hay archivos fast5 contenidos dentro de subcarpetas.
 - Al finalizar la ejecución de guppy se crean 3 carpetas: fail, pass y guppy_basecaller-core-dump-db. La clasificacion entre fail y pass depende de si las lecturas superaron el umbral de calidad especificado por el parámetro min_qscore que por defecto tiene un valor de 7.
@@ -262,12 +267,12 @@ nanopolish variants \
 - Actualmente nanopolish no soporta flowcells R10.4.
 - Para mayor información sobre nanopolish se puede consultar el siguiente enlace https://github.com/jts/nanopolish
 
-#### 6.3.4 wf-human-variations
+#### 6.3.4 wf-human-variation
 ```
-nextflow run wf-human-variation \
+./nextflow run wf-human-variation \
       -w ${vcf_folder} \
       -profile singularity \
-      --snp --sv \
+      --snp \
       --bam ${bam} \
       --bed ${bed} \
       --ref ${ref_fasta} \
@@ -402,3 +407,13 @@ samtools depth bam-1-1.bam > alignment/coverage_per_base.txt
 conda deactivate
 python coverage_per_chr.py > alignment/coverage_per_chr.txt
 ```
+
+## 8. Resource usage by pipeline
+
+![resource usage](resource-usage.png)
+
+- Para el llamado de metilaciones con nanopolish se tiene el siguiente uso de recursos
+  - Tiempo: 53.95000 minutos
+  - RAM: 5.35 GB
+  - CPU: 28 % (20 cores)
+

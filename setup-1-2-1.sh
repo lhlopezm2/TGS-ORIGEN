@@ -3,7 +3,7 @@
 #SBATCH -D .
 #SBATCH -o results/out-1-2-1.txt
 #SBATCH -e results/err-1-2-1.txt
-#SBATCH -n 20
+#SBATCH -n 22
 #SBATCH -N 1
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:1
@@ -71,12 +71,10 @@ else
   echo "----------------"
   echo "Alignment step"
   conda activate ngmlr_env
-  module load samtools/1.15.1
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Alignment step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' ngmlr -t $CPU -r $ref_fasta -q $fastq -x ont \
     |samtools view -Shu |samtools sort -@ $CPU -o $bam --output-fmt BAM
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Bam indexing - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' samtools index $bam -@ $CPU
   conda deactivate
-  module unload samtools/1.15.1
   kill $measure_pid
 fi
 

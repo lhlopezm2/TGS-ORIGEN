@@ -1,9 +1,9 @@
 #!/usr/bin/bash
-#SBATCH -J 1-3-1
+#SBATCH -J 1-2-2
 #SBATCH -D .
-#SBATCH -o results/out-1-3-1.txt
-#SBATCH -e results/err-1-3-1.txt
-#SBATCH -n 20
+#SBATCH -o results/out-1-2-2.txt
+#SBATCH -e results/err-1-2-2.txt
+#SBATCH -n 22
 #SBATCH -N 1
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:1
@@ -15,7 +15,7 @@
 source ~/.bashrc
 
 CPU=20
-setup_v="-1-3-1"
+setup_v="-1-2-2"
 fastq_v=${setup_v:0:2}
 bam_v=${setup_v:0:4}
 home="/shared/home/sorozcoarias/coffea_genomes/Simon/Luis"
@@ -25,9 +25,9 @@ inter_med=5
 fastq="base-calling/fastq${fastq_v}.fastq"
 bam="alignment/bam${bam_v}.bam"
 ref_fasta="GRCh38.fa"
-MODEL_NAME="r941_prom_hac_g360+g422"
 vcf_folder="${home}/variant-calling/vcf${setup_v}"
-vcf="${vcf_folder}/merge_output.vcf.gz"
+vcf_prefix="vcf${setup_v}"
+vcf="${vcf_folder}/${vcf_prefix}.vcf.gz"
 vcf_truth="HG002_GRCh38_benchmark.vcf.gz"
 bed="GRCh38.bed"
 metrics_prefix="metrics/metrics${setup_v}/metrics${setup_v}"
@@ -70,13 +70,11 @@ else
 
   echo "----------------"
   echo "Alignment step"
-  conda activate bwa_env
-  module load samtools/1.15.1
+  conda activate ngmlr_env
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Alignment step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' ngmlr -t $CPU -r $ref_fasta -q $fastq -x ont \
     |samtools view -Shu |samtools sort -@ $CPU -o $bam --output-fmt BAM
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Bam indexing - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' samtools index $bam -@ $CPU
   conda deactivate
-  module unload samtools/1.15.1
   kill $measure_pid
 fi
 
@@ -90,15 +88,19 @@ else
 
   echo "----------------"
   echo "Variant calling step"
-  conda activate clair3
-  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Variant calling step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' run_clair3.sh \
-    --bam_fn=$bam \
-    --ref_fn=$ref_fasta \
-    --threads=$CPU \
-    --platform="ont" \
-    --model_path="${CONDA_PREFIX}/bin/models/${MODEL_NAME}" \
-    --output=$vcf_folder
-  conda deactivate
+  module load singularity
+  module load tensorflow-gpu/2.6.2
+  /shared/home/sorozcoarias/anaconda3/bin/time -f 'Variant calling step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' singularity exec --bind /usr/lib/locale/ \
+    pepper_deepvariant_r0.8.sif \
+    run_pepper_margin_deepvariant call_variant \
+    -b "${bam}" \
+    -f "${ref_fasta}" \
+    -o "${vcf_folder}" \
+    -p "${vcf_prefix}" \
+    -t "${CPU}" \
+    --ont_r9_guppy5_sup
+  module unload tensorflow-gpu/2.6.2
+  module unload singularity
   kill $measure_pid
 fi
 
