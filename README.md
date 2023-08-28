@@ -27,6 +27,7 @@ Se debe contar con los siguientes ambientes de conda:
 - `conda env create -f conda-env-happy.yml`
 - `conda env create -f conda-env-nanopolish.yml`
 - `conda env create -f conda-env-minimap2.yml`
+- `conda env create -f conda-env-ngmlr.yml`
 
 ## 5. Configuración inicial del repositorio
 
