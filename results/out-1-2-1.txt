@@ -1,12 +1,3037 @@
 base-calling/fastq-1.fastq already exists.
-alignment/bam-1-2.bam already exists.
-/shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/merge_output.vcf.gz already exists.
+----------------
+Alignment step
+----------------
+Variant calling step
+[INFO] CLAIR3 VERSION: v1.0.4
+[INFO] BAM FILE PATH: /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/alignment/bam-1-2.bam
+[INFO] REFERENCE FILE PATH: /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/GRCh38.fa
+[INFO] MODEL PATH: /shared/home/sorozcoarias/anaconda3/envs/clair3/bin/models/r941_prom_hac_g360+g422
+[INFO] OUTPUT FOLDER: /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1
+[INFO] PLATFORM: ont
+[INFO] THREADS: 20
+[INFO] BED FILE PATH: EMPTY
+[INFO] VCF FILE PATH: EMPTY
+[INFO] CONTIGS: EMPTY
+[INFO] CONDA PREFIX: /shared/home/sorozcoarias/anaconda3/envs/clair3
+[INFO] SAMTOOLS PATH: samtools
+[INFO] PYTHON PATH: python3
+[INFO] PYPY PATH: pypy3
+[INFO] PARALLEL PATH: parallel
+[INFO] WHATSHAP PATH: whatshap
+[INFO] LONGPHASE PATH: EMPTY
+[INFO] CHUNK SIZE: 5000000
+[INFO] FULL ALIGN PROPORTION: 0.7
+[INFO] FULL ALIGN REFERENCE PROPORTION: 0.1
+[INFO] PHASING PROPORTION: 0.7
+[INFO] MINIMUM MQ: 5
+[INFO] MINIMUM COVERAGE: 2
+[INFO] SNP AF THRESHOLD: 0.08
+[INFO] INDEL AF THRESHOLD: 0.15
+[INFO] ENABLE FILEUP ONLY CALLING: False
+[INFO] ENABLE FAST MODE CALLING: False
+[INFO] ENABLE CALLING SNP CANDIDATES ONLY: False
+[INFO] ENABLE PRINTING REFERENCE CALLS: False
+[INFO] ENABLE OUTPUT GVCF: False
+[INFO] ENABLE HAPLOID PRECISE MODE: False
+[INFO] ENABLE HAPLOID SENSITIVE MODE: False
+[INFO] ENABLE INCLUDE ALL CTGS CALLING: False
+[INFO] ENABLE NO PHASING FOR FULL ALIGNMENT: False
+[INFO] ENABLE REMOVING INTERMEDIATE FILES: False
+[INFO] ENABLE LONGPHASE FOR INTERMEDIATE VCF PHASING: False
+[INFO] ENABLE PHASING FINAL VCF OUTPUT USING WHATSHAP: False
+[INFO] ENABLE PHASING FINAL VCF OUTPUT USING LONGPHASE: False
+[INFO] ENABLE HAPLOTAGGING FINAL BAM: False
+[INFO] ENABLE LONG INDEL CALLING: False
+[INFO] ENABLE C_IMPLEMENT: True
+
++ /shared/ifbstor1/projects/coffea_genomes/Simon/anaconda3_homesimon/envs/clair3/bin/scripts/clair3_c_impl.sh --bam_fn /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/alignment/bam-1-2.bam --ref_fn /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/GRCh38.fa --threads 20 --model_path /shared/home/sorozcoarias/anaconda3/envs/clair3/bin/models/r941_prom_hac_g360+g422 --platform ont --output /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1 --bed_fn=EMPTY --vcf_fn=EMPTY --ctg_name=EMPTY --sample_name=SAMPLE --chunk_num=0 --chunk_size=5000000 --samtools=samtools --python=python3 --pypy=pypy3 --parallel=parallel --whatshap=whatshap --qual=2 --var_pct_full=0.7 --ref_pct_full=0.1 --var_pct_phasing=0.7 --snp_min_af=0.08 --indel_min_af=0.15 --min_mq=5 --min_coverage=2 --min_contig_size=0 --pileup_only=False --gvcf=False --fast_mode=False --call_snp_only=False --print_ref_calls=False --haploid_precise=False --haploid_sensitive=False --include_all_ctgs=False --no_phasing_for_fa=False --pileup_model_prefix=pileup --fa_model_prefix=full_alignment --remove_intermediate_dir=False --enable_phasing=False --enable_long_indel=False --keep_iupac_bases=False --use_gpu=False --longphase_for_phasing=False --longphase=EMPTY --use_whatshap_for_intermediate_phasing=True --use_longphase_for_intermediate_phasing=False --use_whatshap_for_final_output_phasing=False --use_longphase_for_final_output_phasing=False --use_whatshap_for_final_output_haplotagging=False
+
+[INFO] Check environment variables
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/log
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/merge_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/phase_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/gvcf_tmp_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/full_alignment_output
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/phase_output/phase_vcf
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/phase_output/phase_bam
+[INFO] Create folder /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/full_alignment_output/candidate_bed
+[INFO] --include_all_ctgs not enabled, use chr{1..22,X,Y} and {1..22,X,Y} by default
+[INFO] Call variant in contigs: chr1 chr2 chr3 chr4 chr5 chr6 chr7 chr8 chr9 chr10 chr11 chr12 chr13 chr14 chr15 chr16 chr17 chr18 chr19 chr20 chr21 chr22 chrX chrY
+[INFO] Chunk number for each contig: 50 49 40 39 37 35 32 30 28 27 28 27 23 22 21 19 17 17 12 13 10 11 32 12
+[INFO] 1/7 Call variants using pileup model
+Calling variants ...
+Total processed positions in chr1 (chunk 9/50) : 0
+Total time elapsed: 0.66 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_9.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 5/50) : 0
+Total time elapsed: 0.64 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 7/50) : 0
+Total time elapsed: 0.66 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_7.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 10/50) : 0
+Total time elapsed: 0.66 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 12/50) : 0
+Total time elapsed: 0.66 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 11/50) : 14
+Total time elapsed: 3.59 s
+Calling variants ...
+Total processed positions in chr1 (chunk 8/50) : 22
+Total time elapsed: 3.57 s
+Calling variants ...
+Total processed positions in chr1 (chunk 2/50) : 10
+Total time elapsed: 3.59 s
+Calling variants ...
+Total processed positions in chr1 (chunk 14/50) : 14
+Total time elapsed: 3.58 s
+Calling variants ...
+Total processed positions in chr1 (chunk 6/50) : 7
+Total time elapsed: 3.57 s
+Calling variants ...
+Total processed positions in chr1 (chunk 3/50) : 4
+Total time elapsed: 3.57 s
+Calling variants ...
+Total processed positions in chr1 (chunk 1/50) : 85
+Total time elapsed: 3.71 s
+Calling variants ...
+Total processed positions in chr1 (chunk 4/50) : 14
+Total time elapsed: 3.72 s
+Calling variants ...
+Total processed positions in chr1 (chunk 13/50) : 958
+Total time elapsed: 4.99 s
+Calling variants ...
+Total processed positions in chr1 (chunk 15/50) : 6943
+Total time elapsed: 8.97 s
+Calling variants ...
+Total processed positions in chr1 (chunk 16/50) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_16.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 17/50) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_17.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 26/50) : 0
+Total time elapsed: 0.16 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_26.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 24/50) : 0
+Total time elapsed: 0.18 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_24.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 28/50) : 0
+Total time elapsed: 0.15 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_28.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 25/50) : 0
+Total time elapsed: 0.16 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_25.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 21/50) : 0
+Total time elapsed: 0.19 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_21.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 27/50) : 0
+Total time elapsed: 0.13 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_27.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 23/50) : 0
+Total time elapsed: 0.21 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_23.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 29/50) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_29.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 19/50) : 290
+Total time elapsed: 2.77 s
+Calling variants ...
+Total processed positions in chr1 (chunk 22/50) : 409
+Total time elapsed: 2.82 s
+Calling variants ...
+Total processed positions in chr1 (chunk 20/50) : 3987
+Total time elapsed: 5.43 s
+Calling variants ...
+Total processed positions in chr1 (chunk 18/50) : 4836
+Total time elapsed: 6.24 s
+Calling variants ...
+Total processed positions in chr1 (chunk 30/50) : 1332
+Total time elapsed: 3.49 s
+Calling variants ...
+Total processed positions in chr1 (chunk 34/50) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_34.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 35/50) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_35.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 38/50) : 0
+Total time elapsed: 0.20 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_38.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 32/50) : 189
+Total time elapsed: 2.03 s
+Calling variants ...
+Total processed positions in chr1 (chunk 33/50) : 1
+Total time elapsed: 1.78 s
+Calling variants ...
+Total processed positions in chr1 (chunk 40/50) : 0
+Total time elapsed: 0.29 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_40.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 37/50) : 52
+Total time elapsed: 1.77 s
+Calling variants ...
+Total processed positions in chr1 (chunk 36/50) : 398
+Total time elapsed: 2.80 s
+Calling variants ...
+Total processed positions in chr1 (chunk 42/50) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_42.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 31/50) : 5089
+Total time elapsed: 6.62 s
+Calling variants ...
+Total processed positions in chr1 (chunk 43/50) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_43.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 39/50) : 4013
+Total time elapsed: 5.71 s
+Calling variants ...
+Total processed positions in chr1 (chunk 44/50) : 0
+Total time elapsed: 0.45 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_44.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 41/50) : 2546
+Total time elapsed: 4.59 s
+Calling variants ...
+Total processed positions in chr1 (chunk 45/50) : 12528
+Total time elapsed: 11.79 s
+Calling variants ...
+Total processed positions in chr1 (chunk 46/50) : 0
+Total time elapsed: 0.16 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_46.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 48/50) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_48.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 47/50) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_47.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr1 (chunk 50/50) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr1_50.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 2/49) : 0
+Total time elapsed: 0.29 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 3/49) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 4/49) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_4.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 1/49) : 7
+Total time elapsed: 1.73 s
+Calling variants ...
+Total processed positions in chr1 (chunk 49/50) : 282
+Total time elapsed: 2.67 s
+Calling variants ...
+Total processed positions in chr2 (chunk 6/49) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 8/49) : 0
+Total time elapsed: 0.18 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 5/49) : 206
+Total time elapsed: 2.64 s
+Calling variants ...
+Total processed positions in chr2 (chunk 7/49) : 12
+Total time elapsed: 1.82 s
+Calling variants ...
+Total processed positions in chr2 (chunk 9/49) : 5
+Total time elapsed: 1.87 s
+Calling variants ...
+Total processed positions in chr2 (chunk 10/49) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 11/49) : 0
+Total time elapsed: 0.39 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_11.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 12/49) : 0
+Total time elapsed: 0.23 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 13/49) : 0
+Total time elapsed: 0.33 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_13.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 14/49) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_14.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 15/49) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_15.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 20/49) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_20.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 21/49) : 0
+Total time elapsed: 0.19 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_21.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 18/49) : 1943
+Total time elapsed: 4.04 s
+Calling variants ...
+Total processed positions in chr2 (chunk 19/49) : 1323
+Total time elapsed: 3.60 s
+Calling variants ...
+Total processed positions in chr2 (chunk 24/49) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_24.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 16/49) : 3253
+Total time elapsed: 5.04 s
+Calling variants ...
+Total processed positions in chr2 (chunk 23/49) : 15
+Total time elapsed: 1.79 s
+Calling variants ...
+Total processed positions in chr2 (chunk 22/49) : 9
+Total time elapsed: 1.67 s
+Calling variants ...
+Total processed positions in chr2 (chunk 17/49) : 4369
+Total time elapsed: 5.67 s
+Calling variants ...
+Total processed positions in chr2 (chunk 25/49) : 194
+Total time elapsed: 1.98 s
+Calling variants ...
+Total processed positions in chr2 (chunk 27/49) : 0
+Total time elapsed: 0.19 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_27.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 26/49) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_26.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 28/49) : 14
+Total time elapsed: 1.79 s
+Calling variants ...
+Total processed positions in chr2 (chunk 29/49) : 1597
+Total time elapsed: 3.80 s
+Calling variants ...
+Total processed positions in chr2 (chunk 31/49) : 0
+Total time elapsed: 0.51 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_31.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 32/49) : 96
+Total time elapsed: 1.89 s
+Calling variants ...
+Total processed positions in chr2 (chunk 34/49) : 0
+Total time elapsed: 0.40 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_34.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 35/49) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_35.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 33/49) : 17
+Total time elapsed: 1.88 s
+Calling variants ...
+Total processed positions in chr2 (chunk 36/49) : 107
+Total time elapsed: 1.95 s
+Calling variants ...
+Total processed positions in chr2 (chunk 37/49) : 42
+Total time elapsed: 1.99 s
+Calling variants ...
+Total processed positions in chr2 (chunk 39/49) : 725
+Total time elapsed: 3.19 s
+Calling variants ...
+Total processed positions in chr2 (chunk 38/49) : 2960
+Total time elapsed: 4.70 s
+Calling variants ...
+Total processed positions in chr2 (chunk 30/49) : 22731
+Total time elapsed: 19.55 s
+Calling variants ...
+Total processed positions in chr2 (chunk 40/49) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_40.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 41/49) : 0
+Total time elapsed: 0.20 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_41.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 42/49) : 0
+Total time elapsed: 0.21 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_42.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 43/49) : 32
+Total time elapsed: 1.80 s
+Calling variants ...
+Total processed positions in chr2 (chunk 45/49) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_45.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 44/49) : 57
+Total time elapsed: 1.84 s
+Calling variants ...
+Total processed positions in chr2 (chunk 46/49) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_46.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 49/49) : 0
+Total time elapsed: 0.21 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr2_49.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 48/49) : 17
+Total time elapsed: 1.71 s
+Calling variants ...
+Total processed positions in chr3 (chunk 1/40) : 0
+Total time elapsed: 0.20 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr3 (chunk 2/40) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr2 (chunk 47/49) : 210
+Total time elapsed: 2.69 s
+Calling variants ...
+Total processed positions in chr3 (chunk 3/40) : 0
+Total time elapsed: 0.19 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr3 (chunk 4/40) : 45
+Total time elapsed: 1.77 s
+Calling variants ...
+Total processed positions in chr3 (chunk 6/40) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr3 (chunk 8/40) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr3 (chunk 5/40) : 376
+Total time elapsed: 2.83 s
+Calling variants ...
+Total processed positions in chr3 (chunk 7/40) : 20
+Total time elapsed: 1.80 s
+Calling variants ...
+Total processed positions in chr3 (chunk 10/40) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr3 (chunk 11/40) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_11.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr3 (chunk 9/40) : 3380
+Total time elapsed: 5.09 s
+Calling variants ...
+Total processed positions in chr3 (chunk 15/40) : 0
+Total time elapsed: 0.33 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_15.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr3 (chunk 16/40) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_16.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr3 (chunk 13/40) : 181
+Total time elapsed: 1.98 s
+Calling variants ...
+Total processed positions in chr3 (chunk 14/40) : 146
+Total time elapsed: 1.95 s
+Calling variants ...
+Total processed positions in chr3 (chunk 18/40) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_18.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr3 (chunk 17/40) : 4689
+Total time elapsed: 6.12 s
+Calling variants ...
+Total processed positions in chr3 (chunk 12/40) : 12559
+Total time elapsed: 11.40 s
+Calling variants ...
+Total processed positions in chr3 (chunk 19/40) : 392
+Total time elapsed: 2.95 s
+Calling variants ...
+Total processed positions in chr3 (chunk 20/40) : 1212
+Total time elapsed: 3.50 s
+Calling variants ...
+Total processed positions in chr3 (chunk 22/40) : 0
+Total time elapsed: 0.37 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_22.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr3 (chunk 21/40) : 156
+Total time elapsed: 2.02 s
+Calling variants ...
+Total processed positions in chr3 (chunk 23/40) : 1952
+Total time elapsed: 4.13 s
+Calling variants ...
+Total processed positions in chr3 (chunk 25/40) : 2
+Total time elapsed: 2.07 s
+Calling variants ...
+Total processed positions in chr3 (chunk 26/40) : 26
+Total time elapsed: 1.81 s
+Calling variants ...
+Total processed positions in chr3 (chunk 24/40) : 4537
+Total time elapsed: 5.87 s
+Calling variants ...
+Total processed positions in chr3 (chunk 29/40) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_29.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr3 (chunk 27/40) : 41
+Total time elapsed: 1.90 s
+Calling variants ...
+Total processed positions in chr3 (chunk 30/40) : 55
+Total time elapsed: 1.76 s
+Calling variants ...
+Total processed positions in chr3 (chunk 28/40) : 389
+Total time elapsed: 2.81 s
+Calling variants ...
+Total processed positions in chr3 (chunk 31/40) : 8
+Total time elapsed: 1.72 s
+Calling variants ...
+Total processed positions in chr3 (chunk 34/40) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_34.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr3 (chunk 33/40) : 78
+Total time elapsed: 1.98 s
+Calling variants ...
+Total processed positions in chr3 (chunk 32/40) : 279
+Total time elapsed: 2.72 s
+Calling variants ...
+Total processed positions in chr3 (chunk 35/40) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_35.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr3 (chunk 37/40) : 66
+Total time elapsed: 1.80 s
+Calling variants ...
+Total processed positions in chr3 (chunk 36/40) : 177
+Total time elapsed: 2.06 s
+Calling variants ...
+Total processed positions in chr3 (chunk 38/40) : 777
+Total time elapsed: 3.03 s
+Calling variants ...
+Total processed positions in chr3 (chunk 39/40) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr3_39.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 1/39) : 0
+Total time elapsed: 0.35 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr3 (chunk 40/40) : 708
+Total time elapsed: 3.06 s
+Calling variants ...
+Total processed positions in chr4 (chunk 2/39) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 3/39) : 0
+Total time elapsed: 0.29 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 5/39) : 77
+Total time elapsed: 2.08 s
+Calling variants ...
+Total processed positions in chr4 (chunk 4/39) : 654
+Total time elapsed: 2.95 s
+Calling variants ...
+Total processed positions in chr4 (chunk 6/39) : 164
+Total time elapsed: 2.15 s
+Calling variants ...
+Total processed positions in chr4 (chunk 9/39) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_9.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 7/39) : 979
+Total time elapsed: 3.36 s
+Calling variants ...
+Total processed positions in chr4 (chunk 8/39) : 535
+Total time elapsed: 2.90 s
+Calling variants ...
+Total processed positions in chr4 (chunk 10/39) : 0
+Total time elapsed: 0.18 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 12/39) : 0
+Total time elapsed: 0.17 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 11/39) : 6
+Total time elapsed: 1.69 s
+Calling variants ...
+Total processed positions in chr4 (chunk 13/39) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_13.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 14/39) : 24
+Total time elapsed: 1.66 s
+Calling variants ...
+Total processed positions in chr4 (chunk 15/39) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_15.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 16/39) : 0
+Total time elapsed: 0.34 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_16.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 17/39) : 0
+Total time elapsed: 0.20 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_17.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 18/39) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_18.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 20/39) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_20.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 21/39) : 197
+Total time elapsed: 2.07 s
+Calling variants ...
+Total processed positions in chr4 (chunk 19/39) : 2232
+Total time elapsed: 4.35 s
+Calling variants ...
+Total processed positions in chr4 (chunk 22/39) : 10
+Total time elapsed: 1.85 s
+Calling variants ...
+Total processed positions in chr4 (chunk 24/39) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_24.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 23/39) : 41
+Total time elapsed: 2.00 s
+Calling variants ...
+Total processed positions in chr4 (chunk 25/39) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_25.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 26/39) : 9
+Total time elapsed: 1.88 s
+Calling variants ...
+Total processed positions in chr4 (chunk 27/39) : 143
+Total time elapsed: 1.95 s
+Calling variants ...
+Total processed positions in chr4 (chunk 28/39) : 2150
+Total time elapsed: 4.08 s
+Calling variants ...
+Total processed positions in chr4 (chunk 32/39) : 6
+Total time elapsed: 1.79 s
+Calling variants ...
+Total processed positions in chr4 (chunk 30/39) : 827
+Total time elapsed: 3.15 s
+Calling variants ...
+Total processed positions in chr4 (chunk 29/39) : 2632
+Total time elapsed: 4.48 s
+Calling variants ...
+Total processed positions in chr4 (chunk 31/39) : 3193
+Total time elapsed: 4.98 s
+Calling variants ...
+Total processed positions in chr4 (chunk 35/39) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_35.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 33/39) : 2522
+Total time elapsed: 4.45 s
+Calling variants ...
+Total processed positions in chr4 (chunk 36/39) : 148
+Total time elapsed: 1.99 s
+Calling variants ...
+Total processed positions in chr4 (chunk 38/39) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr4_38.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 1/37) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr4 (chunk 34/39) : 7519
+Total time elapsed: 7.92 s
+Calling variants ...
+Total processed positions in chr4 (chunk 39/39) : 3546
+Total time elapsed: 5.40 s
+Calling variants ...
+Total processed positions in chr5 (chunk 2/37) : 243
+Total time elapsed: 2.74 s
+Calling variants ...
+Total processed positions in chr4 (chunk 37/39) : 9947
+Total time elapsed: 9.68 s
+Calling variants ...
+Total processed positions in chr5 (chunk 3/37) : 359
+Total time elapsed: 2.73 s
+Calling variants ...
+Total processed positions in chr5 (chunk 6/37) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 7/37) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_7.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 5/37) : 981
+Total time elapsed: 3.32 s
+Calling variants ...
+Total processed positions in chr5 (chunk 8/37) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 9/37) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_9.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 10/37) : 0
+Total time elapsed: 0.23 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 4/37) : 5873
+Total time elapsed: 7.05 s
+Calling variants ...
+Total processed positions in chr5 (chunk 11/37) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_11.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 12/37) : 0
+Total time elapsed: 0.29 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 13/37) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_13.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 15/37) : 0
+Total time elapsed: 0.23 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_15.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 16/37) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_16.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 17/37) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_17.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 14/37) : 8792
+Total time elapsed: 8.93 s
+Calling variants ...
+Total processed positions in chr5 (chunk 19/37) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_19.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 18/37) : 7033
+Total time elapsed: 7.86 s
+Calling variants ...
+Total processed positions in chr5 (chunk 21/37) : 0
+Total time elapsed: 0.40 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_21.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 23/37) : 0
+Total time elapsed: 0.23 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_23.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 25/37) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_25.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 22/37) : 385
+Total time elapsed: 2.96 s
+Calling variants ...
+Total processed positions in chr5 (chunk 27/37) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_27.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 26/37) : 32
+Total time elapsed: 1.89 s
+Calling variants ...
+Total processed positions in chr5 (chunk 28/37) : 0
+Total time elapsed: 0.39 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_28.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 24/37) : 3622
+Total time elapsed: 5.22 s
+Calling variants ...
+Total processed positions in chr5 (chunk 20/37) : 7750
+Total time elapsed: 8.48 s
+Calling variants ...
+Total processed positions in chr5 (chunk 29/37) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_29.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 30/37) : 0
+Total time elapsed: 0.29 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_30.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 31/37) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_31.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 32/37) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_32.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 33/37) : 0
+Total time elapsed: 0.33 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_33.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 34/37) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_34.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 35/37) : 0
+Total time elapsed: 0.45 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_35.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 36/37) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr5_36.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr6 (chunk 1/35) : 0
+Total time elapsed: 0.44 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr6_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr5 (chunk 37/37) : 2003
+Total time elapsed: 4.04 s
+Calling variants ...
+Total processed positions in chr6 (chunk 2/35) : 125
+Total time elapsed: 1.98 s
+Calling variants ...
+Total processed positions in chr6 (chunk 5/35) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr6_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr6 (chunk 3/35) : 72
+Total time elapsed: 1.79 s
+Calling variants ...
+Total processed positions in chr6 (chunk 6/35) : 22
+Total time elapsed: 1.88 s
+Calling variants ...
+Total processed positions in chr6 (chunk 4/35) : 1658
+Total time elapsed: 4.06 s
+Calling variants ...
+Total processed positions in chr6 (chunk 7/35) : 7
+Total time elapsed: 1.97 s
+Calling variants ...
+Total processed positions in chr6 (chunk 9/35) : 0
+Total time elapsed: 0.35 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr6_9.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr6 (chunk 8/35) : 168
+Total time elapsed: 2.02 s
+Calling variants ...
+Total processed positions in chr6 (chunk 10/35) : 2431
+Total time elapsed: 4.33 s
+Calling variants ...
+Total processed positions in chr6 (chunk 11/35) : 2
+Total time elapsed: 1.74 s
+Calling variants ...
+Total processed positions in chr6 (chunk 13/35) : 25
+Total time elapsed: 1.79 s
+Calling variants ...
+Total processed positions in chr6 (chunk 12/35) : 528
+Total time elapsed: 3.03 s
+Calling variants ...
+Total processed positions in chr6 (chunk 14/35) : 2252
+Total time elapsed: 4.13 s
+Calling variants ...
+Total processed positions in chr6 (chunk 17/35) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr6_17.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr6 (chunk 15/35) : 923
+Total time elapsed: 3.35 s
+Calling variants ...
+Total processed positions in chr6 (chunk 19/35) : 0
+Total time elapsed: 0.23 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr6_19.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr6 (chunk 18/35) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr6_18.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr6 (chunk 21/35) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr6_21.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr6 (chunk 16/35) : 4196
+Total time elapsed: 5.74 s
+Calling variants ...
+Total processed positions in chr6 (chunk 20/35) : 593
+Total time elapsed: 3.03 s
+Calling variants ...
+Total processed positions in chr6 (chunk 22/35) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr6_22.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr6 (chunk 23/35) : 0
+Total time elapsed: 0.38 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr6_23.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr6 (chunk 24/35) : 39
+Total time elapsed: 2.13 s
+Calling variants ...
+Total processed positions in chr6 (chunk 25/35) : 596
+Total time elapsed: 2.94 s
+Calling variants ...
+Total processed positions in chr6 (chunk 26/35) : 35
+Total time elapsed: 1.80 s
+Calling variants ...
+Total processed positions in chr6 (chunk 27/35) : 7
+Total time elapsed: 1.95 s
+Calling variants ...
+Total processed positions in chr6 (chunk 28/35) : 1063
+Total time elapsed: 3.34 s
+Calling variants ...
+Total processed positions in chr6 (chunk 29/35) : 0
+Total time elapsed: 0.51 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr6_29.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr6 (chunk 30/35) : 0
+Total time elapsed: 0.74 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr6_30.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr6 (chunk 31/35) : 0
+Total time elapsed: 0.41 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr6_31.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr6 (chunk 32/35) : 23
+Total time elapsed: 2.10 s
+Calling variants ...
+Total processed positions in chr6 (chunk 33/35) : 2275
+Total time elapsed: 4.31 s
+Calling variants ...
+Total processed positions in chr6 (chunk 34/35) : 0
+Total time elapsed: 0.48 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr6_34.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr6 (chunk 35/35) : 0
+Total time elapsed: 0.36 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr6_35.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 1/32) : 0
+Total time elapsed: 0.34 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr7_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 2/32) : 164
+Total time elapsed: 1.95 s
+Calling variants ...
+Total processed positions in chr7 (chunk 3/32) : 787
+Total time elapsed: 3.04 s
+Calling variants ...
+Total processed positions in chr7 (chunk 4/32) : 137
+Total time elapsed: 2.06 s
+Calling variants ...
+Total processed positions in chr7 (chunk 5/32) : 0
+Total time elapsed: 0.47 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr7_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 6/32) : 0
+Total time elapsed: 0.39 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr7_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 7/32) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr7_7.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 9/32) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr7_9.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 10/32) : 0
+Total time elapsed: 0.21 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr7_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 11/32) : 0
+Total time elapsed: 0.23 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr7_11.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 12/32) : 186
+Total time elapsed: 2.07 s
+Calling variants ...
+Total processed positions in chr7 (chunk 8/32) : 4268
+Total time elapsed: 5.65 s
+Calling variants ...
+Total processed positions in chr7 (chunk 13/32) : 83
+Total time elapsed: 1.91 s
+Calling variants ...
+Total processed positions in chr7 (chunk 15/32) : 0
+Total time elapsed: 0.34 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr7_15.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 16/32) : 0
+Total time elapsed: 0.35 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr7_16.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 14/32) : 3109
+Total time elapsed: 5.01 s
+Calling variants ...
+Total processed positions in chr7 (chunk 17/32) : 3
+Total time elapsed: 1.89 s
+Calling variants ...
+Total processed positions in chr7 (chunk 18/32) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr7_18.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 19/32) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr7_19.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 20/32) : 381
+Total time elapsed: 2.88 s
+Calling variants ...
+Total processed positions in chr7 (chunk 21/32) : 957
+Total time elapsed: 3.18 s
+Calling variants ...
+Total processed positions in chr7 (chunk 25/32) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr7_25.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 22/32) : 2164
+Total time elapsed: 4.19 s
+Calling variants ...
+Total processed positions in chr7 (chunk 24/32) : 110
+Total time elapsed: 1.89 s
+Calling variants ...
+Total processed positions in chr7 (chunk 23/32) : 2676
+Total time elapsed: 4.56 s
+Calling variants ...
+Total processed positions in chr7 (chunk 28/32) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr7_28.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 29/32) : 0
+Total time elapsed: 0.21 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr7_29.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr7 (chunk 27/32) : 220
+Total time elapsed: 2.69 s
+Calling variants ...
+Total processed positions in chr7 (chunk 30/32) : 186
+Total time elapsed: 1.87 s
+Calling variants ...
+Total processed positions in chr7 (chunk 31/32) : 647
+Total time elapsed: 3.04 s
+Calling variants ...
+Total processed positions in chr7 (chunk 26/32) : 5339
+Total time elapsed: 6.49 s
+Calling variants ...
+Total processed positions in chr7 (chunk 32/32) : 25
+Total time elapsed: 1.97 s
+Calling variants ...
+Total processed positions in chr8 (chunk 1/30) : 0
+Total time elapsed: 0.38 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 2/30) : 3214
+Total time elapsed: 4.99 s
+Calling variants ...
+Total processed positions in chr8 (chunk 4/30) : 0
+Total time elapsed: 0.38 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_4.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 3/30) : 24
+Total time elapsed: 2.00 s
+Calling variants ...
+Total processed positions in chr8 (chunk 5/30) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 6/30) : 0
+Total time elapsed: 0.34 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 7/30) : 0
+Total time elapsed: 0.33 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_7.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 8/30) : 508
+Total time elapsed: 2.90 s
+Calling variants ...
+Total processed positions in chr8 (chunk 12/30) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 11/30) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_11.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 9/30) : 821
+Total time elapsed: 3.12 s
+Calling variants ...
+Total processed positions in chr8 (chunk 10/30) : 3460
+Total time elapsed: 5.02 s
+Calling variants ...
+Total processed positions in chr8 (chunk 15/30) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_15.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 16/30) : 0
+Total time elapsed: 0.34 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_16.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 14/30) : 812
+Total time elapsed: 3.12 s
+Calling variants ...
+Total processed positions in chr8 (chunk 13/30) : 2630
+Total time elapsed: 4.48 s
+Calling variants ...
+Total processed positions in chr8 (chunk 17/30) : 0
+Total time elapsed: 0.37 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_17.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 18/30) : 15
+Total time elapsed: 1.96 s
+Calling variants ...
+Total processed positions in chr8 (chunk 19/30) : 368
+Total time elapsed: 2.97 s
+Calling variants ...
+Total processed positions in chr8 (chunk 21/30) : 0
+Total time elapsed: 0.35 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_21.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 20/30) : 46
+Total time elapsed: 1.92 s
+Calling variants ...
+Total processed positions in chr8 (chunk 22/30) : 0
+Total time elapsed: 0.42 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_22.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 23/30) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_23.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 25/30) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_25.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 24/30) : 34
+Total time elapsed: 1.78 s
+Calling variants ...
+Total processed positions in chr8 (chunk 26/30) : 504
+Total time elapsed: 2.85 s
+Calling variants ...
+Total processed positions in chr8 (chunk 27/30) : 14
+Total time elapsed: 1.80 s
+Calling variants ...
+Total processed positions in chr8 (chunk 29/30) : 0
+Total time elapsed: 0.34 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr8_29.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 1/28) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr8 (chunk 28/30) : 1876
+Total time elapsed: 3.99 s
+Calling variants ...
+Total processed positions in chr8 (chunk 30/30) : 152
+Total time elapsed: 1.87 s
+Calling variants ...
+Total processed positions in chr9 (chunk 2/28) : 0
+Total time elapsed: 0.36 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 3/28) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 6/28) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 5/28) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 4/28) : 2
+Total time elapsed: 1.87 s
+Calling variants ...
+Total processed positions in chr9 (chunk 7/28) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_7.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 9/28) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_9.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 8/28) : 0
+Total time elapsed: 0.18 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 10/28) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 11/28) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_11.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 12/28) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 13/28) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_13.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 16/28) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_16.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 14/28) : 27
+Total time elapsed: 1.88 s
+Calling variants ...
+Total processed positions in chr9 (chunk 15/28) : 14
+Total time elapsed: 1.79 s
+Calling variants ...
+Total processed positions in chr9 (chunk 18/28) : 29
+Total time elapsed: 1.84 s
+Calling variants ...
+Total processed positions in chr9 (chunk 19/28) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_19.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 17/28) : 14120
+Total time elapsed: 12.36 s
+Calling variants ...
+Total processed positions in chr9 (chunk 20/28) : 22
+Total time elapsed: 1.87 s
+Calling variants ...
+Total processed positions in chr9 (chunk 21/28) : 22
+Total time elapsed: 1.77 s
+Calling variants ...
+Total processed positions in chr9 (chunk 22/28) : 103
+Total time elapsed: 1.88 s
+Calling variants ...
+Total processed positions in chr9 (chunk 24/28) : 0
+Total time elapsed: 0.19 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_24.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 25/28) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_25.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 23/28) : 22
+Total time elapsed: 1.83 s
+Calling variants ...
+Total processed positions in chr9 (chunk 26/28) : 0
+Total time elapsed: 0.37 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_26.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 27/28) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_27.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr9 (chunk 28/28) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr9_28.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 1/27) : 0
+Total time elapsed: 0.29 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 2/27) : 0
+Total time elapsed: 0.29 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 3/27) : 0
+Total time elapsed: 0.33 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 4/27) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_4.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 5/27) : 0
+Total time elapsed: 0.21 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 9/27) : 156
+Total time elapsed: 1.67 s
+Calling variants ...
+Total processed positions in chr10 (chunk 7/27) : 152
+Total time elapsed: 1.83 s
+Calling variants ...
+Total processed positions in chr10 (chunk 11/27) : 0
+Total time elapsed: 0.15 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_11.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 10/27) : 102
+Total time elapsed: 1.77 s
+Calling variants ...
+Total processed positions in chr10 (chunk 14/27) : 0
+Total time elapsed: 0.19 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_14.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 8/27) : 574
+Total time elapsed: 2.96 s
+Calling variants ...
+Total processed positions in chr10 (chunk 15/27) : 0
+Total time elapsed: 0.20 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_15.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 16/27) : 0
+Total time elapsed: 0.23 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_16.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 13/27) : 51
+Total time elapsed: 1.74 s
+Calling variants ...
+Total processed positions in chr10 (chunk 18/27) : 11
+Total time elapsed: 1.80 s
+Calling variants ...
+Total processed positions in chr10 (chunk 17/27) : 21
+Total time elapsed: 1.78 s
+Calling variants ...
+Total processed positions in chr10 (chunk 19/27) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_19.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 6/27) : 12553
+Total time elapsed: 12.33 s
+Calling variants ...
+Total processed positions in chr10 (chunk 20/27) : 0
+Total time elapsed: 0.35 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_20.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 23/27) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_23.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 22/27) : 45
+Total time elapsed: 1.77 s
+Calling variants ...
+Total processed positions in chr10 (chunk 21/27) : 295
+Total time elapsed: 2.79 s
+Calling variants ...
+Total processed positions in chr10 (chunk 24/27) : 0
+Total time elapsed: 0.39 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_24.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 26/27) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_26.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 27/27) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr10_27.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr10 (chunk 25/27) : 94
+Total time elapsed: 1.88 s
+Calling variants ...
+Total processed positions in chr11 (chunk 1/28) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr11_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr11 (chunk 3/28) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr11_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr11 (chunk 4/28) : 19
+Total time elapsed: 1.78 s
+Calling variants ...
+Total processed positions in chr10 (chunk 12/27) : 36745
+Total time elapsed: 28.46 s
+Calling variants ...
+Total processed positions in chr11 (chunk 6/28) : 90
+Total time elapsed: 1.90 s
+Calling variants ...
+Total processed positions in chr11 (chunk 5/28) : 616
+Total time elapsed: 3.19 s
+Calling variants ...
+Total processed positions in chr11 (chunk 2/28) : 11755
+Total time elapsed: 10.78 s
+Calling variants ...
+Total processed positions in chr11 (chunk 7/28) : 4243
+Total time elapsed: 5.59 s
+Calling variants ...
+Total processed positions in chr11 (chunk 8/28) : 4
+Total time elapsed: 1.81 s
+Calling variants ...
+Total processed positions in chr11 (chunk 12/28) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr11_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr11 (chunk 9/28) : 31
+Total time elapsed: 1.83 s
+Calling variants ...
+Total processed positions in chr11 (chunk 11/28) : 3
+Total time elapsed: 1.75 s
+Calling variants ...
+Total processed positions in chr11 (chunk 13/28) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr11_13.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr11 (chunk 14/28) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr11_14.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr11 (chunk 10/28) : 2005
+Total time elapsed: 4.08 s
+Calling variants ...
+Total processed positions in chr11 (chunk 15/28) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr11_15.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr11 (chunk 17/28) : 0
+Total time elapsed: 0.20 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr11_17.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr11 (chunk 20/28) : 0
+Total time elapsed: 0.20 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr11_20.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr11 (chunk 19/28) : 29
+Total time elapsed: 1.76 s
+Calling variants ...
+Total processed positions in chr11 (chunk 21/28) : 78
+Total time elapsed: 1.74 s
+Calling variants ...
+Total processed positions in chr11 (chunk 18/28) : 7098
+Total time elapsed: 7.59 s
+Calling variants ...
+Total processed positions in chr11 (chunk 16/28) : 12536
+Total time elapsed: 11.76 s
+Calling variants ...
+Total processed positions in chr11 (chunk 22/28) : 59
+Total time elapsed: 1.81 s
+Calling variants ...
+Total processed positions in chr11 (chunk 26/28) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr11_26.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr11 (chunk 27/28) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr11_27.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr11 (chunk 24/28) : 20
+Total time elapsed: 1.80 s
+Calling variants ...
+Total processed positions in chr11 (chunk 25/28) : 4
+Total time elapsed: 1.88 s
+Calling variants ...
+Total processed positions in chr11 (chunk 28/28) : 0
+Total time elapsed: 0.29 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr11_28.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr11 (chunk 23/28) : 976
+Total time elapsed: 3.19 s
+Calling variants ...
+Total processed positions in chr12 (chunk 1/27) : 0
+Total time elapsed: 0.29 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr12_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 2/27) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr12_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 3/27) : 18
+Total time elapsed: 1.97 s
+Calling variants ...
+Total processed positions in chr12 (chunk 5/27) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr12_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 4/27) : 208
+Total time elapsed: 2.82 s
+Calling variants ...
+Total processed positions in chr12 (chunk 6/27) : 31
+Total time elapsed: 1.95 s
+Calling variants ...
+Total processed positions in chr12 (chunk 7/27) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr12_7.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 8/27) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr12_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 9/27) : 192
+Total time elapsed: 2.07 s
+Calling variants ...
+Total processed positions in chr12 (chunk 10/27) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr12_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 13/27) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr12_13.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 14/27) : 0
+Total time elapsed: 0.21 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr12_14.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 15/27) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr12_15.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 16/27) : 0
+Total time elapsed: 0.33 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr12_16.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 12/27) : 16
+Total time elapsed: 1.89 s
+Calling variants ...
+Total processed positions in chr12 (chunk 17/27) : 148
+Total time elapsed: 1.82 s
+Calling variants ...
+Total processed positions in chr12 (chunk 11/27) : 3616
+Total time elapsed: 5.19 s
+Calling variants ...
+Total processed positions in chr12 (chunk 18/27) : 1193
+Total time elapsed: 3.57 s
+Calling variants ...
+Total processed positions in chr12 (chunk 19/27) : 0
+Total time elapsed: 0.18 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr12_19.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 21/27) : 31
+Total time elapsed: 1.82 s
+Calling variants ...
+Total processed positions in chr12 (chunk 20/27) : 2186
+Total time elapsed: 4.00 s
+Calling variants ...
+Total processed positions in chr12 (chunk 24/27) : 0
+Total time elapsed: 0.18 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr12_24.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 23/27) : 24
+Total time elapsed: 1.86 s
+Calling variants ...
+Total processed positions in chr12 (chunk 26/27) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr12_26.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr13 (chunk 1/23) : 0
+Total time elapsed: 0.21 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr13_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr13 (chunk 2/23) : 0
+Total time elapsed: 0.29 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr13_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 22/27) : 4390
+Total time elapsed: 5.60 s
+Calling variants ...
+Total processed positions in chr12 (chunk 25/27) : 97
+Total time elapsed: 2.01 s
+Calling variants ...
+Total processed positions in chr13 (chunk 3/23) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr13_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr13 (chunk 5/23) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr13_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr12 (chunk 27/27) : 4980
+Total time elapsed: 6.22 s
+Calling variants ...
+Total processed positions in chr13 (chunk 4/23) : 1595
+Total time elapsed: 3.77 s
+Calling variants ...
+Total processed positions in chr13 (chunk 6/23) : 12
+Total time elapsed: 1.87 s
+Calling variants ...
+Total processed positions in chr13 (chunk 7/23) : 47
+Total time elapsed: 1.87 s
+Calling variants ...
+Total processed positions in chr13 (chunk 8/23) : 0
+Total time elapsed: 0.29 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr13_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr13 (chunk 10/23) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr13_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr13 (chunk 11/23) : 2531
+Total time elapsed: 4.47 s
+Calling variants ...
+Total processed positions in chr13 (chunk 16/23) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr13_16.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr13 (chunk 17/23) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr13_17.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr13 (chunk 12/23) : 38
+Total time elapsed: 1.96 s
+Calling variants ...
+Total processed positions in chr13 (chunk 13/23) : 16
+Total time elapsed: 1.87 s
+Calling variants ...
+Total processed positions in chr13 (chunk 14/23) : 705
+Total time elapsed: 3.20 s
+Calling variants ...
+Total processed positions in chr13 (chunk 15/23) : 447
+Total time elapsed: 2.88 s
+Calling variants ...
+Total processed positions in chr13 (chunk 18/23) : 0
+Total time elapsed: 0.47 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr13_18.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr13 (chunk 19/23) : 0
+Total time elapsed: 0.34 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr13_19.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr13 (chunk 9/23) : 11033
+Total time elapsed: 10.63 s
+Calling variants ...
+Total processed positions in chr13 (chunk 20/23) : 41
+Total time elapsed: 2.00 s
+Calling variants ...
+Total processed positions in chr13 (chunk 21/23) : 0
+Total time elapsed: 0.34 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr13_21.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr13 (chunk 22/23) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr13_22.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr13 (chunk 23/23) : 0
+Total time elapsed: 0.45 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr13_23.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 1/22) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 2/22) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 3/22) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 4/22) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_4.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 6/22) : 83
+Total time elapsed: 1.84 s
+Calling variants ...
+Total processed positions in chr14 (chunk 8/22) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 7/22) : 100
+Total time elapsed: 1.86 s
+Calling variants ...
+Total processed positions in chr14 (chunk 10/22) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 9/22) : 34
+Total time elapsed: 1.90 s
+Calling variants ...
+Total processed positions in chr14 (chunk 11/22) : 113
+Total time elapsed: 1.89 s
+Calling variants ...
+Total processed positions in chr14 (chunk 12/22) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 5/22) : 7576
+Total time elapsed: 8.26 s
+Calling variants ...
+Total processed positions in chr14 (chunk 13/22) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_13.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 14/22) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_14.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 15/22) : 0
+Total time elapsed: 0.34 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_15.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 16/22) : 0
+Total time elapsed: 0.38 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_16.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 18/22) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_18.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 19/22) : 10
+Total time elapsed: 1.88 s
+Calling variants ...
+Total processed positions in chr14 (chunk 20/22) : 0
+Total time elapsed: 0.20 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_20.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 21/22) : 0
+Total time elapsed: 0.19 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_21.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 22/22) : 0
+Total time elapsed: 0.34 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr14_22.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr15 (chunk 1/21) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr15_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr15 (chunk 2/21) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr15_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr14 (chunk 17/22) : 4928
+Total time elapsed: 6.31 s
+Calling variants ...
+Total processed positions in chr15 (chunk 3/21) : 0
+Total time elapsed: 0.19 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr15_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr15 (chunk 4/21) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr15_4.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr15 (chunk 5/21) : 0
+Total time elapsed: 0.39 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr15_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr15 (chunk 6/21) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr15_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr15 (chunk 8/21) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr15_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr15 (chunk 7/21) : 211
+Total time elapsed: 2.73 s
+Calling variants ...
+Total processed positions in chr15 (chunk 9/21) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr15_9.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr15 (chunk 13/21) : 0
+Total time elapsed: 0.18 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr15_13.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr15 (chunk 10/21) : 1530
+Total time elapsed: 3.62 s
+Calling variants ...
+Total processed positions in chr15 (chunk 12/21) : 192
+Total time elapsed: 1.95 s
+Calling variants ...
+Total processed positions in chr15 (chunk 18/21) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr15_18.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr15 (chunk 20/21) : 0
+Total time elapsed: 0.15 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr15_20.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr15 (chunk 15/21) : 208
+Total time elapsed: 2.69 s
+Calling variants ...
+Total processed positions in chr15 (chunk 11/21) : 2633
+Total time elapsed: 4.61 s
+Calling variants ...
+Total processed positions in chr15 (chunk 17/21) : 116
+Total time elapsed: 1.94 s
+Calling variants ...
+Total processed positions in chr15 (chunk 16/21) : 240
+Total time elapsed: 2.67 s
+Calling variants ...
+Total processed positions in chr15 (chunk 19/21) : 20
+Total time elapsed: 1.74 s
+Calling variants ...
+Total processed positions in chr15 (chunk 21/21) : 0
+Total time elapsed: 0.19 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr15_21.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr15 (chunk 14/21) : 2006
+Total time elapsed: 4.22 s
+Calling variants ...
+Total processed positions in chr16 (chunk 1/19) : 0
+Total time elapsed: 0.21 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr16_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr16 (chunk 2/19) : 961
+Total time elapsed: 3.10 s
+Calling variants ...
+Total processed positions in chr16 (chunk 3/19) : 31
+Total time elapsed: 1.83 s
+Calling variants ...
+Total processed positions in chr16 (chunk 4/19) : 0
+Total time elapsed: 0.33 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr16_4.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr16 (chunk 5/19) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr16_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr16 (chunk 6/19) : 340
+Total time elapsed: 3.06 s
+Calling variants ...
+Total processed positions in chr16 (chunk 8/19) : 0
+Total time elapsed: 0.20 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr16_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr16 (chunk 7/19) : 622
+Total time elapsed: 3.12 s
+Calling variants ...
+Total processed positions in chr16 (chunk 9/19) : 0
+Total time elapsed: 0.13 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr16_9.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr16 (chunk 12/19) : 0
+Total time elapsed: 0.17 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr16_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr16 (chunk 14/19) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr16_14.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr16 (chunk 13/19) : 41
+Total time elapsed: 1.76 s
+Calling variants ...
+Total processed positions in chr16 (chunk 15/19) : 34
+Total time elapsed: 1.86 s
+Calling variants ...
+Total processed positions in chr16 (chunk 10/19) : 1936
+Total time elapsed: 3.85 s
+Calling variants ...
+Total processed positions in chr16 (chunk 11/19) : 2570
+Total time elapsed: 4.38 s
+Calling variants ...
+Total processed positions in chr16 (chunk 16/19) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr16_16.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr16 (chunk 18/19) : 42
+Total time elapsed: 1.84 s
+Calling variants ...
+Total processed positions in chr16 (chunk 17/19) : 516
+Total time elapsed: 2.96 s
+Calling variants ...
+Total processed positions in chr16 (chunk 19/19) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr16_19.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr17 (chunk 1/17) : 13
+Total time elapsed: 1.76 s
+Calling variants ...
+Total processed positions in chr17 (chunk 2/17) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr17_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr17 (chunk 3/17) : 36
+Total time elapsed: 2.00 s
+Calling variants ...
+Total processed positions in chr17 (chunk 4/17) : 168
+Total time elapsed: 1.96 s
+Calling variants ...
+Total processed positions in chr17 (chunk 6/17) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr17_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr17 (chunk 8/17) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr17_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr17 (chunk 5/17) : 352
+Total time elapsed: 2.83 s
+Calling variants ...
+Total processed positions in chr17 (chunk 9/17) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr17_9.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr17 (chunk 10/17) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr17_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr17 (chunk 7/17) : 1145
+Total time elapsed: 3.37 s
+Calling variants ...
+Total processed positions in chr17 (chunk 11/17) : 860
+Total time elapsed: 3.21 s
+Calling variants ...
+Total processed positions in chr17 (chunk 12/17) : 4472
+Total time elapsed: 6.01 s
+Calling variants ...
+Total processed positions in chr17 (chunk 14/17) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr17_14.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr17 (chunk 13/17) : 39
+Total time elapsed: 1.93 s
+Calling variants ...
+Total processed positions in chr17 (chunk 15/17) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr17_15.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr17 (chunk 17/17) : 0
+Total time elapsed: 0.38 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr17_17.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr17 (chunk 16/17) : 1213
+Total time elapsed: 3.59 s
+Calling variants ...
+Total processed positions in chr18 (chunk 2/17) : 0
+Total time elapsed: 0.39 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr18_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr18 (chunk 3/17) : 0
+Total time elapsed: 0.44 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr18_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr18 (chunk 1/17) : 414
+Total time elapsed: 3.11 s
+Calling variants ...
+Total processed positions in chr18 (chunk 4/17) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr18_4.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr18 (chunk 5/17) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr18_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr18 (chunk 6/17) : 0
+Total time elapsed: 0.37 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr18_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr18 (chunk 7/17) : 33
+Total time elapsed: 1.97 s
+Calling variants ...
+Total processed positions in chr18 (chunk 8/17) : 927
+Total time elapsed: 3.43 s
+Calling variants ...
+Total processed positions in chr18 (chunk 9/17) : 665
+Total time elapsed: 3.14 s
+Calling variants ...
+Total processed positions in chr18 (chunk 12/17) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr18_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr18 (chunk 11/17) : 1554
+Total time elapsed: 3.90 s
+Calling variants ...
+Total processed positions in chr18 (chunk 13/17) : 79
+Total time elapsed: 1.93 s
+Calling variants ...
+Total processed positions in chr18 (chunk 10/17) : 5736
+Total time elapsed: 6.77 s
+Calling variants ...
+Total processed positions in chr18 (chunk 14/17) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr18_14.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr18 (chunk 15/17) : 10
+Total time elapsed: 1.81 s
+Calling variants ...
+Total processed positions in chr18 (chunk 17/17) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr18_17.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr19 (chunk 1/12) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr19_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr18 (chunk 16/17) : 333
+Total time elapsed: 3.02 s
+Calling variants ...
+Total processed positions in chr19 (chunk 3/12) : 0
+Total time elapsed: 0.32 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr19_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr19 (chunk 2/12) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr19_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr19 (chunk 5/12) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr19_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr19 (chunk 7/12) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr19_7.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr19 (chunk 6/12) : 1478
+Total time elapsed: 3.56 s
+Calling variants ...
+Total processed positions in chr19 (chunk 4/12) : 5691
+Total time elapsed: 6.74 s
+Calling variants ...
+Total processed positions in chr19 (chunk 8/12) : 264
+Total time elapsed: 2.73 s
+Calling variants ...
+Total processed positions in chr19 (chunk 10/12) : 48
+Total time elapsed: 1.63 s
+Calling variants ...
+Total processed positions in chr19 (chunk 12/12) : 0
+Total time elapsed: 0.18 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr19_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr19 (chunk 11/12) : 217
+Total time elapsed: 2.52 s
+Calling variants ...
+Total processed positions in chr19 (chunk 9/12) : 1884
+Total time elapsed: 3.87 s
+Calling variants ...
+Total processed positions in chr20 (chunk 1/13) : 0
+Total time elapsed: 0.23 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr20_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr20 (chunk 2/13) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr20_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr20 (chunk 5/13) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr20_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr20 (chunk 4/13) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr20_4.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr20 (chunk 6/13) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr20_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr20 (chunk 3/13) : 58
+Total time elapsed: 2.03 s
+Calling variants ...
+Total processed positions in chr20 (chunk 7/13) : 8
+Total time elapsed: 1.79 s
+Calling variants ...
+Total processed positions in chr20 (chunk 8/13) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr20_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr20 (chunk 9/13) : 178
+Total time elapsed: 1.81 s
+Calling variants ...
+Total processed positions in chr20 (chunk 13/13) : 0
+Total time elapsed: 0.11 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr20_13.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr20 (chunk 10/13) : 717
+Total time elapsed: 3.00 s
+Calling variants ...
+Total processed positions in chr21 (chunk 1/10) : 0
+Total time elapsed: 0.12 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr21_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr20 (chunk 12/13) : 9
+Total time elapsed: 1.63 s
+Calling variants ...
+Total processed positions in chr21 (chunk 6/10) : 0
+Total time elapsed: 0.15 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr21_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr21 (chunk 5/10) : 0
+Total time elapsed: 0.15 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr21_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr20 (chunk 11/13) : 615
+Total time elapsed: 2.78 s
+Calling variants ...
+Total processed positions in chr21 (chunk 7/10) : 8
+Total time elapsed: 1.60 s
+Calling variants ...
+Total processed positions in chr21 (chunk 3/10) : 571
+Total time elapsed: 2.90 s
+Calling variants ...
+Total processed positions in chr21 (chunk 9/10) : 0
+Total time elapsed: 0.21 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr21_9.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr21 (chunk 8/10) : 33
+Total time elapsed: 1.68 s
+Calling variants ...
+Total processed positions in chr21 (chunk 4/10) : 181
+Total time elapsed: 2.57 s
+Calling variants ...
+Total processed positions in chr21 (chunk 2/10) : 456
+Total time elapsed: 4.06 s
+Calling variants ...
+Total processed positions in chr21 (chunk 10/10) : 0
+Total time elapsed: 0.13 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr21_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr22 (chunk 1/11) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr22_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr22 (chunk 2/11) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr22_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr22 (chunk 3/11) : 0
+Total time elapsed: 0.29 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr22_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr22 (chunk 4/11) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr22_4.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr22 (chunk 5/11) : 0
+Total time elapsed: 0.29 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr22_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr22 (chunk 8/11) : 0
+Total time elapsed: 0.33 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr22_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr22 (chunk 7/11) : 50
+Total time elapsed: 1.91 s
+Calling variants ...
+Total processed positions in chr22 (chunk 6/11) : 856
+Total time elapsed: 3.28 s
+Calling variants ...
+Total processed positions in chr22 (chunk 10/11) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chr22_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr22 (chunk 9/11) : 134
+Total time elapsed: 1.98 s
+Calling variants ...
+Total processed positions in chrX (chunk 2/32) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 1/32) : 46
+Total time elapsed: 1.79 s
+Calling variants ...
+Total processed positions in chrX (chunk 3/32) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 4/32) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_4.vcf, remove empty file
+Calling variants ...
+Total processed positions in chr22 (chunk 11/11) : 1453
+Total time elapsed: 3.60 s
+Calling variants ...
+Total processed positions in chrX (chunk 5/32) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 6/32) : 0
+Total time elapsed: 0.34 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 8/32) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 7/32) : 24
+Total time elapsed: 1.94 s
+Calling variants ...
+Total processed positions in chrX (chunk 9/32) : 0
+Total time elapsed: 0.36 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_9.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 11/32) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_11.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 12/32) : 0
+Total time elapsed: 0.25 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 13/32) : 0
+Total time elapsed: 0.18 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_13.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 10/32) : 1222
+Total time elapsed: 3.40 s
+Calling variants ...
+Total processed positions in chrX (chunk 16/32) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_16.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 17/32) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_17.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 18/32) : 0
+Total time elapsed: 0.23 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_18.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 15/32) : 125
+Total time elapsed: 1.95 s
+Calling variants ...
+Total processed positions in chrX (chunk 19/32) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_19.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 14/32) : 2513
+Total time elapsed: 4.40 s
+Calling variants ...
+Total processed positions in chrX (chunk 20/32) : 0
+Total time elapsed: 0.34 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_20.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 21/32) : 0
+Total time elapsed: 0.52 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_21.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 22/32) : 0
+Total time elapsed: 0.28 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_22.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 23/32) : 0
+Total time elapsed: 0.37 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_23.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 24/32) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_24.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 25/32) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_25.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 27/32) : 0
+Total time elapsed: 0.35 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_27.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 26/32) : 837
+Total time elapsed: 3.15 s
+Calling variants ...
+Total processed positions in chrX (chunk 28/32) : 0
+Total time elapsed: 0.35 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_28.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 29/32) : 0
+Total time elapsed: 0.30 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_29.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 30/32) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_30.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 31/32) : 0
+Total time elapsed: 0.22 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_31.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 32/32) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrX_32.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 1/12) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrY_1.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 2/12) : 0
+Total time elapsed: 0.24 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrY_2.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 3/12) : 0
+Total time elapsed: 0.26 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrY_3.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 4/12) : 0
+Total time elapsed: 0.31 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrY_4.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 5/12) : 0
+Total time elapsed: 0.27 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrY_5.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 6/12) : 0
+Total time elapsed: 0.18 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrY_6.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 7/12) : 0
+Total time elapsed: 0.17 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrY_7.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 8/12) : 0
+Total time elapsed: 0.15 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrY_8.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 9/12) : 0
+Total time elapsed: 0.14 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrY_9.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 12/12) : 0
+Total time elapsed: 0.10 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrY_12.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 10/12) : 0
+Total time elapsed: 0.09 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrY_10.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrY (chunk 11/12) : 0
+Total time elapsed: 0.10 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/pileup_output/pileup_chrY_11.vcf, remove empty file
+
+real	18m28.750s
+user	30m12.703s
+sys	15m48.322s
+
+[INFO] 2/7 Select heterozygous SNP variants for Whatshap phasing and haplotagging
+[INFO] Select heterozygous pileup variants exceeding phasing quality cutoff 6
+[INFO] Total heterozygous SNP positions selected: chr7: 96
+[INFO] Total heterozygous SNP positions selected: chr2: 222
+[INFO] Total heterozygous SNP positions selected: chr4: 171
+[INFO] Total heterozygous SNP positions selected: chr14: 102
+[INFO] Total heterozygous SNP positions selected: chr5: 198
+[INFO] Total heterozygous SNP positions selected: chr3: 191
+[INFO] Total heterozygous SNP positions selected: chr8: 82
+[INFO] Total heterozygous SNP positions selected: chr17: 63
+[INFO] Total heterozygous SNP positions selected: chr1: 212
+[INFO] Total heterozygous SNP positions selected: chr15: 42
+[INFO] Total heterozygous SNP positions selected: chr13: 109
+[INFO] Total heterozygous SNP positions selected: chr16: 101
+[INFO] Total heterozygous SNP positions selected: chr6: 83
+[INFO] Total heterozygous SNP positions selected: chr10: 153
+[INFO] Total heterozygous SNP positions selected: chr20: 11
+[INFO] Total heterozygous SNP positions selected: chr9: 65
+[INFO] Total heterozygous SNP positions selected: chr18: 71
+[INFO] Total heterozygous SNP positions selected: chr19: 48
+[INFO] Total heterozygous SNP positions selected: chr11: 217
+[INFO] Total heterozygous SNP positions selected: chr12: 78
+[INFO] Total heterozygous SNP positions selected: chr21: 28
+[INFO] Total heterozygous SNP positions selected: chrY: 0
+[INFO] Total heterozygous SNP positions selected: chrX: 16
+[INFO] Total heterozygous SNP positions selected: chr22: 11
+
+real	0m2.393s
+user	0m11.178s
+sys	0m1.978s
+
+[INFO] 3/7 Phase VCF file using Whatshap
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr14 in individual SAMPLE
+Found 102 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 8 reads covering 102 variants
+Kept 6 reads that cover at least two variants each
+Selected 6 most phase-informative reads covering 101 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 70 variants (69.3% of accessible variants) between position 19892836 and 19955369
+
+# Resource usage
+Maximum memory usage: 0.257 GB
+Time spent reading BAM/CRAM:                    0.5 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.7 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr9 in individual SAMPLE
+Found 65 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 9 reads covering 65 variants
+Kept 7 reads that cover at least two variants each
+Selected 7 most phase-informative reads covering 64 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 41 variants (64.1% of accessible variants) between position 83506238 and 83564551
+
+# Resource usage
+Maximum memory usage: 0.321 GB
+Time spent reading BAM/CRAM:                    0.5 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.7 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr8 in individual SAMPLE
+Found 82 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 28 reads covering 82 variants
+Kept 15 reads that cover at least two variants each
+Selected 15 most phase-informative reads covering 75 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 22 variants (29.3% of accessible variants) between position 88975638 and 88977100
+
+# Resource usage
+Maximum memory usage: 0.333 GB
+Time spent reading BAM/CRAM:                    0.5 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.7 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr18 in individual SAMPLE
+Found 71 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 22 reads covering 71 variants
+Kept 12 reads that cover at least two variants each
+Selected 12 most phase-informative reads covering 65 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 25 variants (38.5% of accessible variants) between position 46095933 and 46111971
+
+# Resource usage
+Maximum memory usage: 0.204 GB
+Time spent reading BAM/CRAM:                    0.5 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.7 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr19 in individual SAMPLE
+Found 48 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 11 reads covering 48 variants
+Kept 9 reads that cover at least two variants each
+Selected 9 most phase-informative reads covering 47 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 28 variants (59.6% of accessible variants) between position 16557638 and 16588434
+
+# Resource usage
+Maximum memory usage: 0.161 GB
+Time spent reading BAM/CRAM:                    0.3 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.2 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.8 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr20 in individual SAMPLE
+Found 11 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 5 reads covering 11 variants
+Kept 3 reads that cover at least two variants each
+Selected 3 most phase-informative reads covering 10 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 10 variants (100.0% of accessible variants) between position 49564514 and 49594314
+
+# Resource usage
+Maximum memory usage: 0.173 GB
+Time spent reading BAM/CRAM:                    0.3 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.2 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.8 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr12 in individual SAMPLE
+Found 78 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 20 reads covering 78 variants
+Kept 16 reads that cover at least two variants each
+Selected 16 most phase-informative reads covering 76 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 31 variants (40.8% of accessible variants) between position 129375100 and 129404493
+
+# Resource usage
+Maximum memory usage: 0.309 GB
+Time spent reading BAM/CRAM:                    0.6 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.8 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr16 in individual SAMPLE
+Found 101 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 17 reads covering 82 variants
+Kept 15 reads that cover at least two variants each
+Selected 15 most phase-informative reads covering 82 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 25 variants (30.5% of accessible variants) between position 6980763 and 6995275
+
+# Resource usage
+Maximum memory usage: 0.224 GB
+Time spent reading BAM/CRAM:                    0.4 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.2 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.8 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr13 in individual SAMPLE
+Found 109 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 14 reads covering 109 variants
+Kept 8 reads that cover at least two variants each
+Selected 8 most phase-informative reads covering 107 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 75 variants (70.1% of accessible variants) between position 42644522 and 42737363
+
+# Resource usage
+Maximum memory usage: 0.272 GB
+Time spent reading BAM/CRAM:                    0.5 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.8 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr17 in individual SAMPLE
+Found 63 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 18 reads covering 63 variants
+Kept 14 reads that cover at least two variants each
+Selected 14 most phase-informative reads covering 61 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 28 variants (45.9% of accessible variants) between position 54575914 and 54638273
+
+# Resource usage
+Maximum memory usage: 0.210 GB
+Time spent reading BAM/CRAM:                    0.5 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.7 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr11 in individual SAMPLE
+Found 217 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 31 reads covering 217 variants
+Kept 21 reads that cover at least two variants each
+Selected 21 most phase-informative reads covering 213 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 84 variants (39.4% of accessible variants) between position 6910671 and 6979900
+
+# Resource usage
+Maximum memory usage: 0.313 GB
+Time spent reading BAM/CRAM:                    0.5 s
+Time spent parsing VCF:                         0.1 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.7 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr7 in individual SAMPLE
+Found 96 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 36 reads covering 96 variants
+Kept 26 reads that cover at least two variants each
+Selected 26 most phase-informative reads covering 91 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 17 variants (18.7% of accessible variants) between position 69306095 and 69331712
+
+# Resource usage
+Maximum memory usage: 0.361 GB
+Time spent reading BAM/CRAM:                    0.6 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.8 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr15 in individual SAMPLE
+Found 42 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 25 reads covering 42 variants
+Kept 16 reads that cover at least two variants each
+Selected 16 most phase-informative reads covering 39 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 10 variants (25.6% of accessible variants) between position 44473044 and 44483160
+
+# Resource usage
+Maximum memory usage: 0.247 GB
+Time spent reading BAM/CRAM:                    0.5 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.1 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.7 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr10 in individual SAMPLE
+Found 153 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 20 reads covering 153 variants
+Kept 13 reads that cover at least two variants each
+Selected 13 most phase-informative reads covering 150 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 83 variants (55.3% of accessible variants) between position 56537661 and 56706227
+
+# Resource usage
+Maximum memory usage: 0.310 GB
+Time spent reading BAM/CRAM:                    0.6 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.8 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr4 in individual SAMPLE
+Found 171 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 47 reads covering 171 variants
+Kept 32 reads that cover at least two variants each
+Selected 32 most phase-informative reads covering 166 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 29 variants (17.5% of accessible variants) between position 177253313 and 177292573
+
+# Resource usage
+Maximum memory usage: 0.422 GB
+Time spent reading BAM/CRAM:                    0.6 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.7 s
+Total elapsed time:                             1.4 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr3 in individual SAMPLE
+Found 191 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 39 reads covering 191 variants
+Kept 31 reads that cover at least two variants each
+Selected 31 most phase-informative reads covering 189 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 87 variants (46.0% of accessible variants) between position 57333305 and 57499583
+
+# Resource usage
+Maximum memory usage: 0.438 GB
+Time spent reading BAM/CRAM:                    0.7 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.8 s
+Total elapsed time:                             1.5 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr5 in individual SAMPLE
+Found 198 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 41 reads covering 198 variants
+Kept 36 reads that cover at least two variants each
+Selected 36 most phase-informative reads covering 196 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 45 variants (23.0% of accessible variants) between position 65470243 and 65546418
+
+# Resource usage
+Maximum memory usage: 0.405 GB
+Time spent reading BAM/CRAM:                    0.7 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.7 s
+Total elapsed time:                             1.5 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr6 in individual SAMPLE
+Found 83 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 21 reads covering 83 variants
+Kept 18 reads that cover at least two variants each
+Selected 18 most phase-informative reads covering 82 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 33 variants (40.2% of accessible variants) between position 73200002 and 73223249
+
+# Resource usage
+Maximum memory usage: 0.383 GB
+Time spent reading BAM/CRAM:                    0.8 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.8 s
+Total elapsed time:                             1.6 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr1 in individual SAMPLE
+Found 212 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 42 reads covering 212 variants
+Kept 24 reads that cover at least two variants each
+Selected 24 most phase-informative reads covering 204 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 55 variants (27.0% of accessible variants) between position 70004261 and 70078824
+
+# Resource usage
+Maximum memory usage: 0.538 GB
+Time spent reading BAM/CRAM:                    0.9 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.8 s
+Total elapsed time:                             1.7 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr2 in individual SAMPLE
+Found 222 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 41 reads covering 158 variants
+Kept 27 reads that cover at least two variants each
+Selected 27 most phase-informative reads covering 151 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 79 variants (52.3% of accessible variants) between position 146316687 and 146449322
+
+# Resource usage
+Maximum memory usage: 0.525 GB
+Time spent reading BAM/CRAM:                    0.9 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.8 s
+Total elapsed time:                             1.7 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Resource usage
+Maximum memory usage: 0.045 GB
+Time spent reading BAM/CRAM:                    0.0 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.1 s
+Total elapsed time:                             0.1 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr21 in individual SAMPLE
+Found 28 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 6 reads covering 26 variants
+Kept 4 reads that cover at least two variants each
+Selected 4 most phase-informative reads covering 25 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 19 variants (76.0% of accessible variants) between position 7960833 and 7969956
+
+# Resource usage
+Maximum memory usage: 0.138 GB
+Time spent reading BAM/CRAM:                    0.1 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.1 s
+Total elapsed time:                             0.2 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chr22 in individual SAMPLE
+Found 11 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 8 reads covering 11 variants
+Kept 4 reads that cover at least two variants each
+Selected 4 most phase-informative reads covering 9 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 7 variants (77.8% of accessible variants) between position 50300863 and 50308130
+
+# Resource usage
+Maximum memory usage: 0.146 GB
+Time spent reading BAM/CRAM:                    0.1 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.1 s
+Total elapsed time:                             0.2 s
+This is WhatsHap 1.7 running under Python 3.9.0
+Working on 1 sample from 1 family
+
+# Working on contig chrX in individual SAMPLE
+Found 16 usable heterozygous variants (0 skipped due to missing genotypes)
+Found 9 reads covering 16 variants
+Kept 6 reads that cover at least two variants each
+Selected 6 most phase-informative reads covering 15 variants
+Phasing 1 sample by solving the MEC problem ...
+Largest block contains 9 variants (60.0% of accessible variants) between position 66411418 and 66428545
+
+# Resource usage
+Maximum memory usage: 0.354 GB
+Time spent reading BAM/CRAM:                    0.3 s
+Time spent parsing VCF:                         0.0 s
+Time spent selecting reads:                     0.0 s
+Time spent phasing:                             0.0 s
+Time spent writing VCF:                         0.0 s
+Time spent finding components:                  0.0 s
+Time spent on rest:                             0.1 s
+Total elapsed time:                             0.4 s
+
+real	0m12.522s
+user	0m16.416s
+sys	0m10.215s
+
+[INFO] 5/7 Select candidates for full-alignment calling
+[INFO] Set variants quality cutoff 7.0
+[INFO] Set reference calls quality cutoff 10.0
+[INFO] Low quality reference calls to be processed in chr1: 4006
+[INFO] Low quality variants to be processed in chr1: 456
+[INFO] Low quality reference calls to be processed in chr2: 4045
+[INFO] Low quality variants to be processed in chr2: 460
+[INFO] Low quality reference calls to be processed in chr4: 3321
+[INFO] Low quality variants to be processed in chr4: 453
+[INFO] Low quality reference calls to be processed in chr10: 5175
+[INFO] Low quality variants to be processed in chr10: 360
+[INFO] Low quality reference calls to be processed in chr17: 774
+[INFO] Low quality variants to be processed in chr17: 218
+[INFO] Low quality reference calls to be processed in chr6: 1685
+[INFO] Low quality variants to be processed in chr6: 192
+[INFO] Low quality reference calls to be processed in chr8: 1551
+[INFO] Low quality variants to be processed in chr8: 150
+[INFO] Low quality reference calls to be processed in chr5: 3510
+[INFO] Low quality variants to be processed in chr5: 542
+[INFO] Low quality reference calls to be processed in chr12: 1688
+[INFO] Low quality variants to be processed in chr12: 195
+[INFO] Low quality reference calls to be processed in chr14: 1488
+[INFO] Low quality variants to be processed in chr14: 191
+[INFO] Low quality reference calls to be processed in chr7: 2277
+[INFO] Low quality variants to be processed in chr7: 228
+[INFO] Low quality reference calls to be processed in chr9: 1688
+[INFO] Low quality variants to be processed in chr9: 161
+[INFO] Low quality reference calls to be processed in chr20: 163
+[INFO] Low quality variants to be processed in chr20: 26
+[INFO] Low quality reference calls to be processed in chr18: 1019
+[INFO] Low quality variants to be processed in chr18: 121
+[INFO] Low quality reference calls to be processed in chr19: 1083
+[INFO] Low quality variants to be processed in chr19: 118
+[INFO] Low quality reference calls to be processed in chr16: 741
+[INFO] Low quality variants to be processed in chr16: 106
+[INFO] Low quality reference calls to be processed in chr3: 3083
+[INFO] Low quality variants to be processed in chr3: 573
+[INFO] Low quality reference calls to be processed in chr15: 700
+[INFO] Low quality variants to be processed in chr15: 75
+[INFO] Low quality reference calls to be processed in chr13: 1368
+[INFO] Low quality variants to be processed in chr13: 253
+[INFO] Low quality reference calls to be processed in chr11: 3638
+[INFO] Low quality variants to be processed in chr11: 404
+[INFO] Low quality reference calls to be processed in chr22: 228
+[INFO] Low quality variants to be processed in chr22: 29
+[INFO] Low quality reference calls to be processed in chr21: 137
+[INFO] Low quality variants to be processed in chr21: 24
+[INFO] Low quality reference calls to be processed in chrX: 389
+[INFO] Low quality variants to be processed in chrX: 59
+[93m[WARNING] Cannot find any low-quality 0/0, 0/1 or 1/1 variant in pileup output in contig chrY[0m
+[93m[WARNING] Copying pileup.vcf.gz to /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/merge_output.vcf.gz[0m
+[INFO] Low quality reference calls to be processed in chrY: 0
+[INFO] Low quality variants to be processed in chrY: 0
+
+real	0m2.605s
+user	0m9.557s
+sys	0m2.081s
+
+[INFO] 6/7 Call low-quality variants using full-alignment model
+Calling variants ...
+Total processed positions in chr21 (chunk 1/1) : 161
+Total time elapsed: 2.18 s
+Calling variants ...
+Total processed positions in chr20 (chunk 1/1) : 189
+Total time elapsed: 2.15 s
+Calling variants ...
+Total processed positions in chr22 (chunk 1/1) : 257
+Total time elapsed: 3.05 s
+Calling variants ...
+Total processed positions in chr16 (chunk 1/1) : 847
+Total time elapsed: 6.13 s
+Calling variants ...
+Total processed positions in chr15 (chunk 1/1) : 775
+Total time elapsed: 6.21 s
+Calling variants ...
+Total processed positions in chr17 (chunk 1/1) : 992
+Total time elapsed: 7.66 s
+Calling variants ...
+Total processed positions in chr19 (chunk 1/1) : 1201
+Total time elapsed: 8.02 s
+Calling variants ...
+Total processed positions in chr18 (chunk 1/1) : 1140
+Total time elapsed: 8.34 s
+Calling variants ...
+Total processed positions in chr13 (chunk 1/1) : 1621
+Total time elapsed: 10.35 s
+Calling variants ...
+Total processed positions in chr14 (chunk 1/1) : 1679
+Total time elapsed: 10.91 s
+Calling variants ...
+Total processed positions in chr12 (chunk 1/1) : 1883
+Total time elapsed: 12.45 s
+Calling variants ...
+Total processed positions in  : 0
+[91m[ERROR] No full-alignment output for file //shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/full_alignment_output/full_alignment_.vcf[0m
+Total time elapsed: 0.01 s
+[INFO] No vcf output for file /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/tmp/full_alignment_output/full_alignment_.vcf, remove empty file
+Calling variants ...
+Total processed positions in chrX (chunk 1/1) : 448
+Total time elapsed: 4.50 s
+Calling variants ...
+Total processed positions in chr11 (chunk 1/1) : 4042
+Total time elapsed: 23.80 s
+Calling variants ...
+Total processed positions in chr1 (chunk 1/1) : 4462
+Total time elapsed: 26.09 s
+Calling variants ...
+Total processed positions in chr2 (chunk 1/1) : 4505
+Total time elapsed: 26.39 s
+Calling variants ...
+Total processed positions in chr6 (chunk 1/1) : 1877
+Total time elapsed: 11.93 s
+Calling variants ...
+Total processed positions in chr8 (chunk 1/1) : 1701
+Total time elapsed: 11.06 s
+Calling variants ...
+Total processed positions in chr4 (chunk 1/1) : 3774
+Total time elapsed: 21.39 s
+Calling variants ...
+Total processed positions in chr9 (chunk 1/1) : 1849
+Total time elapsed: 11.58 s
+Calling variants ...
+Total processed positions in chr3 (chunk 1/1) : 3656
+Total time elapsed: 21.46 s
+Calling variants ...
+Total processed positions in chr10 (chunk 1/1) : 5535
+Total time elapsed: 30.86 s
+Calling variants ...
+Total processed positions in chr7 (chunk 1/1) : 2505
+Total time elapsed: 14.63 s
+Calling variants ...
+Total processed positions in chr5 (chunk 1/1) : 4052
+Total time elapsed: 22.76 s
+
+real	1m7.047s
+user	5m29.365s
+sys	0m42.829s
+
+[INFO] 7/7 Merge pileup VCF and full-alignment VCF
+[INFO] Pileup variants processed in chr14: 104
+[INFO] Full-alignment variants processed in chr14: 97
+[INFO] Pileup variants processed in chr19: 37
+[INFO] Full-alignment variants processed in chr19: 19
+[INFO] Pileup variants processed in chr6: 63
+[INFO] Full-alignment variants processed in chr6: 52
+[INFO] Pileup variants processed in chr1: 153
+[INFO] Full-alignment variants processed in chr1: 101
+[INFO] Pileup variants processed in chr9: 62
+[INFO] Full-alignment variants processed in chr9: 62
+[INFO] Pileup variants processed in chr3: 247
+[INFO] Full-alignment variants processed in chr3: 310
+[INFO] Pileup variants processed in chr17: 87
+[INFO] Full-alignment variants processed in chr17: 126
+[INFO] Pileup variants processed in chr8: 65
+[INFO] Full-alignment variants processed in chr8: 45
+[INFO] Pileup variants processed in chr7: 83
+[INFO] Full-alignment variants processed in chr7: 70
+[INFO] Pileup variants processed in chr18: 46
+[INFO] Full-alignment variants processed in chr18: 36
+[INFO] Pileup variants processed in chr13: 120
+[INFO] Full-alignment variants processed in chr13: 103
+[INFO] Pileup variants processed in chr20: 9
+[INFO] Full-alignment variants processed in chr20: 7
+[INFO] Pileup variants processed in chr2: 225
+[INFO] Full-alignment variants processed in chr2: 182
+[INFO] Pileup variants processed in chr10: 136
+[INFO] Full-alignment variants processed in chr10: 65
+[INFO] Pileup variants processed in chr5: 217
+[INFO] Full-alignment variants processed in chr5: 221
+[INFO] Pileup variants processed in chr16: 128
+[INFO] Full-alignment variants processed in chr16: 36
+[INFO] Pileup variants processed in chr4: 186
+[INFO] Full-alignment variants processed in chr4: 192
+[INFO] Pileup variants processed in chr15: 37
+[INFO] Full-alignment variants processed in chr15: 20
+[INFO] Pileup variants processed in chr12: 66
+[INFO] Full-alignment variants processed in chr12: 52
+[INFO] Pileup variants processed in chr11: 200
+[INFO] Full-alignment variants processed in chr11: 137
+[INFO] Pileup variants processed in chr21: 26
+[INFO] Full-alignment variants processed in chr21: 10
+[INFO] Pileup variants processed in chrY: 0
+[INFO] Full-alignment variants processed in chrY: 0
+[INFO] Pileup variants processed in chr22: 10
+[INFO] Full-alignment variants processed in chr22: 6
+[INFO] Pileup variants processed in chrX: 29
+[INFO] Full-alignment variants processed in chrX: 33
+
+real	0m2.902s
+user	0m13.233s
+sys	0m2.608s
+
+[INFO] Finish calling, output file: /shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-1-2-1/merge_output.vcf.gz
+
+real	20m37.436s
+user	36m47.242s
+sys	16m49.313s
 ----------------
 Compute metrics
 Hap.py 
 Benchmarking Summary:
   Type Filter  TRUTH.TOTAL  TRUTH.TP  TRUTH.FN  QUERY.TOTAL  QUERY.FP  QUERY.UNK  FP.gt  FP.al  METRIC.Recall  METRIC.Precision  METRIC.Frac_NA  METRIC.F1_Score  TRUTH.TOTAL.TiTv_ratio  QUERY.TOTAL.TiTv_ratio  TRUTH.TOTAL.het_hom_ratio  QUERY.TOTAL.het_hom_ratio
- INDEL    ALL       525369        20    525349          137       117          0      5     47       0.000038          0.145985             0.0         0.000076                     NaN                     NaN                   1.528453                   0.201754
- INDEL   PASS       525369        16    525353           76        60          0      5     26       0.000030          0.210526             0.0         0.000061                     NaN                     NaN                   1.528453                   0.266667
-   SNP    ALL      3365115      1614   3363501         3440      1826          0    634     44       0.000480          0.469186             0.0         0.000958                2.100129                1.805873                   1.581196                   0.884932
-   SNP   PASS      3365115      1598   3363517         3387      1789          0    612     43       0.000475          0.471804             0.0         0.000949                2.100129                1.787654                   1.581196                   0.884808
+ INDEL    ALL       525369        32    525337          148       116          0      6     35       0.000061          0.216216             0.0         0.000122                     NaN                     NaN                   1.528453                   0.233333
+ INDEL   PASS       525369        25    525344           85        60          0      6     20       0.000048          0.294118             0.0         0.000095                     NaN                     NaN                   1.528453                   0.287879
+   SNP    ALL      3365115      1635   3363480         3340      1705          0    587     30       0.000486          0.489521             0.0         0.000971                2.100129                1.874355                   1.581196                   0.863839
+   SNP   PASS      3365115      1622   3363493         3286      1664          0    564     29       0.000482          0.493609             0.0         0.000963                2.100129                1.857391                   1.581196                   0.863868

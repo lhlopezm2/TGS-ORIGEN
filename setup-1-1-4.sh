@@ -3,7 +3,7 @@
 #SBATCH -D .
 #SBATCH -o results/out-1-1-4.txt
 #SBATCH -e results/err-1-1-4.txt
-#SBATCH -n 20
+#SBATCH -n 22
 #SBATCH -N 1
 #SBATCH --partition=gpu
 #SBATCH --gres=gpu:1
@@ -69,13 +69,11 @@ else
 
   echo "----------------"
   echo "Alignment step"
-  module load minimap2/2.24
-  module load samtools/1.15.1
+  conda activate minimap2
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Alignment step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' minimap2 -a -z 600,200 -x map-ont $ref_fasta $fastq -t $CPU \
     |samtools view -Shu |samtools sort -@ $CPU -o $bam --output-fmt BAM
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Bam indexing - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' samtools index $bam -@ $CPU
-  module unload minimap2/2.24
-  module unload samtools/1.15.1
+  conda deactivate
   kill $measure_pid
 fi
 
@@ -94,13 +92,14 @@ else
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Variant calling step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' nextflow run wf-human-variation \
       -w ${vcf_folder} \
       -profile singularity \
-      --snp --sv \
+      --snp \
       --bam ${bam} \
       --bed ${bed} \
       --ref ${ref_fasta} \
       --basecaller_cfg 'dna_r10.4.1_e8.2_400bps_hac@v4.1.0'  \
       --sample_name "vcf${setup_v}" \
-      --out_dir ${vcf_folder}
+      --out_dir ${vcf_folder}\
+      --bam_min_coverage 0.1
   module unload nextflow/23.04.1
   module unload singularity
   kill $measure_pid

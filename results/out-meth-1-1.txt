@@ -1,2 +1,4 @@
 ----------------
+Fastq indexing step
+----------------
 Calling methylations

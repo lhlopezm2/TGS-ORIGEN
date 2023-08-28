@@ -1,0 +1,2341 @@
+PID measure 1933
+
+
+ Resources used: 
+Time: 0 seconds (0.00000 minutes)
+RAM Memory Actual: 15483 MB (15.1201 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 15483 MB (15.1201 GB)
+RAM Memory MinMax: 0 MB (0.0000 GB)
+Disk Actual: 209343 MB (204.43652 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 209343 MB (204.43652 GB)
+CPU Mean Max: 1%
+CPU Mean: 1%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 1%
+CPU 3 Usage: 1%
+CPU 4 Usage: 1%
+CPU 5 Usage: 1%
+CPU 6 Usage: 1%
+CPU 7 Usage: 1%
+CPU 8 Usage: 1%
+CPU 9 Usage: 1%
+CPU 10 Usage: 1%
+CPU 11 Usage: 1%
+CPU 12 Usage: 1%
+CPU 13 Usage: 1%
+CPU 14 Usage: 1%
+CPU 15 Usage: 1%
+CPU 16 Usage: 1%
+CPU 17 Usage: 1%
+CPU 18 Usage: 1%
+CPU 19 Usage: 1%
+CPU 20 Usage: 1%
+CPU 21 Usage: 1%
+CPU 22 Usage: 1%
+
+
+ Resources used: 
+Time: 23 seconds (0.38333 minutes)
+RAM Memory Actual: 15529 MB (15.1650 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 15529 MB (15.1650 GB)
+RAM Memory MinMax: 46 MB (0.0449 GB)
+Disk Actual: 209391 MB (204.48340 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 209391 MB (204.48340 GB)
+CPU Mean Max: 4%
+CPU Mean: 4%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 21%
+CPU 3 Usage: 4%
+CPU 4 Usage: 4%
+CPU 5 Usage: 4%
+CPU 6 Usage: 4%
+CPU 7 Usage: 5%
+CPU 8 Usage: 4%
+CPU 9 Usage: 4%
+CPU 10 Usage: 4%
+CPU 11 Usage: 4%
+CPU 12 Usage: 4%
+CPU 13 Usage: 4%
+CPU 14 Usage: 4%
+CPU 15 Usage: 4%
+CPU 16 Usage: 4%
+CPU 17 Usage: 4%
+CPU 18 Usage: 4%
+CPU 19 Usage: 4%
+CPU 20 Usage: 4%
+CPU 21 Usage: 4%
+CPU 22 Usage: 4%
+
+
+ Resources used: 
+Time: 45 seconds (0.75000 minutes)
+RAM Memory Actual: 15580 MB (15.2148 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 15580 MB (15.2148 GB)
+RAM Memory MinMax: 97 MB (0.0947 GB)
+Disk Actual: 209427 MB (204.51855 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 209427 MB (204.51855 GB)
+CPU Mean Max: 4%
+CPU Mean: 4%
+CPUs: 
+CPU 1 Usage: 4%
+CPU 2 Usage: 4%
+CPU 3 Usage: 4%
+CPU 4 Usage: 4%
+CPU 5 Usage: 4%
+CPU 6 Usage: 4%
+CPU 7 Usage: 4%
+CPU 8 Usage: 4%
+CPU 9 Usage: 4%
+CPU 10 Usage: 4%
+CPU 11 Usage: 4%
+CPU 12 Usage: 4%
+CPU 13 Usage: 4%
+CPU 14 Usage: 17%
+CPU 15 Usage: 3%
+CPU 16 Usage: 3%
+CPU 17 Usage: 3%
+CPU 18 Usage: 3%
+CPU 19 Usage: 3%
+CPU 20 Usage: 3%
+CPU 21 Usage: 3%
+CPU 22 Usage: 3%
+
+
+ Resources used: 
+Time: 67 seconds (1.11667 minutes)
+RAM Memory Actual: 15970 MB (15.5957 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 15970 MB (15.5957 GB)
+RAM Memory MinMax: 487 MB (0.4756 GB)
+Disk Actual: 209495 MB (204.58496 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 209495 MB (204.58496 GB)
+CPU Mean Max: 30%
+CPU Mean: 30%
+CPUs: 
+CPU 1 Usage: 32%
+CPU 2 Usage: 31%
+CPU 3 Usage: 32%
+CPU 4 Usage: 30%
+CPU 5 Usage: 32%
+CPU 6 Usage: 31%
+CPU 7 Usage: 32%
+CPU 8 Usage: 31%
+CPU 9 Usage: 31%
+CPU 10 Usage: 31%
+CPU 11 Usage: 31%
+CPU 12 Usage: 30%
+CPU 13 Usage: 30%
+CPU 14 Usage: 30%
+CPU 15 Usage: 31%
+CPU 16 Usage: 30%
+CPU 17 Usage: 31%
+CPU 18 Usage: 32%
+CPU 19 Usage: 30%
+CPU 20 Usage: 31%
+CPU 21 Usage: 30%
+CPU 22 Usage: 30%
+
+
+ Resources used: 
+Time: 91 seconds (1.51667 minutes)
+RAM Memory Actual: 16417 MB (16.0322 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 16417 MB (16.0322 GB)
+RAM Memory MinMax: 934 MB (0.9121 GB)
+Disk Actual: 209533 MB (204.62207 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 209533 MB (204.62207 GB)
+CPU Mean Max: 30%
+CPU Mean: 6%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 4%
+CPU 3 Usage: 18%
+CPU 4 Usage: 18%
+CPU 5 Usage: 21%
+CPU 6 Usage: 1%
+CPU 7 Usage: 1%
+CPU 8 Usage: 1%
+CPU 9 Usage: 18%
+CPU 10 Usage: 18%
+CPU 11 Usage: 1%
+CPU 12 Usage: 1%
+CPU 13 Usage: 1%
+CPU 14 Usage: 1%
+CPU 15 Usage: 1%
+CPU 16 Usage: 1%
+CPU 17 Usage: 1%
+CPU 18 Usage: 1%
+CPU 19 Usage: 1%
+CPU 20 Usage: 18%
+CPU 21 Usage: 7%
+CPU 22 Usage: 17%
+
+
+ Resources used: 
+Time: 113 seconds (1.88333 minutes)
+RAM Memory Actual: 15972 MB (15.5977 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 16417 MB (16.0322 GB)
+RAM Memory MinMax: 934 MB (0.9121 GB)
+Disk Actual: 209533 MB (204.62207 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 209533 MB (204.62207 GB)
+CPU Mean Max: 30%
+CPU Mean: 9%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 12%
+CPU 3 Usage: 22%
+CPU 4 Usage: 1%
+CPU 5 Usage: 14%
+CPU 6 Usage: 15%
+CPU 7 Usage: 21%
+CPU 8 Usage: 1%
+CPU 9 Usage: 1%
+CPU 10 Usage: 19%
+CPU 11 Usage: 18%
+CPU 12 Usage: 1%
+CPU 13 Usage: 1%
+CPU 14 Usage: 1%
+CPU 15 Usage: 1%
+CPU 16 Usage: 1%
+CPU 17 Usage: 18%
+CPU 18 Usage: 9%
+CPU 19 Usage: 21%
+CPU 20 Usage: 4%
+CPU 21 Usage: 1%
+CPU 22 Usage: 16%
+
+
+ Resources used: 
+Time: 136 seconds (2.26667 minutes)
+RAM Memory Actual: 15980 MB (15.6055 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 16417 MB (16.0322 GB)
+RAM Memory MinMax: 934 MB (0.9121 GB)
+Disk Actual: 209533 MB (204.62207 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 209533 MB (204.62207 GB)
+CPU Mean Max: 30%
+CPU Mean: 1%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 1%
+CPU 3 Usage: 1%
+CPU 4 Usage: 1%
+CPU 5 Usage: 1%
+CPU 6 Usage: 1%
+CPU 7 Usage: 1%
+CPU 8 Usage: 1%
+CPU 9 Usage: 1%
+CPU 10 Usage: 1%
+CPU 11 Usage: 1%
+CPU 12 Usage: 1%
+CPU 13 Usage: 1%
+CPU 14 Usage: 1%
+CPU 15 Usage: 1%
+CPU 16 Usage: 1%
+CPU 17 Usage: 1%
+CPU 18 Usage: 1%
+CPU 19 Usage: 1%
+CPU 20 Usage: 1%
+CPU 21 Usage: 1%
+CPU 22 Usage: 1%
+
+
+ Resources used: 
+Time: 156 seconds (2.60000 minutes)
+RAM Memory Actual: 15984 MB (15.6094 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 16417 MB (16.0322 GB)
+RAM Memory MinMax: 934 MB (0.9121 GB)
+Disk Actual: 209541 MB (204.62988 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 209541 MB (204.62988 GB)
+CPU Mean Max: 30%
+CPU Mean: 8%
+CPUs: 
+CPU 1 Usage: 18%
+CPU 2 Usage: 7%
+CPU 3 Usage: 11%
+CPU 4 Usage: 16%
+CPU 5 Usage: 20%
+CPU 6 Usage: 1%
+CPU 7 Usage: 27%
+CPU 8 Usage: 6%
+CPU 9 Usage: 1%
+CPU 10 Usage: 1%
+CPU 11 Usage: 6%
+CPU 12 Usage: 22%
+CPU 13 Usage: 7%
+CPU 14 Usage: 1%
+CPU 15 Usage: 1%
+CPU 16 Usage: 1%
+CPU 17 Usage: 1%
+CPU 18 Usage: 1%
+CPU 19 Usage: 1%
+CPU 20 Usage: 18%
+CPU 21 Usage: 8%
+CPU 22 Usage: 21%
+
+
+ Resources used: 
+Time: 178 seconds (2.96667 minutes)
+RAM Memory Actual: 15974 MB (15.5996 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 16417 MB (16.0322 GB)
+RAM Memory MinMax: 934 MB (0.9121 GB)
+Disk Actual: 209540 MB (204.62891 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 209541 MB (204.62988 GB)
+CPU Mean Max: 30%
+CPU Mean: 1%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 1%
+CPU 3 Usage: 1%
+CPU 4 Usage: 1%
+CPU 5 Usage: 1%
+CPU 6 Usage: 1%
+CPU 7 Usage: 1%
+CPU 8 Usage: 1%
+CPU 9 Usage: 1%
+CPU 10 Usage: 1%
+CPU 11 Usage: 1%
+CPU 12 Usage: 1%
+CPU 13 Usage: 1%
+CPU 14 Usage: 1%
+CPU 15 Usage: 1%
+CPU 16 Usage: 1%
+CPU 17 Usage: 1%
+CPU 18 Usage: 1%
+CPU 19 Usage: 1%
+CPU 20 Usage: 1%
+CPU 21 Usage: 1%
+CPU 22 Usage: 1%
+
+
+ Resources used: 
+Time: 199 seconds (3.31667 minutes)
+RAM Memory Actual: 15969 MB (15.5947 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 16417 MB (16.0322 GB)
+RAM Memory MinMax: 934 MB (0.9121 GB)
+Disk Actual: 211374 MB (206.41992 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 211374 MB (206.41992 GB)
+CPU Mean Max: 30%
+CPU Mean: 8%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 19%
+CPU 3 Usage: 13%
+CPU 4 Usage: 1%
+CPU 5 Usage: 3%
+CPU 6 Usage: 27%
+CPU 7 Usage: 5%
+CPU 8 Usage: 1%
+CPU 9 Usage: 1%
+CPU 10 Usage: 1%
+CPU 11 Usage: 18%
+CPU 12 Usage: 15%
+CPU 13 Usage: 23%
+CPU 14 Usage: 1%
+CPU 15 Usage: 1%
+CPU 16 Usage: 1%
+CPU 17 Usage: 18%
+CPU 18 Usage: 17%
+CPU 19 Usage: 21%
+CPU 20 Usage: 1%
+CPU 21 Usage: 1%
+CPU 22 Usage: 3%
+
+
+ Resources used: 
+Time: 226 seconds (3.76667 minutes)
+RAM Memory Actual: 15973 MB (15.5986 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 16417 MB (16.0322 GB)
+RAM Memory MinMax: 934 MB (0.9121 GB)
+Disk Actual: 213558 MB (208.55273 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 213558 MB (208.55273 GB)
+CPU Mean Max: 30%
+CPU Mean: 4%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 1%
+CPU 3 Usage: 1%
+CPU 4 Usage: 1%
+CPU 5 Usage: 1%
+CPU 6 Usage: 1%
+CPU 7 Usage: 1%
+CPU 8 Usage: 1%
+CPU 9 Usage: 1%
+CPU 10 Usage: 8%
+CPU 11 Usage: 9%
+CPU 12 Usage: 1%
+CPU 13 Usage: 1%
+CPU 14 Usage: 1%
+CPU 15 Usage: 1%
+CPU 16 Usage: 1%
+CPU 17 Usage: 7%
+CPU 18 Usage: 20%
+CPU 19 Usage: 10%
+CPU 20 Usage: 1%
+CPU 21 Usage: 1%
+CPU 22 Usage: 18%
+
+
+ Resources used: 
+Time: 247 seconds (4.11667 minutes)
+RAM Memory Actual: 15976 MB (15.6016 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 16417 MB (16.0322 GB)
+RAM Memory MinMax: 934 MB (0.9121 GB)
+Disk Actual: 214409 MB (209.38379 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 214409 MB (209.38379 GB)
+CPU Mean Max: 30%
+CPU Mean: 3%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 1%
+CPU 3 Usage: 1%
+CPU 4 Usage: 1%
+CPU 5 Usage: 1%
+CPU 6 Usage: 1%
+CPU 7 Usage: 1%
+CPU 8 Usage: 1%
+CPU 9 Usage: 1%
+CPU 10 Usage: 1%
+CPU 11 Usage: 1%
+CPU 12 Usage: 1%
+CPU 13 Usage: 1%
+CPU 14 Usage: 1%
+CPU 15 Usage: 18%
+CPU 16 Usage: 1%
+CPU 17 Usage: 1%
+CPU 18 Usage: 1%
+CPU 19 Usage: 1%
+CPU 20 Usage: 10%
+CPU 21 Usage: 23%
+CPU 22 Usage: 1%
+
+
+ Resources used: 
+Time: 271 seconds (4.51667 minutes)
+RAM Memory Actual: 15974 MB (15.5996 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 16417 MB (16.0322 GB)
+RAM Memory MinMax: 934 MB (0.9121 GB)
+Disk Actual: 218950 MB (213.81836 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 218950 MB (213.81836 GB)
+CPU Mean Max: 30%
+CPU Mean: 1%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 1%
+CPU 3 Usage: 1%
+CPU 4 Usage: 1%
+CPU 5 Usage: 1%
+CPU 6 Usage: 1%
+CPU 7 Usage: 1%
+CPU 8 Usage: 1%
+CPU 9 Usage: 1%
+CPU 10 Usage: 1%
+CPU 11 Usage: 1%
+CPU 12 Usage: 1%
+CPU 13 Usage: 1%
+CPU 14 Usage: 1%
+CPU 15 Usage: 1%
+CPU 16 Usage: 1%
+CPU 17 Usage: 1%
+CPU 18 Usage: 1%
+CPU 19 Usage: 1%
+CPU 20 Usage: 1%
+CPU 21 Usage: 1%
+CPU 22 Usage: 1%
+
+
+ Resources used: 
+Time: 299 seconds (4.98333 minutes)
+RAM Memory Actual: 15983 MB (15.6084 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 16417 MB (16.0322 GB)
+RAM Memory MinMax: 934 MB (0.9121 GB)
+Disk Actual: 220609 MB (215.43848 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220609 MB (215.43848 GB)
+CPU Mean Max: 30%
+CPU Mean: 1%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 1%
+CPU 3 Usage: 1%
+CPU 4 Usage: 1%
+CPU 5 Usage: 1%
+CPU 6 Usage: 1%
+CPU 7 Usage: 1%
+CPU 8 Usage: 1%
+CPU 9 Usage: 1%
+CPU 10 Usage: 1%
+CPU 11 Usage: 1%
+CPU 12 Usage: 1%
+CPU 13 Usage: 1%
+CPU 14 Usage: 1%
+CPU 15 Usage: 1%
+CPU 16 Usage: 1%
+CPU 17 Usage: 1%
+CPU 18 Usage: 1%
+CPU 19 Usage: 1%
+CPU 20 Usage: 1%
+CPU 21 Usage: 1%
+CPU 22 Usage: 1%
+
+
+ Resources used: 
+Time: 327 seconds (5.45000 minutes)
+RAM Memory Actual: 15991 MB (15.6162 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 16417 MB (16.0322 GB)
+RAM Memory MinMax: 934 MB (0.9121 GB)
+Disk Actual: 220633 MB (215.46191 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220633 MB (215.46191 GB)
+CPU Mean Max: 30%
+CPU Mean: 2%
+CPUs: 
+CPU 1 Usage: 3%
+CPU 2 Usage: 3%
+CPU 3 Usage: 3%
+CPU 4 Usage: 3%
+CPU 5 Usage: 3%
+CPU 6 Usage: 3%
+CPU 7 Usage: 3%
+CPU 8 Usage: 3%
+CPU 9 Usage: 3%
+CPU 10 Usage: 3%
+CPU 11 Usage: 3%
+CPU 12 Usage: 3%
+CPU 13 Usage: 3%
+CPU 14 Usage: 2%
+CPU 15 Usage: 2%
+CPU 16 Usage: 2%
+CPU 17 Usage: 2%
+CPU 18 Usage: 2%
+CPU 19 Usage: 3%
+CPU 20 Usage: 3%
+CPU 21 Usage: 3%
+CPU 22 Usage: 3%
+
+
+ Resources used: 
+Time: 356 seconds (5.93333 minutes)
+RAM Memory Actual: 17075 MB (16.6748 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1592 MB (1.5547 GB)
+Disk Actual: 220653 MB (215.48145 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220653 MB (215.48145 GB)
+CPU Mean Max: 30%
+CPU Mean: 2%
+CPUs: 
+CPU 1 Usage: 2%
+CPU 2 Usage: 2%
+CPU 3 Usage: 2%
+CPU 4 Usage: 3%
+CPU 5 Usage: 2%
+CPU 6 Usage: 2%
+CPU 7 Usage: 2%
+CPU 8 Usage: 3%
+CPU 9 Usage: 2%
+CPU 10 Usage: 2%
+CPU 11 Usage: 2%
+CPU 12 Usage: 3%
+CPU 13 Usage: 2%
+CPU 14 Usage: 2%
+CPU 15 Usage: 3%
+CPU 16 Usage: 2%
+CPU 17 Usage: 2%
+CPU 18 Usage: 3%
+CPU 19 Usage: 2%
+CPU 20 Usage: 3%
+CPU 21 Usage: 2%
+CPU 22 Usage: 2%
+
+
+ Resources used: 
+Time: 382 seconds (6.36667 minutes)
+RAM Memory Actual: 15975 MB (15.6006 GB)
+RAM Memory Min: 15483 MB (15.1201 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1592 MB (1.5547 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 407 seconds (6.78333 minutes)
+RAM Memory Actual: 15480 MB (15.1172 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 430 seconds (7.16667 minutes)
+RAM Memory Actual: 15480 MB (15.1172 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 455 seconds (7.58333 minutes)
+RAM Memory Actual: 15480 MB (15.1172 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 479 seconds (7.98333 minutes)
+RAM Memory Actual: 15480 MB (15.1172 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 504 seconds (8.40000 minutes)
+RAM Memory Actual: 15481 MB (15.1182 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 528 seconds (8.80000 minutes)
+RAM Memory Actual: 15482 MB (15.1191 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 556 seconds (9.26667 minutes)
+RAM Memory Actual: 15483 MB (15.1201 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 579 seconds (9.65000 minutes)
+RAM Memory Actual: 15485 MB (15.1221 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 606 seconds (10.10000 minutes)
+RAM Memory Actual: 15483 MB (15.1201 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 632 seconds (10.53333 minutes)
+RAM Memory Actual: 15484 MB (15.1211 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 660 seconds (11.00000 minutes)
+RAM Memory Actual: 15486 MB (15.1230 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 686 seconds (11.43333 minutes)
+RAM Memory Actual: 15486 MB (15.1230 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 711 seconds (11.85000 minutes)
+RAM Memory Actual: 15487 MB (15.1240 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 736 seconds (12.26667 minutes)
+RAM Memory Actual: 15488 MB (15.1250 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 764 seconds (12.73333 minutes)
+RAM Memory Actual: 15488 MB (15.1250 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 792 seconds (13.20000 minutes)
+RAM Memory Actual: 15489 MB (15.1260 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 816 seconds (13.60000 minutes)
+RAM Memory Actual: 15489 MB (15.1260 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 842 seconds (14.03333 minutes)
+RAM Memory Actual: 15490 MB (15.1270 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 869 seconds (14.48333 minutes)
+RAM Memory Actual: 15492 MB (15.1289 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 895 seconds (14.91667 minutes)
+RAM Memory Actual: 15491 MB (15.1279 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 922 seconds (15.36667 minutes)
+RAM Memory Actual: 15490 MB (15.1270 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 947 seconds (15.78333 minutes)
+RAM Memory Actual: 15492 MB (15.1289 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 973 seconds (16.21667 minutes)
+RAM Memory Actual: 15491 MB (15.1279 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 998 seconds (16.63333 minutes)
+RAM Memory Actual: 15490 MB (15.1270 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 1023 seconds (17.05000 minutes)
+RAM Memory Actual: 15491 MB (15.1279 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 1048 seconds (17.46667 minutes)
+RAM Memory Actual: 15492 MB (15.1289 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 1073 seconds (17.88333 minutes)
+RAM Memory Actual: 15496 MB (15.1328 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 1099 seconds (18.31667 minutes)
+RAM Memory Actual: 15494 MB (15.1309 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 1124 seconds (18.73333 minutes)
+RAM Memory Actual: 15496 MB (15.1328 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 1150 seconds (19.16667 minutes)
+RAM Memory Actual: 15497 MB (15.1338 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 1174 seconds (19.56667 minutes)
+RAM Memory Actual: 15496 MB (15.1328 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 1199 seconds (19.98333 minutes)
+RAM Memory Actual: 15495 MB (15.1318 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 1223 seconds (20.38333 minutes)
+RAM Memory Actual: 15497 MB (15.1338 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 1246 seconds (20.76667 minutes)
+RAM Memory Actual: 15497 MB (15.1338 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 1272 seconds (21.20000 minutes)
+RAM Memory Actual: 15498 MB (15.1348 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 0%
+CPUs: 
+CPU 1 Usage: 0%
+CPU 2 Usage: 0%
+CPU 3 Usage: 0%
+CPU 4 Usage: 0%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 0%
+CPU 12 Usage: 0%
+CPU 13 Usage: 0%
+CPU 14 Usage: 0%
+CPU 15 Usage: 0%
+CPU 16 Usage: 0%
+CPU 17 Usage: 0%
+CPU 18 Usage: 0%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 0%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 1296 seconds (21.60000 minutes)
+RAM Memory Actual: 15501 MB (15.1377 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17075 MB (16.6748 GB)
+RAM Memory MinMax: 1595 MB (1.5576 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 3%
+CPUs: 
+CPU 1 Usage: 10%
+CPU 2 Usage: 4%
+CPU 3 Usage: 8%
+CPU 4 Usage: 9%
+CPU 5 Usage: 9%
+CPU 6 Usage: 4%
+CPU 7 Usage: 3%
+CPU 8 Usage: 6%
+CPU 9 Usage: 5%
+CPU 10 Usage: 5%
+CPU 11 Usage: 2%
+CPU 12 Usage: 1%
+CPU 13 Usage: 2%
+CPU 14 Usage: 1%
+CPU 15 Usage: 1%
+CPU 16 Usage: 1%
+CPU 17 Usage: 1%
+CPU 18 Usage: 1%
+CPU 19 Usage: 1%
+CPU 20 Usage: 1%
+CPU 21 Usage: 1%
+CPU 22 Usage: 1%
+
+
+ Resources used: 
+Time: 1323 seconds (22.05000 minutes)
+RAM Memory Actual: 17097 MB (16.6963 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17097 MB (16.6963 GB)
+RAM Memory MinMax: 1617 MB (1.5791 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 7%
+CPUs: 
+CPU 1 Usage: 15%
+CPU 2 Usage: 9%
+CPU 3 Usage: 9%
+CPU 4 Usage: 7%
+CPU 5 Usage: 9%
+CPU 6 Usage: 11%
+CPU 7 Usage: 12%
+CPU 8 Usage: 13%
+CPU 9 Usage: 13%
+CPU 10 Usage: 8%
+CPU 11 Usage: 4%
+CPU 12 Usage: 6%
+CPU 13 Usage: 7%
+CPU 14 Usage: 10%
+CPU 15 Usage: 10%
+CPU 16 Usage: 6%
+CPU 17 Usage: 3%
+CPU 18 Usage: 1%
+CPU 19 Usage: 0%
+CPU 20 Usage: 0%
+CPU 21 Usage: 4%
+CPU 22 Usage: 3%
+
+
+ Resources used: 
+Time: 1347 seconds (22.45000 minutes)
+RAM Memory Actual: 15696 MB (15.3281 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17097 MB (16.6963 GB)
+RAM Memory MinMax: 1617 MB (1.5791 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 3%
+CPUs: 
+CPU 1 Usage: 4%
+CPU 2 Usage: 5%
+CPU 3 Usage: 3%
+CPU 4 Usage: 2%
+CPU 5 Usage: 5%
+CPU 6 Usage: 5%
+CPU 7 Usage: 6%
+CPU 8 Usage: 6%
+CPU 9 Usage: 4%
+CPU 10 Usage: 3%
+CPU 11 Usage: 4%
+CPU 12 Usage: 4%
+CPU 13 Usage: 3%
+CPU 14 Usage: 3%
+CPU 15 Usage: 2%
+CPU 16 Usage: 2%
+CPU 17 Usage: 1%
+CPU 18 Usage: 1%
+CPU 19 Usage: 1%
+CPU 20 Usage: 1%
+CPU 21 Usage: 1%
+CPU 22 Usage: 2%
+
+
+ Resources used: 
+Time: 1375 seconds (22.91667 minutes)
+RAM Memory Actual: 17096 MB (16.6953 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17097 MB (16.6963 GB)
+RAM Memory MinMax: 1617 MB (1.5791 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 3%
+CPUs: 
+CPU 1 Usage: 14%
+CPU 2 Usage: 14%
+CPU 3 Usage: 9%
+CPU 4 Usage: 7%
+CPU 5 Usage: 5%
+CPU 6 Usage: 4%
+CPU 7 Usage: 3%
+CPU 8 Usage: 2%
+CPU 9 Usage: 2%
+CPU 10 Usage: 1%
+CPU 11 Usage: 1%
+CPU 12 Usage: 1%
+CPU 13 Usage: 1%
+CPU 14 Usage: 1%
+CPU 15 Usage: 1%
+CPU 16 Usage: 1%
+CPU 17 Usage: 1%
+CPU 18 Usage: 0%
+CPU 19 Usage: 1%
+CPU 20 Usage: 0%
+CPU 21 Usage: 1%
+CPU 22 Usage: 1%
+
+
+ Resources used: 
+Time: 1401 seconds (23.35000 minutes)
+RAM Memory Actual: 17371 MB (16.9639 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17371 MB (16.9639 GB)
+RAM Memory MinMax: 1891 MB (1.8467 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 7%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 1%
+CPU 3 Usage: 1%
+CPU 4 Usage: 1%
+CPU 5 Usage: 0%
+CPU 6 Usage: 0%
+CPU 7 Usage: 0%
+CPU 8 Usage: 0%
+CPU 9 Usage: 6%
+CPU 10 Usage: 10%
+CPU 11 Usage: 6%
+CPU 12 Usage: 7%
+CPU 13 Usage: 15%
+CPU 14 Usage: 13%
+CPU 15 Usage: 17%
+CPU 16 Usage: 14%
+CPU 17 Usage: 6%
+CPU 18 Usage: 9%
+CPU 19 Usage: 9%
+CPU 20 Usage: 15%
+CPU 21 Usage: 13%
+CPU 22 Usage: 14%
+
+
+ Resources used: 
+Time: 1427 seconds (23.78333 minutes)
+RAM Memory Actual: 17472 MB (17.0625 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17472 MB (17.0625 GB)
+RAM Memory MinMax: 1992 MB (1.9453 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 7%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 7%
+CPU 3 Usage: 12%
+CPU 4 Usage: 9%
+CPU 5 Usage: 12%
+CPU 6 Usage: 8%
+CPU 7 Usage: 7%
+CPU 8 Usage: 9%
+CPU 9 Usage: 10%
+CPU 10 Usage: 11%
+CPU 11 Usage: 9%
+CPU 12 Usage: 8%
+CPU 13 Usage: 7%
+CPU 14 Usage: 3%
+CPU 15 Usage: 8%
+CPU 16 Usage: 13%
+CPU 17 Usage: 11%
+CPU 18 Usage: 7%
+CPU 19 Usage: 4%
+CPU 20 Usage: 3%
+CPU 21 Usage: 3%
+CPU 22 Usage: 2%
+
+
+ Resources used: 
+Time: 1454 seconds (24.23333 minutes)
+RAM Memory Actual: 17671 MB (17.2568 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17671 MB (17.2568 GB)
+RAM Memory MinMax: 2191 MB (2.1396 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 8%
+CPUs: 
+CPU 1 Usage: 1%
+CPU 2 Usage: 1%
+CPU 3 Usage: 1%
+CPU 4 Usage: 6%
+CPU 5 Usage: 11%
+CPU 6 Usage: 8%
+CPU 7 Usage: 9%
+CPU 8 Usage: 10%
+CPU 9 Usage: 12%
+CPU 10 Usage: 3%
+CPU 11 Usage: 11%
+CPU 12 Usage: 10%
+CPU 13 Usage: 11%
+CPU 14 Usage: 15%
+CPU 15 Usage: 14%
+CPU 16 Usage: 10%
+CPU 17 Usage: 11%
+CPU 18 Usage: 12%
+CPU 19 Usage: 7%
+CPU 20 Usage: 7%
+CPU 21 Usage: 6%
+CPU 22 Usage: 4%
+
+
+ Resources used: 
+Time: 1482 seconds (24.70000 minutes)
+RAM Memory Actual: 17335 MB (16.9287 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17671 MB (17.2568 GB)
+RAM Memory MinMax: 2191 MB (2.1396 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 9%
+CPUs: 
+CPU 1 Usage: 8%
+CPU 2 Usage: 5%
+CPU 3 Usage: 7%
+CPU 4 Usage: 14%
+CPU 5 Usage: 9%
+CPU 6 Usage: 5%
+CPU 7 Usage: 4%
+CPU 8 Usage: 3%
+CPU 9 Usage: 3%
+CPU 10 Usage: 5%
+CPU 11 Usage: 9%
+CPU 12 Usage: 18%
+CPU 13 Usage: 14%
+CPU 14 Usage: 12%
+CPU 15 Usage: 10%
+CPU 16 Usage: 7%
+CPU 17 Usage: 10%
+CPU 18 Usage: 11%
+CPU 19 Usage: 12%
+CPU 20 Usage: 16%
+CPU 21 Usage: 12%
+CPU 22 Usage: 15%
+
+
+ Resources used: 
+Time: 1508 seconds (25.13333 minutes)
+RAM Memory Actual: 17610 MB (17.1973 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17671 MB (17.2568 GB)
+RAM Memory MinMax: 2191 MB (2.1396 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 3%
+CPUs: 
+CPU 1 Usage: 12%
+CPU 2 Usage: 10%
+CPU 3 Usage: 10%
+CPU 4 Usage: 8%
+CPU 5 Usage: 6%
+CPU 6 Usage: 4%
+CPU 7 Usage: 2%
+CPU 8 Usage: 0%
+CPU 9 Usage: 0%
+CPU 10 Usage: 0%
+CPU 11 Usage: 2%
+CPU 12 Usage: 2%
+CPU 13 Usage: 3%
+CPU 14 Usage: 3%
+CPU 15 Usage: 1%
+CPU 16 Usage: 1%
+CPU 17 Usage: 0%
+CPU 18 Usage: 1%
+CPU 19 Usage: 1%
+CPU 20 Usage: 1%
+CPU 21 Usage: 1%
+CPU 22 Usage: 0%
+
+
+ Resources used: 
+Time: 1532 seconds (25.53333 minutes)
+RAM Memory Actual: 16339 MB (15.9561 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17671 MB (17.2568 GB)
+RAM Memory MinMax: 2191 MB (2.1396 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 4%
+CPUs: 
+CPU 1 Usage: 6%
+CPU 2 Usage: 9%
+CPU 3 Usage: 5%
+CPU 4 Usage: 6%
+CPU 5 Usage: 7%
+CPU 6 Usage: 8%
+CPU 7 Usage: 2%
+CPU 8 Usage: 1%
+CPU 9 Usage: 1%
+CPU 10 Usage: 3%
+CPU 11 Usage: 5%
+CPU 12 Usage: 6%
+CPU 13 Usage: 7%
+CPU 14 Usage: 9%
+CPU 15 Usage: 7%
+CPU 16 Usage: 3%
+CPU 17 Usage: 3%
+CPU 18 Usage: 2%
+CPU 19 Usage: 2%
+CPU 20 Usage: 3%
+CPU 21 Usage: 5%
+CPU 22 Usage: 4%
+
+
+ Resources used: 
+Time: 1556 seconds (25.93333 minutes)
+RAM Memory Actual: 17341 MB (16.9346 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17671 MB (17.2568 GB)
+RAM Memory MinMax: 2191 MB (2.1396 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 9%
+CPUs: 
+CPU 1 Usage: 10%
+CPU 2 Usage: 9%
+CPU 3 Usage: 9%
+CPU 4 Usage: 5%
+CPU 5 Usage: 4%
+CPU 6 Usage: 3%
+CPU 7 Usage: 15%
+CPU 8 Usage: 11%
+CPU 9 Usage: 12%
+CPU 10 Usage: 12%
+CPU 11 Usage: 11%
+CPU 12 Usage: 10%
+CPU 13 Usage: 4%
+CPU 14 Usage: 7%
+CPU 15 Usage: 11%
+CPU 16 Usage: 13%
+CPU 17 Usage: 13%
+CPU 18 Usage: 10%
+CPU 19 Usage: 8%
+CPU 20 Usage: 10%
+CPU 21 Usage: 15%
+CPU 22 Usage: 11%
+
+
+ Resources used: 
+Time: 1580 seconds (26.33333 minutes)
+RAM Memory Actual: 17450 MB (17.0410 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17671 MB (17.2568 GB)
+RAM Memory MinMax: 2191 MB (2.1396 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 4%
+CPUs: 
+CPU 1 Usage: 13%
+CPU 2 Usage: 9%
+CPU 3 Usage: 6%
+CPU 4 Usage: 5%
+CPU 5 Usage: 5%
+CPU 6 Usage: 3%
+CPU 7 Usage: 2%
+CPU 8 Usage: 1%
+CPU 9 Usage: 6%
+CPU 10 Usage: 7%
+CPU 11 Usage: 5%
+CPU 12 Usage: 5%
+CPU 13 Usage: 3%
+CPU 14 Usage: 2%
+CPU 15 Usage: 4%
+CPU 16 Usage: 5%
+CPU 17 Usage: 6%
+CPU 18 Usage: 6%
+CPU 19 Usage: 4%
+CPU 20 Usage: 4%
+CPU 21 Usage: 3%
+CPU 22 Usage: 3%
+
+
+ Resources used: 
+Time: 1606 seconds (26.76667 minutes)
+RAM Memory Actual: 16586 MB (16.1973 GB)
+RAM Memory Min: 15480 MB (15.1172 GB)
+RAM Memory Max: 17671 MB (17.2568 GB)
+RAM Memory MinMax: 2191 MB (2.1396 GB)
+Disk Actual: 220669 MB (215.49707 GB)
+Disk Min: 209343 MB (204.43652 GB)
+Disk Max: 220669 MB (215.49707 GB)
+CPU Mean Max: 30%
+CPU Mean: 4%
+CPUs: 
+CPU 1 Usage: 2%
+CPU 2 Usage: 16%
+CPU 3 Usage: 13%
+CPU 4 Usage: 13%
+CPU 5 Usage: 8%
+CPU 6 Usage: 3%
+CPU 7 Usage: 8%
+CPU 8 Usage: 8%
+CPU 9 Usage: 6%
+CPU 10 Usage: 5%
+CPU 11 Usage: 2%
+CPU 12 Usage: 1%
+CPU 13 Usage: 2%
+CPU 14 Usage: 1%
+CPU 15 Usage: 0%
+CPU 16 Usage: 1%
+CPU 17 Usage: 1%
+CPU 18 Usage: 1%
+CPU 19 Usage: 3%
+CPU 20 Usage: 1%
+CPU 21 Usage: 6%
+CPU 22 Usage: 7%

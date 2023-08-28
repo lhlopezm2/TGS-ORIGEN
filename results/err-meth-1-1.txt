@@ -1,2 +1,37 @@
+[readdb] indexing ./raw_reads
+[readdb] indexing ./raw_reads/20180207_2026_PCIAx2_dialysis
+[readdb] indexing ./raw_reads/20180207_2026_PCIAx2_dialysis/1
+[readdb] indexing ./raw_reads/20180207_2026_PCIAx2_dialysis/0
+[readdb] indexing ./raw_reads/gm24385_180714DNAb
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/7
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/16
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/26
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/19
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/21
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/4
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/5
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/24
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/15
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/18
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/25
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/10
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/23
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/11
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/17
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/1
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/12
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/0
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/2
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/9
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/3
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/8
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/20
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/6
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/14
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/13
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/27
+[readdb] indexing ./raw_reads/gm24385_180714DNAb/22
+[readdb] num reads: 113851, num reads with path to fast5: 113851
+Fastq indexing step - Elapsed Time: 1873.71 s - Memory used: 51032 kB -CPU used: 11%
 [post-run summary] total reads: 40012, unparseable: 0, qc fail: 6082, could not calibrate: 1133, no alignment: 7772, bad fast5: 0
-Variant calling step - Elapsed Time: 1128.02 s - Memory used: 20211776 kB -CPU used: 1252%
+Variant calling step - Elapsed Time: 1534.80 s - Memory used: 20223356 kB -CPU used: 908%

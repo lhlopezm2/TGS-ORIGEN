@@ -6,7 +6,7 @@
 #SBATCH -n 22
 #SBATCH -N 1
 #SBATCH --partition=gpu
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:3g.20gb:1
 #SBATCH --account=coffea_genomes
 #SBATCH --time=1-23:00:00
 #SBATCH --mem=50G
@@ -51,7 +51,7 @@ else
     --cpu_threads_per_caller 4\
     --flowcell FLO-PRO002M\
     --kit SQK-RBK112-96\
-    --recursive -x 'cuda:all:25G'\
+    --recursive -x 'cuda:all:50G'\
     --num_callers 5\
     --compress_fastq\
     --gpu_runners_per_device 15
@@ -71,13 +71,11 @@ else
 
   echo "----------------"
   echo "Alignment step"
-  module load minimap2/2.24
-  module load samtools/1.15.1
+  conda activate minimap2
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Alignment step - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' minimap2 -a -z 600,200 -x map-ont $ref_fasta $fastq -t $CPU \
     |samtools view -Shu |samtools sort -@ $CPU -o $bam --output-fmt BAM
   /shared/home/sorozcoarias/anaconda3/bin/time -f 'Bam indexing - Elapsed Time: %e s - Memory used: %M kB -CPU used: %P' samtools index $bam -@ $CPU
-  module unload minimap2/2.24
-  module unload samtools/1.15.1
+  conda deactivate
   kill $measure_pid
 fi
 

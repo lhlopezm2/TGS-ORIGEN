@@ -1,2 +1,2 @@
-du: cannot access ‘/shared/home/sorozcoarias/coffea_genomes/Simon/Luis/variant-calling/vcf-2-1-1/7b/7d2616e0f2038e6fe5e0bce86ec45d/ref_cache/04/a7’: No such file or directory
-slurmstepd: error: *** JOB 34937323 ON gpu-node-01 CANCELLED AT 2023-08-27T13:38:47 ***
+Command exited with non-zero status 1
+Variant calling step - Elapsed Time: 57.33 s - Memory used: 3780432 kB -CPU used: 195%

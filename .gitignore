@@ -14,13 +14,10 @@ variant-calling/*
 wf-human-variation/*
 metrics/*
 Sniffles2/
-core.1237
-core.42407
+core.*
 duet/
 longshot/
 medaka/
 output/
 wf-human-testing/
 NanoCaller/
-core.24407
-core.26869
